@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemDescription" load_steps=4 format=3 uid="uid://ccighjgjl30pl"]
+
+[ext_resource type="Texture2D" uid="uid://cy4018swg11nx" path="res://assets/atlas/pickaxe_atlas_128.png" id="1_a0ay2"]
+[ext_resource type="Script" uid="uid://dvocng0x1h0ra" path="res://_data/item_description.gd" id="2_58exp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0ay2"]
+atlas = ExtResource("1_a0ay2")
+region = Rect2(128, 256, 128, 128)
+
+[resource]
+script = ExtResource("2_58exp")
+id = 121
+name_key = &"ITEM_121_NAME"
+rarity = 2
+description_key = &"ITEM_121_DESCRIPTION"
+icon = SubResource("AtlasTexture_a0ay2")
+metadata/_custom_type_script = "uid://dvocng0x1h0ra"

@@ -1,0 +1,713 @@
+[gd_scene load_steps=36 format=3 uid="uid://csrfvrxohd6em"]
+
+[ext_resource type="Texture2D" uid="uid://cg8lvnb58kh7a" path="res://assets/frames/frame_forge_light.png" id="1_7rm4b"]
+[ext_resource type="Texture2D" uid="uid://b8nl1o0soldo0" path="res://assets/frames/Frame_light_on.png" id="2_4vhjo"]
+[ext_resource type="Script" uid="uid://1ehti86nbm1n" path="res://scenes/forge_menu/forge_menu.gd" id="2_5x3f0"]
+[ext_resource type="Texture2D" uid="uid://bwxjhl7t5ee7x" path="res://assets/atlas/item_atlas_128.png" id="2_acc64"]
+[ext_resource type="Texture2D" uid="uid://bf0fntksupku1" path="res://assets/backgrounds/background_forge.png" id="3_8h0f4"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="3_uxy6k"]
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/Frame_light.png" id="5_l5sqo"]
+[ext_resource type="Texture2D" uid="uid://hibvsj26wfwg" path="res://assets/frames/frame_forge_light_on.png" id="7_fb0tg"]
+[ext_resource type="Texture2D" uid="uid://stn507v6avwg" path="res://assets/atlas/ore_atlas_128.png" id="9_5x3f0"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/UI_frame_4.png" id="9_l5sqo"]
+[ext_resource type="PackedScene" uid="uid://cdvkw48qir4of" path="res://scenes/tooltips/forge/tooltip_forge.tscn" id="12_5x3f0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxy6k"]
+texture = ExtResource("5_l5sqo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8h0f4"]
+texture = ExtResource("2_4vhjo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6hhld"]
+texture = ExtResource("2_4vhjo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3033d"]
+texture = ExtResource("5_l5sqo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l5sqo"]
+texture = ExtResource("5_l5sqo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_o8qox"]
+default_font = ExtResource("3_uxy6k")
+default_font_size = 30
+Button/styles/disabled = SubResource("StyleBoxTexture_uxy6k")
+Button/styles/focus = SubResource("StyleBoxTexture_8h0f4")
+Button/styles/hover = SubResource("StyleBoxTexture_6hhld")
+Button/styles/normal = SubResource("StyleBoxTexture_3033d")
+Panel/styles/panel = SubResource("StyleBoxTexture_l5sqo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ipdk0"]
+texture = ExtResource("7_fb0tg")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6xh6"]
+atlas = ExtResource("2_acc64")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m67or"]
+atlas = ExtResource("2_acc64")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2mjj"]
+atlas = ExtResource("2_acc64")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6cyv"]
+atlas = ExtResource("2_acc64")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5x3f0"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h0f4"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hhld"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78f7k"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2uei"]
+texture = ExtResource("9_l5sqo")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5x3f0"]
+texture = ExtResource("1_7rm4b")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_8h0f4"]
+Panel/styles/panel = SubResource("StyleBoxTexture_5x3f0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kbvyj"]
+texture = ExtResource("1_7rm4b")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4hlk"]
+texture = ExtResource("5_l5sqo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_vg401"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxy6k"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5sqo"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tr1x"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(128, 0, 128, 128)
+
+[node name="ForgeMenu" type="Control"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_o8qox")
+script = ExtResource("2_5x3f0")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.63000005)
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_8h0f4")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="ItemSelect" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelItem" type="Panel" parent="VBoxContainer/ItemSelect"]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/ItemSelect/PanelItem"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.5
+offset_top = -11.5
+offset_right = 145.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "UI_FORGE_MENU_LABEL_SELECT_ITEM"
+horizontal_alignment = 1
+
+[node name="ItemContainer" type="HBoxContainer" parent="VBoxContainer/ItemSelect"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PickaxeButton" type="Button" parent="VBoxContainer/ItemSelect/ItemContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ipdk0")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/ItemSelect/ItemContainer/PickaxeButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 20.0
+offset_right = 64.0
+offset_bottom = 148.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_d6xh6")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/ItemSelect/ItemContainer/PickaxeButton"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.5
+offset_top = -45.0
+offset_right = 60.5
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 27
+text = "UI_FORGE_MENU_LABEL_ITEM_PICKAXE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HelmetButton" type="Button" parent="VBoxContainer/ItemSelect/ItemContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/ItemSelect/ItemContainer/HelmetButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 20.0
+offset_right = 64.0
+offset_bottom = 148.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_m67or")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/ItemSelect/ItemContainer/HelmetButton"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -58.5
+offset_top = -45.0
+offset_right = 58.5
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 27
+text = "HELMET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LanternButton" type="Button" parent="VBoxContainer/ItemSelect/ItemContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/ItemSelect/ItemContainer/LanternButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 20.0
+offset_right = 64.0
+offset_bottom = 148.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_u2mjj")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/ItemSelect/ItemContainer/LanternButton"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -45.0
+offset_right = 61.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 27
+text = "LANTERN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JewelButton" type="Button" parent="VBoxContainer/ItemSelect/ItemContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/ItemSelect/ItemContainer/JewelButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 20.0
+offset_right = 64.0
+offset_bottom = 148.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_u6cyv")
+
+[node name="Label" type="Label" parent="VBoxContainer/ItemSelect/ItemContainer/JewelButton"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.5
+offset_top = -45.0
+offset_right = 43.5
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 27
+text = "JEWEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OreSelect" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelOre" type="Panel" parent="VBoxContainer/OreSelect"]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/OreSelect/PanelOre"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.5
+offset_top = -18.5
+offset_right = 264.5
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "UI_FORGE_MENU_LABEL_SELECT_ORE"
+horizontal_alignment = 1
+
+[node name="OreContainer" type="HBoxContainer" parent="VBoxContainer/OreSelect"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="SapphireButton" type="Button" parent="VBoxContainer/OreSelect/OreContainer"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="SapphireIcon" type="TextureRect" parent="VBoxContainer/OreSelect/OreContainer/SapphireButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_5x3f0")
+
+[node name="Label" type="Label" parent="VBoxContainer/OreSelect/OreContainer/SapphireButton"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "UI_FORGE_MENU_LABEL_ORE_SAPPHIRE"
+horizontal_alignment = 1
+
+[node name="RubyButton" type="Button" parent="VBoxContainer/OreSelect/OreContainer"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="RubyIcon" type="TextureRect" parent="VBoxContainer/OreSelect/OreContainer/RubyButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_8h0f4")
+
+[node name="Label" type="Label" parent="VBoxContainer/OreSelect/OreContainer/RubyButton"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -251.5
+offset_top = -60.0
+offset_right = 251.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "UI_FORGE_MENU_LABEL_ORE_RUBY"
+horizontal_alignment = 1
+
+[node name="EmeraldButton" type="Button" parent="VBoxContainer/OreSelect/OreContainer"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="EmeraldIcon" type="TextureRect" parent="VBoxContainer/OreSelect/OreContainer/EmeraldButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_6hhld")
+
+[node name="Label" type="Label" parent="VBoxContainer/OreSelect/OreContainer/EmeraldButton"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -281.0
+offset_top = -60.0
+offset_right = 281.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "UI_FORGE_MENU_LABEL_ORE_EMERALD"
+horizontal_alignment = 1
+
+[node name="DiamondButton" type="Button" parent="VBoxContainer/OreSelect/OreContainer"]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="DiamondIcon" type="TextureRect" parent="VBoxContainer/OreSelect/OreContainer/DiamondButton"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_78f7k")
+
+[node name="Label" type="Label" parent="VBoxContainer/OreSelect/OreContainer/DiamondButton"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -281.5
+offset_top = -60.0
+offset_right = 281.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "UI_FORGE_MENU_LABEL_ORE_DIAMOND"
+horizontal_alignment = 1
+
+[node name="Control" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(700, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_d2uei")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_right = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8h0f4")
+theme_override_constants/separation = 50
+alignment = 2
+
+[node name="Equipment" type="Button" parent="VBoxContainer/Control/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_kbvyj")
+disabled = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/HBoxContainer/Equipment"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+stretch_mode = 5
+
+[node name="AffinityPanel" type="Panel" parent="VBoxContainer/Control/HBoxContainer"]
+custom_minimum_size = Vector2(400, 350)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control/HBoxContainer/AffinityPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = -30.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AffinityLabel" type="Label" parent="VBoxContainer/Control/HBoxContainer/AffinityPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemAffinityContainer" type="VBoxContainer" parent="VBoxContainer/Control/HBoxContainer/AffinityPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="OreAffinityContainer" type="VBoxContainer" parent="VBoxContainer/Control/HBoxContainer/AffinityPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(720, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_l4hlk")
+
+[node name="CostContainer" type="HBoxContainer" parent="VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_vg401")
+alignment = 1
+
+[node name="WoodCost" type="VBoxContainer" parent="VBoxContainer/Panel/CostContainer"]
+custom_minimum_size = Vector2(120, 157)
+layout_mode = 2
+theme_override_constants/separation = -10
+
+[node name="OreIcon" type="TextureRect" parent="VBoxContainer/Panel/CostContainer/WoodCost"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_uxy6k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreCost" type="Label" parent="VBoxContainer/Panel/CostContainer/WoodCost"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MetalCost" type="VBoxContainer" parent="VBoxContainer/Panel/CostContainer"]
+custom_minimum_size = Vector2(120, 157)
+layout_mode = 2
+theme_override_constants/separation = -10
+
+[node name="OreIcon" type="TextureRect" parent="VBoxContainer/Panel/CostContainer/MetalCost"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_l5sqo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreCost" type="Label" parent="VBoxContainer/Panel/CostContainer/MetalCost"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoldCost" type="VBoxContainer" parent="VBoxContainer/Panel/CostContainer"]
+custom_minimum_size = Vector2(120, 157)
+layout_mode = 2
+theme_override_constants/separation = -10
+
+[node name="OreIcon" type="TextureRect" parent="VBoxContainer/Panel/CostContainer/GoldCost"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_6tr1x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreCost" type="Label" parent="VBoxContainer/Panel/CostContainer/GoldCost"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OreCost" type="VBoxContainer" parent="VBoxContainer/Panel/CostContainer"]
+custom_minimum_size = Vector2(120, 157)
+layout_mode = 2
+theme_override_constants/separation = -10
+
+[node name="OreIcon" type="TextureRect" parent="VBoxContainer/Panel/CostContainer/OreCost"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreCost" type="Label" parent="VBoxContainer/Panel/CostContainer/OreCost"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ForgeButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "FORGE"
+
+[node name="ResultButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="ResultIcon" type="TextureRect" parent="VBoxContainer/ResultButton"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="TextureRect" parent="VBoxContainer/ResultButton"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TooltipForge" parent="." instance=ExtResource("12_5x3f0")]
+visible = false
+
+[connection signal="pressed" from="VBoxContainer/ItemSelect/ItemContainer/PickaxeButton" to="." method="_on_pickaxe_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ItemSelect/ItemContainer/HelmetButton" to="." method="_on_helmet_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ItemSelect/ItemContainer/LanternButton" to="." method="_on_lantern_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ItemSelect/ItemContainer/JewelButton" to="." method="_on_jewel_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OreSelect/OreContainer/SapphireButton" to="." method="_on_sapphire_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OreSelect/OreContainer/RubyButton" to="." method="_on_ruby_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OreSelect/OreContainer/EmeraldButton" to="." method="_on_emerald_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OreSelect/OreContainer/DiamondButton" to="." method="_on_diamond_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ForgeButton" to="." method="_on_forge_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ResultButton" to="." method="_on_result_button_pressed"]

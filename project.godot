@@ -1,0 +1,72 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[admob]
+
+general/android/app_id="ca-app-pub-5656762110882545~5174217811"
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="arcade_miner"
+config/description="Do you like shiny colored rocks ? Then you can mine until your pockets are full... And keep mining even more !"
+run/main_scene="uid://cx12loloifxne"
+config/features=PackedStringArray("4.6", "Mobile")
+boot_splash/show_image=false
+config/icon="uid://bloabfcog83eh"
+
+[autoload]
+
+InputManager="*res://_autoloads/input_manager.gd"
+SkillTreeManager="*res://_autoloads/skill_tree_manager.gd"
+GameManager="*res://_autoloads/game_manager.gd"
+InventoryManager="*res://_autoloads/inventory_manager.gd"
+ItemFactory="*res://_autoloads/item_factory.gd"
+Database="*res://_autoloads/database.gd"
+SaveManager="*res://_autoloads/save_manager.gd"
+LanguageManager="*res://_autoloads/language_manager.gd"
+AdManager="*res://_autoloads/ad_manager.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/size/borderless=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/admob/plugin.cfg")
+
+[global_group]
+
+inventory_item_slots=""
+inventory_equipment_slots=""
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://_localization/ui.en.translation", "res://_localization/ui.fr.translation", "res://_localization/ui.es.translation", "res://_localization/ui.de.translation", "res://_localization/ui.it.translation", "res://_localization/items.de.translation", "res://_localization/items.en.translation", "res://_localization/items.es.translation", "res://_localization/items.fr.translation", "res://_localization/items.it.translation", "res://_localization/datas.de.translation", "res://_localization/datas.en.translation", "res://_localization/datas.es.translation", "res://_localization/datas.fr.translation", "res://_localization/datas.it.translation")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

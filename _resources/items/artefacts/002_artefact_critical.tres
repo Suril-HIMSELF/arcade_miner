@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dblhcn4ndmpww"]
+
+[ext_resource type="Resource" uid="uid://cobo0m4lonbc7" path="res://_resources/items/descriptions/item_002.tres" id="1_mu7e0"]
+[ext_resource type="Texture2D" uid="uid://bvr6sqxhicnib" path="res://assets/atlas/artefacts_atlas.png" id="2_mu7e0"]
+[ext_resource type="Script" uid="uid://6rjj0t56qr88" path="res://_data/item.gd" id="3_mu7e0"]
+[ext_resource type="Script" uid="uid://dlbtrjuhbb1gy" path="res://_data/stat_value.gd" id="4_wj7bs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ci1br"]
+atlas = ExtResource("2_mu7e0")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="Resource" id="Resource_bt0a2"]
+script = ExtResource("4_wj7bs")
+stat = 600
+value = 0.2
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_7kalr"]
+script = ExtResource("4_wj7bs")
+stat = 601
+value = 3.0
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[resource]
+script = ExtResource("3_mu7e0")
+hash = "djE7NDs0OzI7NjAwLDAuMywxOzYwMSwzLjAsMXw5NTg5NTgzMTdlNmY1MjgyNTlmOWE3YzM5MjZhOTkzZTJmYTM2ODE2ZjQwNTFjNjFkMDVlMzdhMjA0MjIwMmFm"
+description = ExtResource("1_mu7e0")
+icon = SubResource("AtlasTexture_ci1br")
+type = 4
+rarity = 4
+stats = Array[ExtResource("4_wj7bs")]([SubResource("Resource_bt0a2"), SubResource("Resource_7kalr")])

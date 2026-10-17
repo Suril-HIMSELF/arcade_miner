@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=8 format=3 uid="uid://uyjpsbce03yj"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_ors31"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_jw832"]
+[ext_resource type="Script" uid="uid://bw106588ppk51" path="res://_data/skill.gd" id="3_qfvy7"]
+[ext_resource type="Resource" uid="uid://cd5hne7041ep" path="res://_resources/stats/timer_duration.tres" id="4_i74mb"]
+
+[sub_resource type="Resource" id="Resource_rih6b"]
+script = ExtResource("1_ors31")
+quantity = 1000
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_q3h3n"]
+script = ExtResource("1_ors31")
+ore = 5
+quantity = 200
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2dws"]
+atlas = ExtResource("2_jw832")
+region = Rect2(768, 128, 128, 128)
+
+[resource]
+script = ExtResource("3_qfvy7")
+id = 50000
+name = "STAT_TIMER_DURATION_NAME"
+description = "STAT_TIMER_DURATION_DESCRIPTION"
+primary_icon = SubResource("AtlasTexture_j2dws")
+stat = ExtResource("4_i74mb")
+bonus = 2.0
+max_level = 5
+cost = Array[ExtResource("1_ors31")]([SubResource("Resource_rih6b"), SubResource("Resource_q3h3n")])

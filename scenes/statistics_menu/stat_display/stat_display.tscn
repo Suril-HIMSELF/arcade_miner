@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cymutsnblajgg"]
+
+[ext_resource type="Script" uid="uid://wsanrm4mo130" path="res://scenes/statistics_menu/stat_display/stat_display.gd" id="1_v0ury"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_su5nj"]
+[ext_resource type="Texture2D" uid="uid://mxgnb27y3sk3" path="res://assets/atlas/skill_secondary_atlas_64.png" id="3_su5nj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmgra"]
+atlas = ExtResource("2_su5nj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qmqx"]
+atlas = ExtResource("3_su5nj")
+region = Rect2(64, 0, 64, 64)
+
+[node name="StatDisplay" type="HBoxContainer" unique_id=2070372815]
+mouse_filter = 2
+theme_override_constants/separation = 15
+script = ExtResource("1_v0ury")
+
+[node name="Control" type="Control" parent="." unique_id=873890880]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PrimaryIcon" type="TextureRect" parent="Control" unique_id=244188099]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_fmgra")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SecondaryIcon" type="TextureRect" parent="Control" unique_id=1337580063]
+z_index = 1
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_4qmqx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StatLabel" type="Label" parent="." unique_id=1199019439]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "999"
+vertical_alignment = 1

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemDescription" load_steps=4 format=3 uid="uid://csafne76cqxle"]
+
+[ext_resource type="Texture2D" uid="uid://dyrsxfhgwlkyh" path="res://assets/atlas/helmet_atlas_128.png" id="1_1nelb"]
+[ext_resource type="Script" uid="uid://dvocng0x1h0ra" path="res://_data/item_description.gd" id="1_v45sl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unmai"]
+atlas = ExtResource("1_1nelb")
+region = Rect2(128, 0, 128, 128)
+
+[resource]
+script = ExtResource("1_v45sl")
+id = 201
+name_key = &"ITEM_201_NAME"
+type = 1
+description_key = &"ITEM_201_DESCRIPTION"
+icon = SubResource("AtlasTexture_unmai")
+metadata/_custom_type_script = "uid://dvocng0x1h0ra"

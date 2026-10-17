@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemDescription" load_steps=4 format=3 uid="uid://3bx8frr0bcs1"]
+
+[ext_resource type="Texture2D" uid="uid://d3frxjbns3l0f" path="res://assets/atlas/jewel_atlas_128.png" id="1_7stsp"]
+[ext_resource type="Script" uid="uid://dvocng0x1h0ra" path="res://_data/item_description.gd" id="1_no2q0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8bc0"]
+atlas = ExtResource("1_7stsp")
+region = Rect2(128, 128, 128, 128)
+
+[resource]
+script = ExtResource("1_no2q0")
+id = 411
+name_key = &"ITEM_411_NAME"
+type = 3
+rarity = 1
+description_key = &"ITEM_411_DESCRIPTION"
+icon = SubResource("AtlasTexture_c8bc0")
+metadata/_custom_type_script = "uid://dvocng0x1h0ra"

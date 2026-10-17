@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=11 format=3 uid="uid://c70s52f0454y4"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_jlueo"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_qack3"]
+[ext_resource type="Script" uid="uid://bw106588ppk51" path="res://_data/skill.gd" id="3_75ur2"]
+[ext_resource type="Resource" uid="uid://dnqpteih0vvdl" path="res://_resources/stats/gold_rush_power.tres" id="4_jlueo"]
+[ext_resource type="Texture2D" uid="uid://mxgnb27y3sk3" path="res://assets/atlas/skill_secondary_atlas_64.png" id="4_v6ijt"]
+
+[sub_resource type="Resource" id="Resource_rih6b"]
+script = ExtResource("1_jlueo")
+quantity = 100
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_v6ijt"]
+script = ExtResource("1_jlueo")
+ore = 1
+quantity = 60
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_jc4cw"]
+script = ExtResource("1_jlueo")
+ore = 3
+quantity = 10
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6mrm"]
+atlas = ExtResource("2_qack3")
+region = Rect2(256, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc4cw"]
+atlas = ExtResource("4_v6ijt")
+region = Rect2(256, 0, 64, 64)
+
+[resource]
+script = ExtResource("3_75ur2")
+id = 66100
+name = "STAT_GOLD_RUSH_POWER_NAME"
+description = "STAT_GOLD_RUSH_POWER_DESCRIPTION"
+primary_icon = SubResource("AtlasTexture_i6mrm")
+secondary_icon = SubResource("AtlasTexture_jc4cw")
+stat = ExtResource("4_jlueo")
+bonus = 1.0
+max_level = 5
+cost = Array[ExtResource("1_jlueo")]([SubResource("Resource_rih6b"), SubResource("Resource_v6ijt"), SubResource("Resource_jc4cw")])

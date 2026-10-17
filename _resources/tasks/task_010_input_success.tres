@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Task" format=3 uid="uid://c16gty2ye4y1v"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_pnrai"]
+[ext_resource type="Script" uid="uid://bj0fbj6y5qgc6" path="res://_data/task.gd" id="2_wkt6v"]
+
+[sub_resource type="Resource" id="Resource_ibpf0"]
+script = ExtResource("1_pnrai")
+ore = 1
+quantity = 10
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[resource]
+script = ExtResource("2_wkt6v")
+type = 5
+id = 9
+description = "TASK_010_DESCRIPTION"
+base_required_amount = 60
+base_rewards = Array[ExtResource("1_pnrai")]([SubResource("Resource_ibpf0")])
+max_level = 20
+metadata/_custom_type_script = "uid://bj0fbj6y5qgc6"

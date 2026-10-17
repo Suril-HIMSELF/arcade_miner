@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dqi70dhdjpslu"]
+
+[ext_resource type="Resource" uid="uid://b2gcmfucjybhx" path="res://_resources/items/descriptions/item_004.tres" id="1_j501s"]
+[ext_resource type="Texture2D" uid="uid://bvr6sqxhicnib" path="res://assets/atlas/artefacts_atlas.png" id="2_8nko6"]
+[ext_resource type="Script" uid="uid://6rjj0t56qr88" path="res://_data/item.gd" id="3_8nko6"]
+[ext_resource type="Script" uid="uid://dlbtrjuhbb1gy" path="res://_data/stat_value.gd" id="4_32pl2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v671g"]
+atlas = ExtResource("2_8nko6")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="Resource" id="Resource_bt0a2"]
+script = ExtResource("4_32pl2")
+stat = 520
+value = 0.3
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[resource]
+script = ExtResource("3_8nko6")
+hash = "djE7NDs0OzQ7NTIwLDAuMywxfDQwYjU0ZmE0YWFjNzQ1NjY5NGMwMzcxNzYzODg4MmI2ZmVmYTFmNzA1YzZmNmQxNjYxZDI4ODdkODIyZWFlNzM="
+description = ExtResource("1_j501s")
+icon = SubResource("AtlasTexture_v671g")
+type = 4
+rarity = 4
+stats = Array[ExtResource("4_32pl2")]([SubResource("Resource_bt0a2")])

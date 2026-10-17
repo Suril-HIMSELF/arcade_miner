@@ -1,0 +1,470 @@
+[gd_scene format=3 uid="uid://bitxbqplf45jy"]
+
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="1_11wkm"]
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/frame_light.png" id="1_oudyb"]
+[ext_resource type="Script" uid="uid://bfiitttpiq2s5" path="res://scenes/statistics_menu/statistics_menu.gd" id="3_4q3rr"]
+[ext_resource type="Texture2D" uid="uid://btvruml5dkvy2" path="res://assets/backgrounds/background_statistics.png" id="4_4q3rr"]
+[ext_resource type="PackedScene" uid="uid://cymutsnblajgg" path="res://scenes/statistics_menu/stat_display/stat_display.tscn" id="5_3xpff"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="5_lkble"]
+[ext_resource type="Texture2D" uid="uid://bpdnkshu62dn0" path="res://assets/backgrounds/background_tooltip.png" id="6_fg3uf"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="7_mqi62"]
+[ext_resource type="Texture2D" uid="uid://bmx6f65s5watr" path="res://assets/frames/separator_h.png" id="8_sfg0r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3xpff"]
+texture = ExtResource("1_oudyb")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="Theme" id="Theme_l6cit"]
+default_font = ExtResource("1_11wkm")
+default_font_size = 21
+Panel/styles/panel = SubResource("StyleBoxTexture_3xpff")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lkble"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vpwf6"]
+texture = ExtResource("5_lkble")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibgqg"]
+texture = ExtResource("6_fg3uf")
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mqi62"]
+texture = ExtResource("5_lkble")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfg0r"]
+texture = ExtResource("6_fg3uf")
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ahoym"]
+texture = ExtResource("5_lkble")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y1wgc"]
+texture = ExtResource("6_fg3uf")
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ltuqc"]
+texture = ExtResource("5_lkble")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f185j"]
+texture = ExtResource("6_fg3uf")
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fg3uf"]
+
+[node name="StatisticMenu" type="Control" unique_id=1317758830]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_l6cit")
+script = ExtResource("3_4q3rr")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1365345311]
+modulate = Color(1, 1, 1, 0.6313726)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4q3rr")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1326788827]
+clip_contents = false
+layout_mode = 0
+offset_top = 200.0
+offset_right = 1080.0
+offset_bottom = 1620.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="StatContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=263366120]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/StatContainer" unique_id=1040339097]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lkble")
+
+[node name="QuantityPanel" type="PanelContainer" parent="ScrollContainer/StatContainer" unique_id=1345902306]
+z_index = 1
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_vpwf6")
+
+[node name="Background" type="Panel" parent="ScrollContainer/StatContainer/QuantityPanel" unique_id=313985515]
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ibgqg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/StatContainer/QuantityPanel" unique_id=194347734]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer" unique_id=436009478]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("7_mqi62")
+theme_override_font_sizes/font_size = 35
+text = "UI_STAT_LABEL_QUANTITY"
+vertical_alignment = 1
+
+[node name="Separator" type="TextureRect" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer" unique_id=1874055488]
+layout_mode = 2
+texture = ExtResource("8_sfg0r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer" unique_id=1724226318]
+layout_mode = 2
+theme_override_constants/separation = -20
+alignment = 1
+
+[node name="StoneQuantity" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer/HBoxContainer" unique_id=1451153396 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+
+[node name="GoldQuantity" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer/HBoxContainer" unique_id=984595109 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 101
+
+[node name="SapphireQuantity" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer/HBoxContainer" unique_id=1032712100 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 102
+
+[node name="RubyQuantity" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer/HBoxContainer" unique_id=1733414270 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 103
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer" unique_id=1137557864]
+layout_mode = 2
+theme_override_constants/separation = -20
+alignment = 1
+
+[node name="EmeraldQuantity" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer/HBoxContainer2" unique_id=485222544 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 104
+
+[node name="DiamondQuantity" parent="ScrollContainer/StatContainer/QuantityPanel/VBoxContainer/HBoxContainer2" unique_id=1558238988 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 105
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/StatContainer" unique_id=733044132]
+layout_mode = 2
+
+[node name="XpPanel" type="PanelContainer" parent="ScrollContainer/StatContainer" unique_id=513619441]
+z_index = 1
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_vpwf6")
+
+[node name="Background" type="Panel" parent="ScrollContainer/StatContainer/XpPanel" unique_id=1183359344]
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ibgqg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/StatContainer/XpPanel" unique_id=131981115]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer" unique_id=796126175]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("7_mqi62")
+theme_override_font_sizes/font_size = 35
+text = "UI_STAT_LABEL_XP"
+vertical_alignment = 1
+
+[node name="Separator" type="TextureRect" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer" unique_id=1918936299]
+layout_mode = 2
+texture = ExtResource("8_sfg0r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer" unique_id=766969468]
+layout_mode = 2
+theme_override_constants/separation = -20
+alignment = 1
+
+[node name="StoneQuantity" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer/HBoxContainer" unique_id=2070372815 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 200
+
+[node name="GoldQuantity" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer/HBoxContainer" unique_id=573378436 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 201
+
+[node name="SapphireQuantity" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer/HBoxContainer" unique_id=971495627 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 202
+
+[node name="RubyQuantity" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer/HBoxContainer" unique_id=650379744 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 203
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer" unique_id=115704135]
+layout_mode = 2
+theme_override_constants/separation = -20
+alignment = 1
+
+[node name="EmeraldQuantity" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer/HBoxContainer2" unique_id=1072521104 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 204
+
+[node name="DiamondQuantity" parent="ScrollContainer/StatContainer/XpPanel/VBoxContainer/HBoxContainer2" unique_id=1714164236 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 205
+
+[node name="RuntimePanel" type="PanelContainer" parent="ScrollContainer/StatContainer" unique_id=839599553]
+z_index = 1
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_mqi62")
+
+[node name="Background" type="Panel" parent="ScrollContainer/StatContainer/RuntimePanel" unique_id=294350635]
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sfg0r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/StatContainer/RuntimePanel" unique_id=1676827458]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer" unique_id=1837566571]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("7_mqi62")
+theme_override_font_sizes/font_size = 35
+text = "UI_STAT_LABEL_RUNTIME"
+vertical_alignment = 1
+
+[node name="Separator" type="TextureRect" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer" unique_id=629564995]
+layout_mode = 2
+texture = ExtResource("8_sfg0r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer" unique_id=1406461088]
+layout_mode = 2
+theme_override_constants/separation = -20
+alignment = 1
+
+[node name="CritChance" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer/HBoxContainer" unique_id=1169599324 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_vertical = 4
+stat = 600
+
+[node name="CritPower" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer/HBoxContainer" unique_id=190396467 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_vertical = 4
+stat = 601
+
+[node name="Luck" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer/HBoxContainer" unique_id=1711104142 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_vertical = 4
+stat = 520
+
+[node name="Damage" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer/HBoxContainer" unique_id=2103097708 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_vertical = 4
+stat = 700
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer" unique_id=445852058]
+layout_mode = 2
+theme_override_constants/separation = -20
+alignment = 1
+
+[node name="TimerDuration" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer/HBoxContainer2" unique_id=605120956 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_vertical = 4
+stat = 500
+
+[node name="TimerPenalty" parent="ScrollContainer/StatContainer/RuntimePanel/VBoxContainer/HBoxContainer2" unique_id=1269512884 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_vertical = 4
+stat = 501
+
+[node name="HeatPanel" type="PanelContainer" parent="ScrollContainer/StatContainer" unique_id=1664075132]
+z_index = 1
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_ahoym")
+
+[node name="Background" type="Panel" parent="ScrollContainer/StatContainer/HeatPanel" unique_id=2031047403]
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_y1wgc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/StatContainer/HeatPanel" unique_id=963407489]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer" unique_id=1156998876]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("7_mqi62")
+theme_override_font_sizes/font_size = 35
+text = "UI_STAT_LABEL_HEAT"
+vertical_alignment = 1
+
+[node name="Separator" type="TextureRect" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer" unique_id=1995053463]
+layout_mode = 2
+texture = ExtResource("8_sfg0r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer" unique_id=992947588]
+layout_mode = 2
+alignment = 1
+
+[node name="HeatTier1" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer/HBoxContainer" unique_id=258870113 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stat = 1306
+
+[node name="HeatTier2" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer/HBoxContainer" unique_id=2029834416 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stat = 1307
+
+[node name="HeatTier3" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer/HBoxContainer" unique_id=721797142 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stat = 1308
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer" unique_id=555106911]
+layout_mode = 2
+alignment = 1
+
+[node name="HeatXp" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer/HBoxContainer2" unique_id=1221528856 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stat = 1303
+
+[node name="HeatCrit" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer/HBoxContainer2" unique_id=2127603435 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stat = 1304
+
+[node name="HeatQuantity" parent="ScrollContainer/StatContainer/HeatPanel/VBoxContainer/HBoxContainer2" unique_id=1171772746 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stat = 1305
+
+[node name="EventPanel" type="PanelContainer" parent="ScrollContainer/StatContainer" unique_id=324518118]
+z_index = 1
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_ltuqc")
+
+[node name="Background" type="Panel" parent="ScrollContainer/StatContainer/EventPanel" unique_id=1537109349]
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_f185j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/StatContainer/EventPanel" unique_id=505393266]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer" unique_id=715635539]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("7_mqi62")
+theme_override_font_sizes/font_size = 35
+text = "UI_STAT_LABEL_EVENT"
+vertical_alignment = 1
+
+[node name="Separator" type="TextureRect" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer" unique_id=1180279138]
+layout_mode = 2
+texture = ExtResource("8_sfg0r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer" unique_id=1982665983]
+layout_mode = 2
+alignment = 1
+
+[node name="BombChance" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer/HBoxContainer" unique_id=1042379698 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 620
+
+[node name="RelicChance" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer/HBoxContainer" unique_id=903725553 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 640
+
+[node name="GoldRushChance" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer/HBoxContainer" unique_id=1292782381 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 660
+
+[node name="EchoChance" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer/HBoxContainer" unique_id=769208532 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 650
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer" unique_id=1523700828]
+layout_mode = 2
+alignment = 1
+
+[node name="BombPower" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer/HBoxContainer2" unique_id=159125260 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 621
+
+[node name="RelicPower" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer/HBoxContainer2" unique_id=1779504230 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 641
+
+[node name="GoldRushPower" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer/HBoxContainer2" unique_id=848370166 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 661
+
+[node name="EchoPower" parent="ScrollContainer/StatContainer/EventPanel/VBoxContainer/HBoxContainer2" unique_id=1192430906 instance=ExtResource("5_3xpff")]
+layout_mode = 2
+stat = 651
+
+[node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/StatContainer" unique_id=1720171685]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fg3uf")

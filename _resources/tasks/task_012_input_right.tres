@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Task" format=3 uid="uid://b0fi172f6vawv"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_we7yh"]
+[ext_resource type="Texture2D" uid="uid://bt7lrqithfs4m" path="res://assets/symbols/stone_right.png" id="2_j7psh"]
+[ext_resource type="Script" uid="uid://bj0fbj6y5qgc6" path="res://_data/task.gd" id="2_x5wo1"]
+
+[sub_resource type="Resource" id="Resource_sde1y"]
+script = ExtResource("1_we7yh")
+ore = 1
+quantity = 10
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[resource]
+script = ExtResource("2_x5wo1")
+type = 5
+id = 11
+description = "TASK_011_DESCRIPTION"
+base_required_amount = 30
+base_rewards = Array[ExtResource("1_we7yh")]([SubResource("Resource_sde1y")])
+max_level = 15
+icon = ExtResource("2_j7psh")
+metadata/_custom_type_script = "uid://bj0fbj6y5qgc6"

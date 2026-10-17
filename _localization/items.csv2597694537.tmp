@@ -1,0 +1,150 @@
+key;en;fr
+ITEM_000_NAME;RGB Talisman;Talisman RGB
+ITEM_000_DESCRIPTION;A ancient talisman with the true power of pixel color;Un ancien talisman contenant la puissance de la couleur du pixel
+ITEM_001_NAME;Time control;Contrôle du temps
+ITEM_001_DESCRIPTION;Artefact able to bend time;Artafact capable de courber le temps
+ITEM_002_NAME;Marksman best friend;Meilleur amis du tireur
+ITEM_002_DESCRIPTION;Its mecanism make everything critical;Son mécanisme rend tout critique
+ITEM_003_NAME;Artefact of abundance;Artefact d'abondance
+ITEM_003_DESCRIPTION;Ores tends to multiply upon its contact;Les minerais ont tendance à se multiplier à son contact
+ITEM_004_NAME;Lucky charm;Porte bonheur
+ITEM_004_DESCRIPTION;All the odds inside a small piece of ancient technology;Tout la chance contenu dans une petite piece de technologie ancienne
+ITEM_005_NAME;Big amulet of Nope;Grosse amulette du Nan
+ITEM_005_DESCRIPTION;Prevents bad thing to happen;Empêche les mauvaise choses de se produire
+ITEM_006_NAME;The golden one;L'unique doré
+ITEM_006_DESCRIPTION;Attract gold and make people rich;Attire l'or et rend les gens riches
+ITEM_007_NAME;Artefact of knowledge;Artefact du savoir
+ITEM_007_DESCRIPTION;Makes learning fun and fast;Rend l'apprentissage rapide et marrant
+ITEM_008_NAME;Heat piece;Pièce de combo
+ITEM_008_DESCRIPTION;The missing part of the heat system;Le module manquant du système de combo
+ITEM_009_NAME;Event viewer;Observateur d'évènements
+ITEM_009_DESCRIPTION;It makes events more likely to happen;Il a tendance à faire apparaitre des évènements
+ITEM_100_NAME;Rusty pickaxe;Pioche rouillée
+ITEM_100_DESCRIPTION;It's old but it gets the job done;Elle est vieille mais elle fait le taff
+ITEM_101_NAME;Dwarven pickaxe;Pioche de nain
+ITEM_101_DESCRIPTION;Dwarves are professionals and professionals have standards : this pickaxe is a must have for this job !;Les nains sont des professionnels et les professionnels ont des standards : cette pioche est la norme dans le métier !
+ITEM_102_NAME;Primal pickaxe;Pioche primitive
+ITEM_102_DESCRIPTION;Nothing can beat rock pickaxe from pre-historic time.;Rien ne bat une pioche en cailloux préhistorique.
+ITEM_103_NAME;Mechanical pickaxe;Pioche mécanique
+ITEM_103_DESCRIPTION;Because why not try to add mechanical engineering inside a pickaxe ?;Parce que pourquoi pas ajouter de l'ingénieurie mécanique sur une pioche ?
+ITEM_110_NAME;Tuned Pickaxe;Pioche tunée
+ITEM_110_DESCRIPTION;Because it's to stylish to have a damascus decorated blade.;Parce que c'est trop stylé d'avoir une lame en damascus avec motifs.
+ITEM_111_NAME;Tribal pickaxe;Pioche tribale
+ITEM_111_DESCRIPTION;Blessed by shamans and used during the sacrificial rituals of sacred chickens;Bénie par les shamans et utilisée pendant les rituels de sacrifice de poulets sacrés.
+ITEM_112_NAME;Enhanced primal pickaxe;Pioche primitive avancée
+ITEM_112_DESCRIPTION;This is the upgrade of already imbeatable primitive pickaxe !;C'est la mise à jour de la version déjà imbattable de la pioche primitive !
+ITEM_113_NAME;Iron Pickaxe;Pioche en fer
+ITEM_113_DESCRIPTION;Simplicity and efficiency;Simplicité et efficacité
+ITEM_120_NAME;Energy pickage;Pioche énergetique
+ITEM_120_DESCRIPTION;If you put energy cell inside a pickaxe, it destroy everything.;Si vous mettez une cellule d'énergie dans une pioche, elle détruit absolument tout.
+ITEM_121_NAME;Bone pickage;Pioche en os
+ITEM_121_DESCRIPTION;With a good glass of milk, bones can broke ore into pieces.;Avec un bon verre de lait, des os peuvent mettre le minerai en pièces.
+ITEM_122_NAME;Ore pickaxe;Pioche de minerai
+ITEM_122_DESCRIPTION;After all, why not us ore to mine ore ?;Après tout, pourquoi ne pas utiliser du minerai pour miner du minerai ?
+ITEM_123_NAME;Titanium pickaxe;Pioche en titane
+ITEM_123_DESCRIPTION;Near perfect pickaxe which melt roc.;Pioche quasi parfaite qui fait fondre la roche.
+ITEM_130_NAME;Ultimate pickaxe;Pioche ultime
+ITEM_130_DESCRIPTION;It gather ore before you think of mining it;Elle récolte le minerai avant même que vous ne pensiez le miner
+ITEM_131_NAME;Arcane pickaxe;Pioche arcane
+ITEM_131_DESCRIPTION;Use the dark hidden power of this pickaxe to mine beyond human comprehension.;Utilise le sombre pouvoir caché de cette pioche pour miner au délà de la compréhension humaine.
+ITEM_132_NAME;Angel pickaxe;Pioche rouillée
+ITEM_132_DESCRIPTION;Summon heaven power to collect those holy ore;Invoque le pouvoir de l'au dela pour collecter le minerai sacré
+ITEM_133_NAME;Drake pickaxe;Pioche dragonique
+ITEM_133_DESCRIPTION;Put a drake inside a pickaxe to not just mine ore but destroy the whole cavern with it.;Ajoute un dragon dans la pioche pour pas juste détruire la roche mais également toute la grotte avec.
+ITEM_200_NAME;Basic helmet;Casque basique
+ITEM_200_DESCRIPTION;It cover miner's head and keep it warm;Il couvre la tête du mineur et la garde au chaud
+ITEM_201_NAME;Iron helmet;Casque en fer
+ITEM_201_DESCRIPTION;Solid helmet for a solid miner.;Un casque solide pour un mineur solide.
+ITEM_202_NAME;Adventurer helmet;Casque d'aventurier
+ITEM_202_DESCRIPTION;Made for exploration and discoveries.;Fait pour l'exploration et les découvertes.
+ITEM_203_NAME;Just a towel;Juste une serviette
+ITEM_203_DESCRIPTION;Everybody needs a towel !;Tout le monde a besoin d'une serviette !
+ITEM_210_NAME;Knight helmet;Casque de chevalier
+ITEM_210_DESCRIPTION;This is what a knight would wear if it was asked to mine.;C'est ce que porterait un chevalier s'il lui était demandé de miner.
+ITEM_211_NAME;Mechanical helmet;Casque mécanique
+ITEM_211_DESCRIPTION;Because why not try to add mechanical engineering inside a helmet ?;Parce que pourquoi pas ajouter de l'ingénieurie mécanique sur un casque ?
+ITEM_212_NAME;Scout helmet;Casque de scout
+ITEM_212_DESCRIPTION;Hidding in a bush grant you insibility.;Se cacher dans un buisson vous octroie l'invisibilité
+ITEM_213_NAME;Bone helmet;Casque en os
+ITEM_213_DESCRIPTION;Put other's bone to cover your own bones;Prendre les os des autres pour couvrir vos propres os.
+ITEM_220_NAME;Pilot Helmet;Casque de pilote
+ITEM_220_DESCRIPTION;A helmet is a helmet, even if it's purpose is not to mine !;Un casque est un casque, même si son objectif n'est pas de miner !
+ITEM_221_NAME;Viking helmet;Casque de Viking
+ITEM_221_DESCRIPTION;Crush, destroy and GET ORE BY ODIN !;Ecrase, détruis et CHOPE DU MINERAI PAR ODIN !
+ITEM_222_NAME;Diver helmet;Casque de plongée
+ITEM_222_DESCRIPTION;Underwater, nobody can hear you mine.;Sous l'eau, personne ne vous entendra miner
+ITEM_223_NAME;Ore helmet;Casque de minerai
+ITEM_223_DESCRIPTION;Ore on helmet won't make you rich, but it sure look fancy;Du minerai sur un casque ne vous rendra pas plus riche, mais ca ajoute un côté fantaisiste.
+ITEM_230_NAME;Holy helmet;Casque sacré
+ITEM_230_DESCRIPTION;In the name of gooooooooooood ! For the grace, for the might of our lord !;Par le nom de dieeeeeeeeeeeeeeeeeu ! Pour la grâce, pour la puissance de notre seigneur !
+ITEM_231_NAME;Arcane helmet;Casque arcane
+ITEM_231_DESCRIPTION;The void is waiting for ore sacrifice.;Le néant attend son sacrifice de minerai.
+ITEM_232_NAME;Universe helmet;Casque de l'univers
+ITEM_232_DESCRIPTION;Here we are, born to be king with the helmet of the universe !;Nous y voila, né pour être des rois portant le casque de l'univers !
+ITEM_233_NAME;Drake helmet;Casque de dragon
+ITEM_233_DESCRIPTION;It spits fire and melt everything it touches.;Il crache du feu et fait foudre tout ce qu'il touche.
+ITEM_300_NAME;Small lantern;Petite lanterne
+ITEM_300_DESCRIPTION;Can light around but not too far;Peut éclairer les alentours mais pas trop loin
+ITEM_301_NAME;Square lantern;Lanterne carrée
+ITEM_301_DESCRIPTION;Simple and sturdy, it won't let you down in the dark;Simple et robuste, elle ne vous laissera pas dans le noir.
+ITEM_302_NAME;Train lantern;Lanterne de train
+ITEM_302_DESCRIPTION;Tchoo tchoo, let the light come as fast as a steam train !;Tchou tchou ! Que la lumière vienne aussi vite qu'un train à vapeur !
+ITEM_303_NAME;Light in a jar;Lumière dans une jarre
+ITEM_303_DESCRIPTION;A candle, an empty jar of jam and some fire to light your happy days.;Une bougie, un pot de confiture vide et un peu de feu pour illuminer vos jours heureux.
+ITEM_310_NAME;Rusty lantern;Lanterne rouillée
+ITEM_310_DESCRIPTION;It's old with some holes with oil leaking which makes it totaly safe to handle in the dark.;Elle est vieille et rouillée avec des trou d'où coule de l'huile ce qui la rend totalement sûre à manipuler dans le noir.
+ITEM_311_NAME;Tavern lamp;Lampe de taverne
+ITEM_311_DESCRIPTION;Lantern from an external wall of the last tavern you rob like the filthy thief you are.;Lanterne provenant d'un mur extérieur de la dernière taverne que vous avez pillé comme le sale voleur que vous êtes.
+ITEM_312_NAME;Lantern of nature;Lanterne de la nature
+ITEM_312_DESCRIPTION;Let the light from plant heal your wound.;Laisse la lueur d'une plante soigner tes blessures.
+ITEM_313_NAME;Skull lantern;Crâne lanterne
+ITEM_313_DESCRIPTION;Recycle your enemy's head into a lovely lantern lighting all the memories you had with him;Recycle la tête de votre ennemi en une mignonne lanterne illuminant les souvenirs que vous avez vécu avec lui.
+ITEM_320_NAME;Green lantern;Lanterne verte
+ITEM_320_DESCRIPTION;Legend says it can materialize whatever you can imagine, so think of something big !;La légende racontre qu'elle peut matérialiser tout ce que vous pouvez imaginer, alors pensez à quelque chose d'énorme !
+ITEM_321_NAME;Water powered lantern;Lanterne alimentée à l'eau
+ITEM_321_DESCRIPTION;Nobody knows how it works but it uses the power of water to emit light.;Personne ne comprends comment ça fonctionne mais ça utilise le pouvoir de l'eau pour émettre de la lumière.
+ITEM_322_NAME;Warm lantern;Lanterne chauffante
+ITEM_322_DESCRIPTION;Its fire releases so much heat you always stays warm even during the coldest winters.;Son feu dégage tellement de chaleur que vous restez toujours au chaud même pendant les hivers les plus froids.
+ITEM_323_NAME;Energy cell;Cellule d'énergie
+ITEM_323_DESCRIPTION;Initially intended to power an ancient mechanism but you stole it to light your path.;Initialement prévu pour alimenter un ancient mécanisme mais vous l'avez volé pour illuminer votre chemin.
+
+ITEM_330_NAME;Red Lantern;Lanterne rouge
+ITEM_330_DESCRIPTION;Rebel lantern used during the war for underground meetings to organize the resistance.;Lanterne des rebelles utilisée pendant la guerre lors des rencontres dans les souterain pour organiser la résistance.
+ITEM_331_NAME;Galactic lantern;Lanterne galactique
+ITEM_331_DESCRIPTION;Contains a tiny slowly spinning galaxy. Its stars are blue, red or green and together, they emit a bright white light;Renferme une petite galaxie qui tourne lentement. Ses étoiles sont bleues, rouges ou vertes et ensemble, elles émettent une intense lumière blanche.
+ITEM_332_NAME;Drake's head;Tête de dragon
+ITEM_332_DESCRIPTION;Once, there was a dragon, sovereign of the skies, that reduced villages and crops to ash. Then came a hero who, with a well-aimed sword stroke, beheaded the beast and restored peace to the kingdom.;Autrefois un dragon, souverain des cieux, qui réduisait en cendre villages et récoltes. Vint un héros qui d'un coup d'épée bien placé, le décapita ramenant la paix sur le royaume.
+ITEM_333_NAME;Heaven's light;Lumière du ciel
+ITEM_333_DESCRIPTION;Once a lantern used to light the path of the dead to guide them to after to the afterlife, its light brings out the good in us.;Autrefois une lanterne utilisée pour illuminer le chemin des défunts pour les guider dans l'au delà, sa lumière fait ressortir ce qu'il y a de bon en nous.
+ITEM_400_NAME;Iron ring;Anneau en fer
+ITEM_400_DESCRIPTION;Don't get it too close to fire or it will melt.;Ne l'approchez pas trop du feu où il va fondre.
+ITEM_401_NAME;Copper ring;Anneau de cuivre
+ITEM_401_DESCRIPTION;Not very durable, but with a lovely orange hue.;Peu résistant mais d'une jolie teinte orangée.
+ITEM_402_NAME;Wood ring;Ring en bois
+ITEM_402_DESCRIPTION;If you don't even enough money to get a real jewel, you can still take some branches and twist them to make a ring.;Si vous n'avez pas assez d'argent pour avoir un bijou, vous pouvez toujours utiliser des branches pour les tordres et en faire un anneau.
+ITEM_403_NAME;Bone ring;Anneau en os
+ITEM_403_DESCRIPTION;The monster had no chance against you so you want to make sure everybody can see it by wearnig one of his bone around your finger.;Le monstre n'avait aucune chance contre vous donc vous voulez être sûr que tout le monde le sache en portant un de ses os autour de votre doigt.
+ITEM_410_NAME;Mechanical ring;Anneau mécanique
+ITEM_410_DESCRIPTION;Because why not try to add mechanical engineering inside a ring ?;Parce que pourquoi pas ajouter de l'ingénieurie mécanique dans un anneau ?
+ITEM_411_NAME;Ring of duty;L'anneau du devoir
+ITEM_411_DESCRIPTION;This ring was bestowed upon you for keeping your word regarding the task entrusted to you by the King to whom you have sworn allegiance.;Cet anneau vous a été remis pour avoir honoré votre parole dans la tache qui vous a été confié par le Roi pour qui vous pretez allégence.
+ITEM_412_NAME;Ring of luck;Anneau de chance
+ITEM_412_DESCRIPTION;Provides come back of the loved one, wealth, success at work and zeal in bed.;Assure le retour de l'être aimé, la richesse, le succès au travail et la ferveur dans le lit.
+ITEM_413_NAME;Skull lizard ring;Anneau de crâne de lézard
+ITEM_413_DESCRIPTION;You took a lizard that looks like a tiny drake and rip off his skin and organs to make a ring to show dominance.;Vous avez pris un lézard ressemblant à un miniscule dragon et vous lui avez arraché la peau et les organes pour en faire un anneau qui montre votre domination.
+ITEM_420_NAME;River ring;Anneau de la rivière 
+ITEM_420_DESCRIPTION;Its blue color comes from the calm and quiet little river where it was cooled during its forging.;Sa couleur bleue provient de la rivière calme et silencieuse dans laquelle il a été refroidit pendant sa forge.
+ITEM_421_NAME;Moon ring;Anneau de lune
+ITEM_421_DESCRIPTION;It reach its full potential at night when you can see a bright moon. Else it's just a shiny piece of rare metal;Il atteint son plein potentiel la nuit qua d on peut voir briller la lune. Sinon c'est juste une pièce de métal rafe brillant. 
+ITEM_422_NAME;Magma ring;Anneaux de magma
+ITEM_422_DESCRIPTION;So hot it burns what you touch making it as incandescent as a volcano.;Si chaud qu'il brûle ce que vous touchez le rendant aussi incandescent qu'un volcan.
+ITEM_423_NAME;Frost ring;Anneau de givre
+ITEM_423_DESCRIPTION;So cold it freezes what you touch making it as fragile as a thin layer of glass.; Si froid qu'il congèle ce que vous touchez le rendant aussi fragile qu'une fine couche de verre.
+ITEM_430_NAME;Ring of incandescence;Anneau d'incandescence
+ITEM_430_DESCRIPTION;It glows in red in the dark when someone near tries to attack you.;Il brille en rouge dans le noir quand quelqu'un proche de vous veux vous attaquer.
+ITEM_431_NAME;Ring of the universe;Anneau de l'univers
+ITEM_431_DESCRIPTION;Phenomenal Cosmic Powers! Itty Bitty Living Space!;Un pouvoir cosmique phénomenal ! Dans un vrai mouchoir de poche !
+ITEM_432_NAME;Drake ring;Anneau du dragon
+ITEM_432_DESCRIPTION;Forged in volcano's flames, this ring will unleash the fury of the sovereign of the skies;Forgé dans les flammes d'un volcan, cet anneau déchaînera la fureur du souverain des cieux.
+ITEM_433_NAME;God's ring;Anneau de dieu
+ITEM_433_DESCRIPTION;Makes you immortal and happy forever. Whatever you do, it will be blessed by chance, success and kindness;Vous rend immortel et heureux pour toujours. Quoi que vous entrepreniez, ce sera bénit par la chance, le succès et la bienveillance.

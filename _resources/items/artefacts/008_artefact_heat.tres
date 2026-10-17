@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c042jbgsyxfrg"]
+
+[ext_resource type="Resource" uid="uid://cpaqo7bh2xxli" path="res://_resources/items/descriptions/item_008.tres" id="1_1hx56"]
+[ext_resource type="Texture2D" uid="uid://bvr6sqxhicnib" path="res://assets/atlas/artefacts_atlas.png" id="2_gfs58"]
+[ext_resource type="Script" uid="uid://6rjj0t56qr88" path="res://_data/item.gd" id="3_gfs58"]
+[ext_resource type="Script" uid="uid://dlbtrjuhbb1gy" path="res://_data/stat_value.gd" id="4_yww5d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfcxj"]
+atlas = ExtResource("2_gfs58")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="Resource" id="Resource_bt0a2"]
+script = ExtResource("4_yww5d")
+stat = 1300
+value = 5.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_noslu"]
+script = ExtResource("4_yww5d")
+stat = 1302
+value = -1.0
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_or35b"]
+script = ExtResource("4_yww5d")
+stat = 1306
+value = -10.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_pp0ri"]
+script = ExtResource("4_yww5d")
+stat = 1307
+value = -15.0
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_p8ml0"]
+script = ExtResource("4_yww5d")
+stat = 1308
+value = -10.0
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[resource]
+script = ExtResource("3_gfs58")
+hash = "djE7NDs0Ozg7MTMwMCw1LjAsMDsxMzAxLC0xLjAsMDsxMzA2LC0xMC4wLDA7MTMwNywtMTUuMCwwOzEzMDgsLTEwLjAsMHw3N2FiYjNiYTkyMTlmM2JkYzczOTlhZjczNjU3MDJlNjlkODg2ZDU5OTcxZDMxYjI5YjllNTNiMmE4ODU1ZGNh"
+description = ExtResource("1_1hx56")
+icon = SubResource("AtlasTexture_vfcxj")
+type = 4
+rarity = 4
+stats = Array[ExtResource("4_yww5d")]([SubResource("Resource_bt0a2"), SubResource("Resource_noslu"), SubResource("Resource_or35b"), SubResource("Resource_pp0ri"), SubResource("Resource_p8ml0")])

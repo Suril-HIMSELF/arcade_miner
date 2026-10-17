@@ -1,0 +1,271 @@
+[gd_scene format=3 uid="uid://dvoqfdvw3f0p5"]
+
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="1_2o053"]
+[ext_resource type="Script" uid="uid://csqlgtx4e66o1" path="res://scenes/tooltips/inventory/tooltip_inventory.gd" id="1_38ong"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="3_jdxsg"]
+[ext_resource type="Texture2D" uid="uid://bpdnkshu62dn0" path="res://assets/backgrounds/background_tooltip.png" id="4_5jp25"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="5_2o053"]
+[ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/frames/frame_shadow.png" id="5_drfir"]
+[ext_resource type="Texture2D" uid="uid://cy4018swg11nx" path="res://assets/atlas/pickaxe_atlas_128.png" id="6_drfir"]
+[ext_resource type="Texture2D" uid="uid://7whusx0kgrw2" path="res://assets/frames/frame_normal.png" id="6_xn3eq"]
+[ext_resource type="Texture2D" uid="uid://bmx6f65s5watr" path="res://assets/frames/separator_h.png" id="8_xn3eq"]
+[ext_resource type="Texture2D" uid="uid://bsh0x5f4xjbyy" path="res://assets/buttons/button_green.png" id="9_dk0p8"]
+[ext_resource type="Texture2D" uid="uid://b46wayhwevqv6" path="res://assets/frames/frame_small.png" id="9_xn3eq"]
+[ext_resource type="Texture2D" uid="uid://gjcri7dvlebd" path="res://assets/buttons/button_red.png" id="10_drfir"]
+
+[sub_resource type="Theme" id="Theme_wkg6y"]
+default_font = ExtResource("1_2o053")
+default_font_size = 30
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wfhxq"]
+texture = ExtResource("3_jdxsg")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="Theme" id="Theme_jdxsg"]
+Panel/styles/panel = SubResource("StyleBoxTexture_wfhxq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5obhr"]
+texture = ExtResource("3_jdxsg")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2or4i"]
+texture = ExtResource("4_5jp25")
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sr5v5"]
+texture = ExtResource("5_drfir")
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dsd3e"]
+texture = ExtResource("6_xn3eq")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flexf"]
+atlas = ExtResource("6_drfir")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tlcvc"]
+texture = ExtResource("9_xn3eq")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0vejm"]
+texture = ExtResource("9_xn3eq")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xn3eq"]
+texture = ExtResource("9_dk0p8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_flexf"]
+texture = ExtResource("9_dk0p8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxqfs"]
+texture = ExtResource("9_dk0p8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c0edb"]
+texture = ExtResource("9_dk0p8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0jy5k"]
+texture = ExtResource("10_drfir")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bcch7"]
+texture = ExtResource("10_drfir")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4i4jg"]
+texture = ExtResource("10_drfir")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kylpt"]
+texture = ExtResource("10_drfir")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_npb3c"]
+texture = ExtResource("10_drfir")
+
+[node name="TooltipInventory" type="CanvasLayer" unique_id=373503403]
+
+[node name="Control" type="Control" parent="." unique_id=494226572]
+z_index = 8
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_wkg6y")
+script = ExtResource("1_38ong")
+
+[node name="BlackVeil" type="ColorRect" parent="Control" unique_id=47317358]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5529412)
+
+[node name="Panel" type="PanelContainer" parent="Control" unique_id=767231601]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -450.0
+offset_right = 888.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_jdxsg")
+theme_override_styles/panel = SubResource("StyleBoxTexture_5obhr")
+
+[node name="Background" type="Panel" parent="Control/Panel" unique_id=1316437266]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2or4i")
+
+[node name="InnerShadow" type="Panel" parent="Control/Panel" unique_id=2068251222]
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sr5v5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel" unique_id=1841094001]
+layout_mode = 2
+mouse_force_pass_scroll_events = false
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Header" type="HBoxContainer" parent="Control/Panel/VBoxContainer" unique_id=486293647]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="Control/Panel/VBoxContainer/Header" unique_id=2128737247]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_styles/disabled = SubResource("StyleBoxTexture_dsd3e")
+disabled = true
+
+[node name="Icon" type="TextureRect" parent="Control/Panel/VBoxContainer/Header/Button" unique_id=471227325]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_flexf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/Header" unique_id=276514889]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Title" type="Label" parent="Control/Panel/VBoxContainer/Header/TitleContainer" unique_id=1101513374]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_2o053")
+theme_override_font_sizes/font_size = 38
+text = "Basic Pickaxe"
+vertical_alignment = 1
+
+[node name="Rarity" type="Label" parent="Control/Panel/VBoxContainer/Header/TitleContainer" unique_id=1358863693]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Epic"
+vertical_alignment = 1
+
+[node name="DescriptionPanel" type="PanelContainer" parent="Control/Panel/VBoxContainer" unique_id=1848580062]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tlcvc")
+
+[node name="Description" type="Label" parent="Control/Panel/VBoxContainer/DescriptionPanel" unique_id=1308779516]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 26
+text = "This is a placeholder description made to see the rendering of this frame."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Separator1" type="TextureRect" parent="Control/Panel/VBoxContainer" unique_id=429967258]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+texture = ExtResource("8_xn3eq")
+expand_mode = 1
+
+[node name="ContentPanel" type="PanelContainer" parent="Control/Panel/VBoxContainer" unique_id=918163938]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0vejm")
+
+[node name="Content" type="VBoxContainer" parent="Control/Panel/VBoxContainer/ContentPanel" unique_id=40132245]
+custom_minimum_size = Vector2(500, 250)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Footer" type="HBoxContainer" parent="Control/Panel/VBoxContainer" unique_id=297970248]
+layout_mode = 2
+size_flags_vertical = 10
+alignment = 1
+
+[node name="EquipButton" type="Button" parent="Control/Panel/VBoxContainer/Footer" unique_id=1849184850]
+custom_minimum_size = Vector2(280, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("5_2o053")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_xn3eq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_flexf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bxqfs")
+theme_override_styles/focus = SubResource("StyleBoxTexture_c0edb")
+text = "TOOLTIP_INVENTORY_BUTTON_EQUIP"
+
+[node name="DeleteButton" type="Button" parent="Control/Panel/VBoxContainer/Footer" unique_id=112320164]
+custom_minimum_size = Vector2(280, 100)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("5_2o053")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxTexture_0jy5k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bcch7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4i4jg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_kylpt")
+theme_override_styles/focus = SubResource("StyleBoxTexture_npb3c")
+text = "TOOLTIP_INVENTORY_BUTTON_DELETE"
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/Footer/EquipButton" to="Control" method="_on_equip_button_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/Footer/DeleteButton" to="Control" method="_on_delete_button_pressed"]

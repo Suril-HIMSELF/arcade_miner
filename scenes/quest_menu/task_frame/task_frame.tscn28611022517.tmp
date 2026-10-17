@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://duneeu42gph4n"]
+
+[ext_resource type="Script" uid="uid://danr3a0hjhbal" path="res://scenes/quest_menu/TaskFrame/task_frame.gd" id="1_dretj"]
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/Frame_light.png" id="1_ysxwo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf8q8"]
+texture = ExtResource("1_ysxwo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[node name="TaskFrame" type="Panel"]
+offset_right = 1000.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qf8q8")
+script = ExtResource("1_dretj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = -40.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Description" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "Collect 999 stone"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RewardsContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ClaimButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2

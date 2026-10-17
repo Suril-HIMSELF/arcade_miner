@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://ct260j3s2bwb1"]
+
+[ext_resource type="Resource" uid="uid://bql6hehq4o8p" path="res://_resources/items/descriptions/item_007.tres" id="1_3buux"]
+[ext_resource type="Texture2D" uid="uid://bvr6sqxhicnib" path="res://assets/atlas/artefacts_atlas.png" id="2_tmnhs"]
+[ext_resource type="Script" uid="uid://6rjj0t56qr88" path="res://_data/item.gd" id="3_tmnhs"]
+[ext_resource type="Script" uid="uid://dlbtrjuhbb1gy" path="res://_data/stat_value.gd" id="4_p5twl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57hgv"]
+atlas = ExtResource("2_tmnhs")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="Resource" id="Resource_bt0a2"]
+script = ExtResource("4_p5twl")
+stat = 200
+value = 1.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_3buux"]
+script = ExtResource("4_p5twl")
+stat = 201
+value = 2.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_8rdmh"]
+script = ExtResource("4_p5twl")
+stat = 202
+value = 3.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_ineon"]
+script = ExtResource("4_p5twl")
+stat = 203
+value = 4.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_a8fvu"]
+script = ExtResource("4_p5twl")
+stat = 204
+value = 5.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_qftuj"]
+script = ExtResource("4_p5twl")
+stat = 205
+value = 6.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[resource]
+script = ExtResource("3_tmnhs")
+hash = "djE7NDs0Ozc7MjAwLDEuMCwwOzIwMSwyLjAsMDsyMDIsMy4wLDA7MjAzLDQuMCwwOzIwNCw1LjAsMDsyMDUsNi4wLDB8MDI2MDVhZmZlMzEzNDIwZjQ3NTA3ODhiYmU3ZTg4OWQxNTM3NDA3ZDMzNjk0MDE3NThjODMxNjhmMTJjMjRmOQ=="
+description = ExtResource("1_3buux")
+icon = SubResource("AtlasTexture_57hgv")
+type = 4
+rarity = 4
+stats = Array[ExtResource("4_p5twl")]([SubResource("Resource_bt0a2"), SubResource("Resource_3buux"), SubResource("Resource_8rdmh"), SubResource("Resource_ineon"), SubResource("Resource_a8fvu"), SubResource("Resource_qftuj")])

@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://duneeu42gph4n"]
+
+[ext_resource type="Script" uid="uid://danr3a0hjhbal" path="res://scenes/quest_menu/task_frame/task_frame.gd" id="1_dretj"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="1_xrw2j"]
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/frame_light.png" id="1_ysxwo"]
+[ext_resource type="Texture2D" uid="uid://bpdnkshu62dn0" path="res://assets/backgrounds/background_tooltip.png" id="3_lvp5g"]
+[ext_resource type="Texture2D" uid="uid://bsh0x5f4xjbyy" path="res://assets/buttons/button_green.png" id="4_8r60a"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="4_160xr"]
+[ext_resource type="Texture2D" uid="uid://bmx6f65s5watr" path="res://assets/frames/separator_h.png" id="4_ikmo2"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="5_3fx2c"]
+[ext_resource type="Texture2D" uid="uid://gjcri7dvlebd" path="res://assets/buttons/button_red.png" id="6_bng6i"]
+[ext_resource type="AudioStream" uid="uid://bqsi3p865nqq3" path="res://assets/sounds/sfx_pickaxe_critical.mp3" id="10_3fx2c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf8q8"]
+texture = ExtResource("1_xrw2j")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikmo2"]
+texture = ExtResource("1_ysxwo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_160xr"]
+texture = ExtResource("4_8r60a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8r60a"]
+texture = ExtResource("4_8r60a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bng6i"]
+texture = ExtResource("4_8r60a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fv015"]
+texture = ExtResource("6_bng6i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5yjk1"]
+texture = ExtResource("4_8r60a")
+
+[node name="TaskFrame" type="Panel" unique_id=527417816]
+custom_minimum_size = Vector2(800, 340)
+offset_right = 800.0
+offset_bottom = 340.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qf8q8")
+script = ExtResource("1_dretj")
+
+[node name="Background" type="TextureRect" parent="." unique_id=942357101]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_lvp5g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=749239018]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="HBoxContainer" parent="VBoxContainer" unique_id=619373257]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="VBoxContainer/Header" unique_id=1006835437]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ikmo2")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/Header/Button" unique_id=1575502957]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleHeader" type="VBoxContainer" parent="VBoxContainer/Header" unique_id=2044209175]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Description" type="Label" parent="VBoxContainer/Header/TitleHeader" unique_id=372205530]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_160xr")
+theme_override_font_sizes/font_size = 38
+text = "Collect 999 stone"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Header/TitleHeader" unique_id=1115379561]
+layout_mode = 2
+
+[node name="Level" type="RichTextLabel" parent="VBoxContainer/Header/TitleHeader/HBoxContainer" unique_id=963603084]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("5_3fx2c")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Level : "
+vertical_alignment = 1
+
+[node name="Requirement" type="Label" parent="VBoxContainer/Header/TitleHeader/HBoxContainer" unique_id=452068538]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("5_3fx2c")
+theme_override_font_sizes/font_size = 30
+text = "999 / 999"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1315289848]
+layout_mode = 2
+
+[node name="Separator" type="TextureRect" parent="VBoxContainer" unique_id=1023791539]
+layout_mode = 2
+texture = ExtResource("4_ikmo2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1740371898]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RewardsContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1911956998]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ClaimButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1704785128]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_160xr")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxTexture_160xr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8r60a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bng6i")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_fv015")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5yjk1")
+text = "UI_TASK_FRAME_BUTTON_CLAIM"
+
+[node name="SfxClaim" type="AudioStreamPlayer2D" parent="." unique_id=387126010]
+stream = ExtResource("10_3fx2c")

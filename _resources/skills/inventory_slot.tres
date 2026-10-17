@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=8 format=3 uid="uid://bjqxidgttpxa3"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_qd7bb"]
+[ext_resource type="Script" uid="uid://bw106588ppk51" path="res://_data/skill.gd" id="2_6cwin"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_8uoju"]
+[ext_resource type="Resource" uid="uid://du6s2v8l3m8pv" path="res://_resources/stats/inventory_slot.tres" id="3_e81he"]
+
+[sub_resource type="Resource" id="Resource_rih6b"]
+script = ExtResource("1_qd7bb")
+quantity = 1000
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_m5swa"]
+script = ExtResource("1_qd7bb")
+ore = 5
+quantity = 100
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mggd"]
+atlas = ExtResource("2_8uoju")
+region = Rect2(256, 128, 128, 128)
+
+[resource]
+script = ExtResource("2_6cwin")
+id = 58000
+name = "STAT_INVENTORY_SLOTS_NAME"
+description = "STAT_INVENTORY_SLOTS_DESCRIPTION"
+primary_icon = SubResource("AtlasTexture_1mggd")
+stat = ExtResource("3_e81he")
+bonus = 5.0
+max_level = 2
+cost = Array[ExtResource("1_qd7bb")]([SubResource("Resource_rih6b"), SubResource("Resource_m5swa")])

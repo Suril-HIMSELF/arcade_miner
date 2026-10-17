@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Skill" format=3 uid="uid://codwbjnq872hq"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_rlexy"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_8e2th"]
+[ext_resource type="Script" uid="uid://bw106588ppk51" path="res://_data/skill.gd" id="3_rqnya"]
+[ext_resource type="Resource" uid="uid://dlehv587q0683" path="res://_resources/stats/unlock_artefacts.tres" id="4_rlexy"]
+
+[sub_resource type="Resource" id="Resource_8e2th"]
+script = ExtResource("1_rlexy")
+ore = 3
+quantity = 300
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_rqnya"]
+script = ExtResource("1_rlexy")
+ore = 4
+quantity = 150
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_e4nbr"]
+script = ExtResource("1_rlexy")
+ore = 5
+quantity = 60
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_821pw"]
+atlas = ExtResource("2_8e2th")
+region = Rect2(512, 256, 128, 128)
+
+[resource]
+script = ExtResource("3_rqnya")
+id = 58996
+name = "STAT_UNLOCK_ARTEFACT_NAME"
+description = "STAT_UNLOCK_ARTEFACT_DESCRIPTION"
+primary_icon = SubResource("AtlasTexture_821pw")
+stat = ExtResource("4_rlexy")
+max_level = 1
+cost = Array[ExtResource("1_rlexy")]([SubResource("Resource_8e2th"), SubResource("Resource_rqnya"), SubResource("Resource_e4nbr")])

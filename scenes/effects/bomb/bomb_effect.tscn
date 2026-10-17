@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cq1yhk7lhewxj"]
+
+[ext_resource type="Script" uid="uid://b1so8guldhyg5" path="res://scenes/effects/bomb/bomb_effect.gd" id="1_4yd6b"]
+[ext_resource type="Texture2D" uid="uid://ddfmnim7ku43k" path="res://assets/effects/bomb_effect_animation.png" id="2_4yd6b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gupk7"]
+atlas = ExtResource("2_4yd6b")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwt4i"]
+atlas = ExtResource("2_4yd6b")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf44w"]
+atlas = ExtResource("2_4yd6b")
+region = Rect2(200, 0, 100, 100)
+
+[node name="BombEffect" type="Node2D"]
+script = ExtResource("1_4yd6b")
+
+[node name="BombSprite" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("AtlasTexture_gupk7")
+
+[node name="Explosion1Sprite" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("AtlasTexture_hwt4i")
+
+[node name="Explosion2Sprite" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("AtlasTexture_nf44w")

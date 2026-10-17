@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmp6kww8idtkm"]
+
+[ext_resource type="Script" uid="uid://dac8k0rrmpnkp" path="res://scenes/game/symbol/symbol.gd" id="1_ugxat"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_e3wt7"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_ugxat"]
+offsets = PackedFloat32Array(0.19078948, 0.6809211, 0.7006579)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dok3p"]
+gradient = SubResource("Gradient_ugxat")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Symbol" type="Control"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+script = ExtResource("1_ugxat")
+
+[node name="Glow" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.6431373)
+material = SubResource("CanvasItemMaterial_e3wt7")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_dok3p")
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 1
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5

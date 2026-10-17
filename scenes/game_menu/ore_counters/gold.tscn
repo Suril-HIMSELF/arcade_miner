@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://8v46px05attc"]
+
+[ext_resource type="Texture2D" uid="uid://stn507v6avwg" path="res://assets/atlas/ore_atlas_128.png" id="1_5qhrx"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="2_bpkmx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gndnv"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_5v6r0"]
+offsets = PackedFloat32Array(0, 0.3125, 0.7269737)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pdo1f"]
+gradient = SubResource("Gradient_5v6r0")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lcygq"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_10c2w"]
+offsets = PackedFloat32Array(0.16447368, 0.84210527)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a8seh"]
+gradient = SubResource("Gradient_10c2w")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tebxm"]
+atlas = ExtResource("1_5qhrx")
+region = Rect2(128, 0, 128, 128)
+
+[node name="Gold" type="Control"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 150.0
+
+[node name="GlowIcon" type="TextureRect" parent="."]
+modulate = Color(0.96862745, 0.59607846, 0, 0.34509805)
+material = SubResource("CanvasItemMaterial_gndnv")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 175.0
+grow_horizontal = 2
+texture = SubResource("GradientTexture2D_pdo1f")
+expand_mode = 5
+
+[node name="GlowLabel" type="TextureRect" parent="."]
+modulate = Color(0.96862745, 0.5019608, 0, 0.34509805)
+material = SubResource("CanvasItemMaterial_lcygq")
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -90.0
+offset_right = 25.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_a8seh")
+expand_mode = 3
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 150.0
+texture = SubResource("AtlasTexture_tebxm")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_top = 150.0
+offset_right = 150.0
+offset_bottom = 182.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.99215686, 0.8627451, 0.74509805, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1.48, 0.368, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("2_bpkmx")
+theme_override_font_sizes/font_size = 26
+text = "9999"
+horizontal_alignment = 1

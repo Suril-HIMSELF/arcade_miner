@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://cfcmvokmsymig"]
+
+[ext_resource type="Script" uid="uid://dlxh5w4304jhb" path="res://scenes/market_menu/market_slot/market_slot.gd" id="1_n1a6c"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="2_n1a6c"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="2_q5ngr"]
+[ext_resource type="Texture2D" uid="uid://bpdnkshu62dn0" path="res://assets/backgrounds/background_tooltip.png" id="3_bua1b"]
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/frame_light.png" id="4_0p8jl"]
+[ext_resource type="Texture2D" uid="uid://stn507v6avwg" path="res://assets/atlas/ore_atlas_128.png" id="5_f2bwn"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="6_uiwwf"]
+[ext_resource type="Texture2D" uid="uid://cfkp3anybs6fp" path="res://assets/frames/separator_v.png" id="8_n1a6c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qxhr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w2bos"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t1i32"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1w8yw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b41b8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q22x3"]
+texture = ExtResource("2_q5ngr")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="Theme" id="Theme_7dcla"]
+Panel/styles/panel = SubResource("StyleBoxTexture_q22x3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4bp2b"]
+texture = ExtResource("4_0p8jl")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jqh6s"]
+texture = ExtResource("4_0p8jl")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iw50i"]
+texture = ExtResource("4_0p8jl")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1s7u6"]
+texture = ExtResource("4_0p8jl")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3prgs"]
+texture = ExtResource("4_0p8jl")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4eg6"]
+atlas = ExtResource("5_f2bwn")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1a6c"]
+atlas = ExtResource("5_f2bwn")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5ngr"]
+atlas = ExtResource("5_f2bwn")
+region = Rect2(128, 0, 128, 128)
+
+[node name="MarketSlot" type="Button" unique_id=493173964]
+custom_minimum_size = Vector2(1000, 200)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2qxhr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w2bos")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t1i32")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1w8yw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b41b8")
+script = ExtResource("1_n1a6c")
+
+[node name="Panel" type="Panel" parent="." unique_id=1960679479]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+theme = SubResource("Theme_7dcla")
+
+[node name="Background" type="TextureRect" parent="Panel" unique_id=285812854]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_bua1b")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1713222782]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 10.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 30.0
+offset_right = -9040.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/HBoxContainer" unique_id=35801556]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_4bp2b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jqh6s")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iw50i")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_1s7u6")
+theme_override_styles/focus = SubResource("StyleBoxTexture_3prgs")
+disabled = true
+
+[node name="Icon" type="TextureRect" parent="Panel/HBoxContainer/Button" unique_id=591273289]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_m4eg6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleContainer" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=934908290]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Title" type="Label" parent="Panel/HBoxContainer/TitleContainer" unique_id=1338812201]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_uiwwf")
+theme_override_font_sizes/font_size = 34
+
+[node name="Quantity" type="RichTextLabel" parent="Panel/HBoxContainer/TitleContainer" unique_id=1948201648]
+custom_minimum_size = Vector2(0, 41)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("2_n1a6c")
+theme_override_font_sizes/normal_font_size = 34
+bbcode_enabled = true
+fit_content = true
+vertical_alignment = 1
+
+[node name="Separator" type="TextureRect" parent="Panel/HBoxContainer" unique_id=64934433]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
+texture = ExtResource("8_n1a6c")
+expand_mode = 1
+
+[node name="PriceLabel" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=1968636130]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="BuyPriceTitle" type="Label" parent="Panel/HBoxContainer/PriceLabel" unique_id=1491129205]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.5686275, 0.7764706, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("2_n1a6c")
+theme_override_font_sizes/font_size = 35
+text = "UI_MARKETSLOT_LABEL_BUY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer/PriceLabel" unique_id=407932364]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/PriceLabel/HBoxContainer" unique_id=960747879]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = SubResource("AtlasTexture_n1a6c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BuyValueLabel" type="Label" parent="Panel/HBoxContainer/PriceLabel/HBoxContainer" unique_id=40285025]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_n1a6c")
+theme_override_font_sizes/font_size = 34
+text = "9999"
+horizontal_alignment = 1
+
+[node name="PriceValues" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=968798124]
+custom_minimum_size = Vector2(80, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="SellPriceTitle" type="Label" parent="Panel/HBoxContainer/PriceValues" unique_id=746899617]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0, 0.27058825, 1)
+theme_override_fonts/font = ExtResource("2_n1a6c")
+theme_override_font_sizes/font_size = 35
+text = "UI_MARKETSLOT_LABEL_SELL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer/PriceValues" unique_id=634359361]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer/PriceValues/HBoxContainer" unique_id=552595529]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = SubResource("AtlasTexture_q5ngr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SellValueLabel" type="Label" parent="Panel/HBoxContainer/PriceValues/HBoxContainer" unique_id=1581127170]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_n1a6c")
+theme_override_font_sizes/font_size = 35
+text = "9999"

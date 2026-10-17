@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bn8sw6blm2qj0"]
+
+[ext_resource type="Script" uid="uid://l73a323qf1cb" path="res://scenes/quest_menu/task_rewards/task_rewards.gd" id="1_1reg2"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="1_vn5l4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r60a"]
+atlas = ExtResource("1_vn5l4")
+region = Rect2(0, 0, 128, 128)
+
+[node name="RewardFrame" type="Control" unique_id=1248110842]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 128.0
+offset_bottom = 128.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_1reg2")
+
+[node name="RewardIcon" type="TextureRect" parent="." unique_id=1337306367]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+size_flags_horizontal = 0
+texture = SubResource("AtlasTexture_8r60a")
+stretch_mode = 5
+
+[node name="RewardLabel" type="Label" parent="." unique_id=1591336035]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 30
+text = "999"
+horizontal_alignment = 1
+vertical_alignment = 1

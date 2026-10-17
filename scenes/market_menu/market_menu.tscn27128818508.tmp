@@ -1,0 +1,323 @@
+[gd_scene load_steps=26 format=3 uid="uid://b46my2w0fyepv"]
+
+[ext_resource type="Texture2D" uid="uid://bkav73x7iar81" path="res://assets/themes/UI_frame_5.png" id="1_0p8ve"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="2_4y35j"]
+[ext_resource type="Script" uid="uid://dg0xlm6kykvpj" path="res://scenes/market/market_menu.gd" id="3_a65ne"]
+[ext_resource type="Texture2D" uid="uid://da5ghl7f6e38v" path="res://assets/themes/background_inventory.png" id="5_f6hf2"]
+[ext_resource type="Texture2D" uid="uid://cs52fqq3pr1dw" path="res://assets/themes/background_frame_2.png" id="6_0p8ve"]
+[ext_resource type="Script" uid="uid://ctylkqg4llvlr" path="res://scenes/market/stock_manager.gd" id="6_a65ne"]
+[ext_resource type="Texture2D" uid="uid://bspkmcw5bxgad" path="res://assets/themes/UI_frame_6.png" id="8_4xc2j"]
+[ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/themes/UI_frame_normal_shadow.png" id="8_mrpi6"]
+[ext_resource type="Texture2D" uid="uid://cnxog56ff3cgq" path="res://assets/atlas/ore_atlas.png" id="9_a65ne"]
+[ext_resource type="Texture2D" uid="uid://3dqmipn0k803" path="res://assets/icons/restock.png" id="9_je0gi"]
+[ext_resource type="PackedScene" uid="uid://dy8svgahvfitu" path="res://scenes/market/ore_panel/ore_panel.tscn" id="11_4rklr"]
+[ext_resource type="PackedScene" uid="uid://bos5mq7cc35xf" path="res://scenes/tooltip/tooltip.tscn" id="14_4xc2j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibo5k"]
+texture = ExtResource("1_0p8ve")
+texture_margin_left = 100.0
+texture_margin_top = 100.0
+texture_margin_right = 100.0
+texture_margin_bottom = 100.0
+
+[sub_resource type="Theme" id="Theme_au0up"]
+default_font = ExtResource("2_4y35j")
+default_font_size = 20
+Label/colors/font_color = Color(0.9529412, 0.9411765, 0.9098039, 1)
+Label/colors/font_outline_color = Color(0.101960786, 0.07058824, 0.047058824, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.53333336)
+Label/constants/outline_size = 6
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+Panel/styles/panel = SubResource("StyleBoxTexture_ibo5k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4rklr"]
+texture = ExtResource("8_4xc2j")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_0p8ve"]
+Panel/styles/panel = SubResource("StyleBoxTexture_4rklr")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvy7w"]
+atlas = ExtResource("9_a65ne")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qlinp"]
+texture = ExtResource("8_4xc2j")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_8d7vg"]
+Panel/styles/panel = SubResource("StyleBoxTexture_qlinp")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xc2j"]
+atlas = ExtResource("9_a65ne")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a65ne"]
+atlas = ExtResource("9_a65ne")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rklr"]
+atlas = ExtResource("9_a65ne")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p8ve"]
+atlas = ExtResource("9_a65ne")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibo5k"]
+atlas = ExtResource("9_a65ne")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au0up"]
+atlas = ExtResource("9_a65ne")
+region = Rect2(128, 128, 128, 128)
+
+[node name="MarketMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_au0up")
+script = ExtResource("3_a65ne")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.63000005)
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_f6hf2")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+script = ExtResource("6_a65ne")
+tooltip_path = NodePath("../Tooltip")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="Panel" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Background" type="TextureRect" parent="MarginContainer/VBoxContainer/Header"]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_0p8ve")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="InnerShadow" type="TextureRect" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GoldPanel" type="Panel" parent="MarginContainer/VBoxContainer/Header"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 80.0
+offset_right = -100.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0p8ve")
+
+[node name="Container" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Header/GoldPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Gold" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Header/GoldPanel/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -2
+
+[node name="GoldIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Header/GoldPanel/Container/Gold"]
+z_index = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_bvy7w")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GoldQuantity" type="Label" parent="MarginContainer/VBoxContainer/Header/GoldPanel/Container/Gold"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = ": 999999"
+vertical_alignment = 1
+
+[node name="Restock" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Header/GoldPanel/Container"]
+layout_mode = 2
+theme_override_constants/separation = -2
+alignment = 2
+
+[node name="RestockIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/Header/GoldPanel/Container/Restock"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("9_je0gi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RestockLabel" type="Label" parent="MarginContainer/VBoxContainer/Header/GoldPanel/Container/Restock"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = ": 99"
+vertical_alignment = 1
+
+[node name="Stocks" type="Panel" parent="MarginContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(0, 1300)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Background" type="TextureRect" parent="MarginContainer/VBoxContainer/Stocks"]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_0p8ve")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="InnerShadow" type="TextureRect" parent="MarginContainer/VBoxContainer/Stocks"]
+modulate = Color(1, 1, 1, 0.597)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_mrpi6")
+
+[node name="OreContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Stocks"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -80.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8d7vg")
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="WoodPanel" parent="MarginContainer/VBoxContainer/Stocks/OreContainer" instance=ExtResource("11_4rklr")]
+layout_mode = 2
+_icon = SubResource("AtlasTexture_4xc2j")
+_ore_name = "Wood"
+
+[node name="MetalPanel" parent="MarginContainer/VBoxContainer/Stocks/OreContainer" instance=ExtResource("11_4rklr")]
+layout_mode = 2
+_icon = SubResource("AtlasTexture_a65ne")
+
+[node name="SapphirePanel" parent="MarginContainer/VBoxContainer/Stocks/OreContainer" instance=ExtResource("11_4rklr")]
+layout_mode = 2
+_icon = SubResource("AtlasTexture_4rklr")
+_ore_name = "Sapphire"
+
+[node name="RubyPanel" parent="MarginContainer/VBoxContainer/Stocks/OreContainer" instance=ExtResource("11_4rklr")]
+layout_mode = 2
+_icon = SubResource("AtlasTexture_0p8ve")
+_ore_name = "Ruby"
+
+[node name="EmeraldPanel" parent="MarginContainer/VBoxContainer/Stocks/OreContainer" instance=ExtResource("11_4rklr")]
+layout_mode = 2
+_icon = SubResource("AtlasTexture_ibo5k")
+_ore_name = "Emerald"
+
+[node name="DiamondPanel" parent="MarginContainer/VBoxContainer/Stocks/OreContainer" instance=ExtResource("11_4rklr")]
+layout_mode = 2
+_icon = SubResource("AtlasTexture_au0up")
+_ore_name = "Diamond"
+
+[node name="ExitButton" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 70.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 40
+text = "EXIT"
+
+[node name="Tooltip" parent="." instance=ExtResource("14_4xc2j")]
+visible = false
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

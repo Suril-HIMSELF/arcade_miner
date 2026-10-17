@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatDefinition" load_steps=2 format=3 uid="uid://dxjkuui20tlvx"]
+
+[ext_resource type="Script" uid="uid://cjij84vdl2etu" path="res://_data/stat_definition.gd" id="2_3n0pm"]
+
+[resource]
+script = ExtResource("2_3n0pm")
+id = 100
+name = "STAT_STONE_QUANTITY_NAME"
+description = "STAT_STONE_QUANTITY_DESCRIPTION"
+tags = Array[int]([0, 8])
+metadata/_custom_type_script = "uid://cjij84vdl2etu"

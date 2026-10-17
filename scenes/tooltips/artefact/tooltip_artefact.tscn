@@ -1,0 +1,264 @@
+[gd_scene format=3 uid="uid://bcqdcti01xdkj"]
+
+[ext_resource type="Script" uid="uid://cff8jbbxkwpsw" path="res://scenes/tooltips/artefact/tooltip_artefact.gd" id="1_1twdx"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="1_ci5je"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="3_ci5je"]
+[ext_resource type="Texture2D" uid="uid://bpdnkshu62dn0" path="res://assets/backgrounds/background_tooltip.png" id="4_in5g3"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="6_1rpv5"]
+[ext_resource type="Texture2D" uid="uid://duyu4bjry66sb" path="res://assets/frames/frame_tooltip_artefact.png" id="6_gpwc6"]
+[ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/frames/frame_shadow.png" id="6_ub2vr"]
+[ext_resource type="Texture2D" uid="uid://bmx6f65s5watr" path="res://assets/frames/separator_h.png" id="7_ub2vr"]
+[ext_resource type="Texture2D" uid="uid://bsh0x5f4xjbyy" path="res://assets/buttons/button_green.png" id="8_1rpv5"]
+[ext_resource type="Texture2D" uid="uid://b46wayhwevqv6" path="res://assets/frames/frame_small.png" id="8_erb28"]
+
+[sub_resource type="Theme" id="Theme_in5g3"]
+default_font = ExtResource("6_1rpv5")
+default_font_size = 30
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("1_ci5je")
+RichTextLabel/font_sizes/normal_font_size = 30
+RichTextLabel/fonts/normal_font = ExtResource("1_ci5je")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wfhxq"]
+texture = ExtResource("3_ci5je")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="Theme" id="Theme_jdxsg"]
+Label/fonts/font = ExtResource("6_1rpv5")
+Panel/styles/panel = SubResource("StyleBoxTexture_wfhxq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtw14"]
+texture = ExtResource("6_gpwc6")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_erb28"]
+texture = ExtResource("6_gpwc6")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_63nx0"]
+texture = ExtResource("6_gpwc6")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ub2vr"]
+texture = ExtResource("6_gpwc6")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1285b"]
+texture = ExtResource("6_gpwc6")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yjfrs"]
+texture = ExtResource("8_erb28")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86e5m"]
+texture = ExtResource("8_erb28")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uykvn"]
+texture = ExtResource("8_1rpv5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prlh8"]
+texture = ExtResource("8_1rpv5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rjjn"]
+texture = ExtResource("8_1rpv5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_en1jm"]
+texture = ExtResource("8_1rpv5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cs44c"]
+texture = ExtResource("8_1rpv5")
+
+[node name="TooltipArtefact" type="CanvasLayer" unique_id=1526136136]
+
+[node name="Control" type="Control" parent="." unique_id=1998802390]
+z_index = 8
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_in5g3")
+script = ExtResource("1_1twdx")
+
+[node name="BlackVeil" type="ColorRect" parent="Control" unique_id=1376594948]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5529412)
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1181819361]
+custom_minimum_size = Vector2(700, 900)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -450.0
+offset_right = 350.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_jdxsg")
+
+[node name="Background" type="TextureRect" parent="Control/Panel" unique_id=491921882]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_in5g3")
+
+[node name="InnerShadow" type="TextureRect" parent="Control/Panel" unique_id=751455777]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_ub2vr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel" unique_id=223285898]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_force_pass_scroll_events = false
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Header" type="HBoxContainer" parent="Control/Panel/VBoxContainer" unique_id=770856850]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Icon" type="Button" parent="Control/Panel/VBoxContainer/Header" unique_id=303135394]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_rtw14")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_erb28")
+theme_override_styles/hover = SubResource("StyleBoxTexture_63nx0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ub2vr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_1285b")
+expand_icon = true
+
+[node name="TitleContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/Header" unique_id=1625514778]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Title" type="Label" parent="Control/Panel/VBoxContainer/Header/TitleContainer" unique_id=2044374186]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "Artefact"
+vertical_alignment = 1
+
+[node name="Rarity" type="Label" parent="Control/Panel/VBoxContainer/Header/TitleContainer" unique_id=187558607]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_1rpv5")
+theme_override_font_sizes/font_size = 30
+text = "Legendary"
+vertical_alignment = 1
+
+[node name="DescriptionPanel" type="PanelContainer" parent="Control/Panel/VBoxContainer" unique_id=1918704967]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yjfrs")
+
+[node name="Description" type="Label" parent="Control/Panel/VBoxContainer/DescriptionPanel" unique_id=1328148544]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("6_1rpv5")
+theme_override_font_sizes/font_size = 25
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Separator1" type="TextureRect" parent="Control/Panel/VBoxContainer" unique_id=559584093]
+layout_mode = 2
+texture = ExtResource("7_ub2vr")
+
+[node name="ContentPanel" type="PanelContainer" parent="Control/Panel/VBoxContainer" unique_id=1431618354]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_86e5m")
+
+[node name="Content" type="VBoxContainer" parent="Control/Panel/VBoxContainer/ContentPanel" unique_id=2117512800]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Footer" type="VBoxContainer" parent="Control/Panel/VBoxContainer" unique_id=1879317933]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Button" type="Button" parent="Control/Panel/VBoxContainer/Footer" unique_id=1093136900]
+custom_minimum_size = Vector2(280, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_uykvn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_prlh8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0rjjn")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_en1jm")
+theme_override_styles/focus = SubResource("StyleBoxTexture_cs44c")
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/Footer/Button" to="Control" method="_on_button_pressed"]

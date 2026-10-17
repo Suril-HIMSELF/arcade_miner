@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=11 format=3 uid="uid://ci8q6o3e26g6w"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_v0c5j"]
+[ext_resource type="Script" uid="uid://bw106588ppk51" path="res://_data/skill.gd" id="2_b6lr8"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_gpusw"]
+[ext_resource type="Resource" uid="uid://bqqw18gl7g7xq" path="res://_resources/stats/relic_power.tres" id="3_v0c5j"]
+[ext_resource type="Texture2D" uid="uid://mxgnb27y3sk3" path="res://assets/atlas/skill_secondary_atlas_64.png" id="4_gpusw"]
+
+[sub_resource type="Resource" id="Resource_rih6b"]
+script = ExtResource("1_v0c5j")
+quantity = 100
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_gpusw"]
+script = ExtResource("1_v0c5j")
+ore = 2
+quantity = 40
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_0nwc0"]
+script = ExtResource("1_v0c5j")
+ore = 3
+quantity = 10
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nwc0"]
+atlas = ExtResource("2_gpusw")
+region = Rect2(128, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdwbo"]
+atlas = ExtResource("4_gpusw")
+region = Rect2(256, 0, 64, 64)
+
+[resource]
+script = ExtResource("2_b6lr8")
+id = 64100
+name = "STAT_RELIC_POWER_NAME"
+description = "STAT_RELIC_POWER_DESCRIPTION"
+primary_icon = SubResource("AtlasTexture_0nwc0")
+secondary_icon = SubResource("AtlasTexture_fdwbo")
+stat = ExtResource("3_v0c5j")
+bonus = 1.0
+max_level = 4
+cost = Array[ExtResource("1_v0c5j")]([SubResource("Resource_rih6b"), SubResource("Resource_gpusw"), SubResource("Resource_0nwc0")])

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemDescription" load_steps=4 format=3 uid="uid://dw71gobmjpb61"]
+
+[ext_resource type="Texture2D" uid="uid://d3frxjbns3l0f" path="res://assets/atlas/jewel_atlas_128.png" id="1_mikna"]
+[ext_resource type="Script" uid="uid://dvocng0x1h0ra" path="res://_data/item_description.gd" id="1_x1yh3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5478o"]
+atlas = ExtResource("1_mikna")
+region = Rect2(0, 128, 128, 128)
+
+[resource]
+script = ExtResource("1_x1yh3")
+id = 410
+name_key = &"ITEM_410_NAME"
+type = 3
+rarity = 1
+description_key = &"ITEM_410_DESCRIPTION"
+icon = SubResource("AtlasTexture_5478o")
+metadata/_custom_type_script = "uid://dvocng0x1h0ra"

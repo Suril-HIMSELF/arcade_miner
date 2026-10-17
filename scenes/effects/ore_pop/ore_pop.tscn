@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6ngkcgkexvly"]
+
+[ext_resource type="Script" uid="uid://1ykptaxfo0uo" path="res://scenes/effects/ore_pop/ore_pop.gd" id="1_njekh"]
+
+[node name="OrePopEffect" type="Node2D"]
+script = ExtResource("1_njekh")
+
+[node name="OreSprite" type="Sprite2D" parent="."]

@@ -1,0 +1,729 @@
+[gd_scene format=3 uid="uid://csrfvrxohd6em"]
+
+[ext_resource type="Texture2D" uid="uid://b8nl1o0soldo0" path="res://assets/frames/frame_light_on.png" id="2_4vhjo"]
+[ext_resource type="Script" uid="uid://1ehti86nbm1n" path="res://scenes/forge_menu/forge_menu.gd" id="2_5x3f0"]
+[ext_resource type="Texture2D" uid="uid://bf0fntksupku1" path="res://assets/backgrounds/background_forge.png" id="3_8h0f4"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="3_uxy6k"]
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/frame_light.png" id="5_l5sqo"]
+[ext_resource type="Texture2D" uid="uid://xfgtpmiqx4hy" path="res://assets/atlas/forge_item_atlas.png" id="7_l5sqo"]
+[ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/frames/frame_shadow.png" id="8_2vhcx"]
+[ext_resource type="Texture2D" uid="uid://stn507v6avwg" path="res://assets/atlas/ore_atlas_128.png" id="9_5x3f0"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="9_d2uei"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="9_l5sqo"]
+[ext_resource type="Texture2D" uid="uid://bpdnkshu62dn0" path="res://assets/backgrounds/background_tooltip.png" id="11_d2uei"]
+[ext_resource type="PackedScene" uid="uid://cdvkw48qir4of" path="res://scenes/tooltips/forge/tooltip_forge.tscn" id="12_5x3f0"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="13_6tr1x"]
+[ext_resource type="Texture2D" uid="uid://bsh0x5f4xjbyy" path="res://assets/buttons/button_green.png" id="14_5lwbr"]
+[ext_resource type="Texture2D" uid="uid://bmx6f65s5watr" path="res://assets/frames/separator_h.png" id="14_6tr1x"]
+[ext_resource type="Texture2D" uid="uid://do2pc28i11u6j" path="res://assets/buttons/button_green_pressed.png" id="15_668v1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxy6k"]
+texture = ExtResource("5_l5sqo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8h0f4"]
+texture = ExtResource("2_4vhjo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6hhld"]
+texture = ExtResource("2_4vhjo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3033d"]
+texture = ExtResource("5_l5sqo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_668v1"]
+texture = ExtResource("2_4vhjo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l5sqo"]
+texture = ExtResource("5_l5sqo")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_o8qox"]
+default_font = ExtResource("3_uxy6k")
+default_font_size = 30
+Button/styles/disabled = SubResource("StyleBoxTexture_uxy6k")
+Button/styles/focus = SubResource("StyleBoxTexture_8h0f4")
+Button/styles/hover = SubResource("StyleBoxTexture_6hhld")
+Button/styles/normal = SubResource("StyleBoxTexture_3033d")
+Button/styles/pressed = SubResource("StyleBoxTexture_668v1")
+Panel/styles/panel = SubResource("StyleBoxTexture_l5sqo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ehrve"]
+texture = ExtResource("9_l5sqo")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbvyj"]
+atlas = ExtResource("7_l5sqo")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6xh6"]
+atlas = SubResource("AtlasTexture_kbvyj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m67or"]
+atlas = ExtResource("7_l5sqo")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2uei"]
+atlas = ExtResource("7_l5sqo")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vhcx"]
+atlas = ExtResource("7_l5sqo")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2vhcx"]
+texture = ExtResource("9_l5sqo")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5x3f0"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hhld"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78f7k"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5lwbr"]
+texture = ExtResource("9_l5sqo")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxy6k"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5sqo"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tr1x"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h0f4"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v8q8u"]
+texture = ExtResource("14_5lwbr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_441kg"]
+texture = ExtResource("15_668v1")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehrve"]
+atlas = ExtResource("9_d2uei")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2uei"]
+texture = ExtResource("9_l5sqo")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v8q8u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kbvyj"]
+texture = SubResource("CompressedTexture2D_v8q8u")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[node name="ForgeMenu" type="Control" unique_id=44331285]
+z_index = -1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_o8qox")
+script = ExtResource("2_5x3f0")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1338796836]
+modulate = Color(1, 1, 1, 0.63000005)
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_8h0f4")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=678357684]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer" unique_id=154518686]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 250
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer" unique_id=1781962963]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="ItemPanel" type="Panel" parent="ScrollContainer/MarginContainer/VBoxContainer" unique_id=984575499]
+custom_minimum_size = Vector2(900, 340)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_ehrve")
+
+[node name="Background" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel" unique_id=465990803]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_d2uei")
+
+[node name="InnerShadow" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel" unique_id=1151048916]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_2vhcx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel" unique_id=997281135]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -60.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer" unique_id=1547828228]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_6tr1x")
+theme_override_font_sizes/font_size = 38
+text = "UI_FORGE_MENU_LABEL_SELECT_ITEM"
+
+[node name="Separator" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer" unique_id=686058281]
+layout_mode = 2
+texture = ExtResource("14_6tr1x")
+
+[node name="ContentContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer" unique_id=1517966355]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="PickaxeButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer" unique_id=2088583101]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Icon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer/PickaxeButton" unique_id=1478191130]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_d6xh6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HelmetButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer" unique_id=1671743196]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Icon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer/HelmetButton" unique_id=436898245]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_m67or")
+stretch_mode = 5
+
+[node name="LanternButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer" unique_id=1059893824]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Icon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer/LanternButton" unique_id=127233581]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_d2uei")
+stretch_mode = 5
+
+[node name="JewelButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer" unique_id=244694538]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Icon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer/JewelButton" unique_id=986054466]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_2vhcx")
+
+[node name="OrePanel" type="Panel" parent="ScrollContainer/MarginContainer/VBoxContainer" unique_id=819179475]
+custom_minimum_size = Vector2(900, 340)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_2vhcx")
+
+[node name="Background" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel" unique_id=2098965693]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_d2uei")
+
+[node name="InnerShadow" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel" unique_id=1362230596]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_2vhcx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel" unique_id=8466118]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -60.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer" unique_id=423186289]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_6tr1x")
+theme_override_font_sizes/font_size = 38
+text = "UI_FORGE_MENU_LABEL_SELECT_ORE"
+
+[node name="Separator" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer" unique_id=237749599]
+layout_mode = 2
+texture = ExtResource("14_6tr1x")
+
+[node name="ContentContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer" unique_id=738728914]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="SapphireButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer" unique_id=387078831]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="SapphireIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer/SapphireButton" unique_id=437591822]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_5x3f0")
+
+[node name="RubyButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer" unique_id=1050588982]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="EmeraldButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer" unique_id=741048418]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="EmeraldIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer/EmeraldButton" unique_id=1053848718]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_6hhld")
+
+[node name="DiamondButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer" unique_id=557106034]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="DiamondIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer/DiamondButton" unique_id=101797416]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_78f7k")
+
+[node name="CostPanel" type="Panel" parent="ScrollContainer/MarginContainer/VBoxContainer" unique_id=1821582992]
+custom_minimum_size = Vector2(900, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_5lwbr")
+
+[node name="Background" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel" unique_id=131273972]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_d2uei")
+
+[node name="InnerShadow" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel" unique_id=1384542052]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_2vhcx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel" unique_id=1948206205]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -60.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer" unique_id=191872679]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_6tr1x")
+theme_override_font_sizes/font_size = 38
+text = "UI_FORGE_MENU_LABEL_COSTS"
+
+[node name="Separator" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer" unique_id=405972668]
+layout_mode = 2
+texture = ExtResource("14_6tr1x")
+
+[node name="CostContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer" unique_id=1096011067]
+layout_mode = 2
+alignment = 1
+
+[node name="WoodCost" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer" unique_id=1178026095]
+layout_mode = 2
+
+[node name="OreIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer/WoodCost" unique_id=467491599]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_uxy6k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreCost" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer/WoodCost" unique_id=613817907]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 1
+
+[node name="MetalCost" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer" unique_id=1993752627]
+layout_mode = 2
+
+[node name="OreIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer/MetalCost" unique_id=1206517546]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_l5sqo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreCost" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer/MetalCost" unique_id=1159925555]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 1
+
+[node name="GoldCost" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer" unique_id=1047775601]
+layout_mode = 2
+
+[node name="OreIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer/GoldCost" unique_id=246333722]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_6tr1x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreCost" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer/GoldCost" unique_id=20506189]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 1
+
+[node name="OreCost" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer" unique_id=2110378801]
+layout_mode = 2
+
+[node name="OreIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer/OreCost" unique_id=1984666647]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreCost" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel/VBoxContainer/CostContainer/OreCost" unique_id=2130563994]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+vertical_alignment = 1
+
+[node name="RubyIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel" unique_id=281773353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 275.0
+offset_top = -227.5
+offset_right = 275.0
+offset_bottom = -227.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_8h0f4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer" unique_id=1791860137]
+layout_mode = 2
+theme_override_constants/separation = 27
+alignment = 1
+
+[node name="ForgeButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1328863248]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("13_6tr1x")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxTexture_v8q8u")
+theme_override_styles/hover = SubResource("StyleBoxTexture_441kg")
+text = "UI_FORGE_MENU_BUTTON_FORGE"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=496663883]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1454684917]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_ehrve")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotCount" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=270810241]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+
+[node name="Control" type="Panel" parent="ScrollContainer/MarginContainer/VBoxContainer" unique_id=713554981]
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_d2uei")
+
+[node name="Background" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/Control" unique_id=1219535919]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_d2uei")
+
+[node name="InnerShadow" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/Control" unique_id=1312856423]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Control" unique_id=840128170]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -60.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemLabel" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer" unique_id=1785285523]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_6tr1x")
+theme_override_font_sizes/font_size = 38
+
+[node name="OreLabel" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer" unique_id=130419136]
+layout_mode = 2
+
+[node name="Separator" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer" unique_id=1427604197]
+layout_mode = 2
+texture = ExtResource("14_6tr1x")
+
+[node name="ContentContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer" unique_id=2008248330]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Equipment" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer/ContentContainer" unique_id=205391508]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_kbvyj")
+disabled = true
+
+[node name="Icon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer/ContentContainer/Equipment" unique_id=1722064376]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreAffinityContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer/ContentContainer" unique_id=242921463]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="AffinityStatLabel" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer/ContentContainer/OreAffinityContainer" unique_id=1009516453]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+
+[node name="AffinityValueLabel" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer/ContentContainer/OreAffinityContainer" unique_id=954339529]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.15075254, 0.38505822, 1, 1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 2
+
+[node name="TooltipForge" parent="." unique_id=127987055 instance=ExtResource("12_5x3f0")]
+
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer/PickaxeButton" to="." method="_on_pickaxe_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer/HelmetButton" to="." method="_on_helmet_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer/LanternButton" to="." method="_on_lantern_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/ItemPanel/VBoxContainer/ContentContainer/JewelButton" to="." method="_on_jewel_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer/SapphireButton" to="." method="_on_sapphire_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer/RubyButton" to="." method="_on_ruby_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer/EmeraldButton" to="." method="_on_emerald_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer/DiamondButton" to="." method="_on_diamond_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/ForgeButton" to="." method="_on_forge_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/Control/VBoxContainer/ContentContainer/Equipment" to="." method="_on_equipment_button_pressed"]

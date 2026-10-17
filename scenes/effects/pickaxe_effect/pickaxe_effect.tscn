@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl0odmfi2u1t5"]
+
+[ext_resource type="Script" uid="uid://dkf4g8t8uplnr" path="res://scenes/effects/pickaxe_effect/pickaxe_effect.gd" id="1_ow6ci"]
+[ext_resource type="Texture2D" uid="uid://1uu8v166nvjy" path="res://assets/icons/pickaxe_hit.png" id="1_y2d64"]
+
+[node name="PickaxeEffect" type="Node2D"]
+position = Vector2(-70, 10)
+script = ExtResource("1_ow6ci")
+
+[node name="PickaxeSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_y2d64")

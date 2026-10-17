@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://b46my2w0fyepv"]
+
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="2_4y35j"]
+[ext_resource type="Script" uid="uid://dg0xlm6kykvpj" path="res://scenes/market_menu/market_menu.gd" id="3_a65ne"]
+[ext_resource type="PackedScene" uid="uid://cfcmvokmsymig" path="res://scenes/market_menu/market_slot/market_slot.tscn" id="4_2lugx"]
+[ext_resource type="Texture2D" uid="uid://bfpsvqx30hh5x" path="res://assets/backgrounds/background_market.png" id="4_rei6i"]
+[ext_resource type="PackedScene" uid="uid://q7vkbfsi8k0f" path="res://scenes/tooltips/market/tooltip_market.tscn" id="12_4rklr"]
+
+[sub_resource type="Theme" id="Theme_au0up"]
+default_font = ExtResource("2_4y35j")
+default_font_size = 20
+Label/colors/font_color = Color(0.9529412, 0.9411765, 0.9098039, 1)
+Label/colors/font_outline_color = Color(0.101960786, 0.07058824, 0.047058824, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.53333336)
+Label/constants/outline_size = 6
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4rklr"]
+
+[sub_resource type="Theme" id="Theme_e48af"]
+Panel/styles/panel = SubResource("StyleBoxEmpty_4rklr")
+
+[node name="MarketMenu" type="Control" unique_id=86145420]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_au0up")
+script = ExtResource("3_a65ne")
+
+[node name="Background" type="TextureRect" parent="." unique_id=213403413]
+modulate = Color(1, 1, 1, 0.63000005)
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_rei6i")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=609776459]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 100
+
+[node name="OreContainer" type="VBoxContainer" parent="MarginContainer" unique_id=505913689]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+mouse_filter = 2
+theme = SubResource("Theme_e48af")
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="WoodSlot" parent="MarginContainer/OreContainer" unique_id=512668466 instance=ExtResource("4_2lugx")]
+layout_mode = 2
+size_flags_vertical = 6
+ore = 6
+
+[node name="MetalSlot" parent="MarginContainer/OreContainer" unique_id=1946307702 instance=ExtResource("4_2lugx")]
+layout_mode = 2
+size_flags_vertical = 6
+ore = 7
+
+[node name="SapphireSlot" parent="MarginContainer/OreContainer" unique_id=2064515286 instance=ExtResource("4_2lugx")]
+layout_mode = 2
+size_flags_vertical = 6
+ore = 2
+
+[node name="RubySlot" parent="MarginContainer/OreContainer" unique_id=24870426 instance=ExtResource("4_2lugx")]
+layout_mode = 2
+size_flags_vertical = 4
+ore = 3
+
+[node name="EmeraldSlot" parent="MarginContainer/OreContainer" unique_id=493173964 instance=ExtResource("4_2lugx")]
+layout_mode = 2
+size_flags_vertical = 4
+ore = 4
+
+[node name="DiamondSlot" parent="MarginContainer/OreContainer" unique_id=735963757 instance=ExtResource("4_2lugx")]
+layout_mode = 2
+size_flags_vertical = 4
+ore = 5
+
+[node name="TooltipMarket" parent="." unique_id=502370162 instance=ExtResource("12_4rklr")]

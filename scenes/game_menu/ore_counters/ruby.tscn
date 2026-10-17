@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://qj52hsgx4xmw"]
+
+[ext_resource type="Texture2D" uid="uid://stn507v6avwg" path="res://assets/atlas/ore_atlas_128.png" id="1_m107r"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="2_dwe2q"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nspvg"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_1iff4"]
+offsets = PackedFloat32Array(0, 0.24013157, 0.78289473)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.035398245, 0.035398245, 0.035398245, 0.035398245)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mpc11"]
+gradient = SubResource("Gradient_1iff4")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_u1ujd"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_h48ew"]
+offsets = PackedFloat32Array(0.108552635, 0.82236844)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cw1yj"]
+gradient = SubResource("Gradient_h48ew")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d78ah"]
+atlas = ExtResource("1_m107r")
+region = Rect2(384, 0, 128, 128)
+
+[node name="Ruby" type="Control"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+
+[node name="GlowIcon" type="TextureRect" parent="."]
+modulate = Color(0.90588236, 0, 0, 0.6117647)
+material = SubResource("CanvasItemMaterial_nspvg")
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_mpc11")
+expand_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="GlowLabel" type="TextureRect" parent="."]
+modulate = Color(0.90683234, 0, 0, 0.35300002)
+material = SubResource("CanvasItemMaterial_u1ujd")
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = 100.0
+offset_right = 75.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_cw1yj")
+expand_mode = 3
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 150.0
+texture = SubResource("AtlasTexture_d78ah")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 0
+offset_top = 150.0
+offset_right = 150.0
+offset_bottom = 182.0
+size_flags_vertical = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("2_dwe2q")
+theme_override_font_sizes/font_size = 26
+text = "9999"
+horizontal_alignment = 1

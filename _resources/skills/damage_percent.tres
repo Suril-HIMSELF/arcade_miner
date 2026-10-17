@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=10 format=3 uid="uid://capp1ci6w0ace"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_soryf"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_sy5bd"]
+[ext_resource type="Script" uid="uid://bw106588ppk51" path="res://_data/skill.gd" id="3_btkwr"]
+[ext_resource type="Texture2D" uid="uid://mxgnb27y3sk3" path="res://assets/atlas/skill_secondary_atlas_64.png" id="4_wfwov"]
+[ext_resource type="Resource" uid="uid://bmf8pf6t0r6xl" path="res://_resources/stats/damage_percent.tres" id="5_soryf"]
+
+[sub_resource type="Resource" id="Resource_rih6b"]
+script = ExtResource("1_soryf")
+quantity = 300
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_soryf"]
+script = ExtResource("1_soryf")
+ore = 3
+quantity = 40
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5wq8"]
+atlas = ExtResource("2_sy5bd")
+region = Rect2(512, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy5bd"]
+atlas = ExtResource("4_wfwov")
+region = Rect2(192, 0, 64, 64)
+
+[resource]
+script = ExtResource("3_btkwr")
+id = 70100
+name = "STAT_DAMAGE_PERCENT_NAME"
+description = "STAT_DAMAGE_PERCENT_DESCRIPTION"
+primary_icon = SubResource("AtlasTexture_j5wq8")
+secondary_icon = SubResource("AtlasTexture_sy5bd")
+stat = ExtResource("5_soryf")
+bonus = 1.0
+max_level = 5
+cost = Array[ExtResource("1_soryf")]([SubResource("Resource_rih6b"), SubResource("Resource_soryf")])

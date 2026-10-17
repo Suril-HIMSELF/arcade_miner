@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c42d6ui26o6de"]
+
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/frame_light.png" id="1_06n5k"]
+[ext_resource type="Script" uid="uid://ghvj7kp58sbh" path="res://scenes/skill_tree/ore_cost/ore_cost.gd" id="1_klq7o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_83sfj"]
+texture = ExtResource("1_06n5k")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[node name="OreCost" type="Button" unique_id=1832199359]
+custom_minimum_size = Vector2(150, 150)
+offset_right = 150.0
+offset_bottom = 150.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_83sfj")
+disabled = true
+script = ExtResource("1_klq7o")
+
+[node name="OreIcon" type="TextureRect" parent="." unique_id=1536855763]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 100.0
+grow_horizontal = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="OreCost" type="Label" parent="." unique_id=1946843427]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -50.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1

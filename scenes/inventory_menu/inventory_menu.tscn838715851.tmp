@@ -1,0 +1,1249 @@
+[gd_scene load_steps=36 format=3 uid="uid://xdi7d6lulfyd"]
+
+[ext_resource type="Texture2D" uid="uid://b46wayhwevqv6" path="res://assets/frames/UI_frame_small.png" id="1_mmjna"]
+[ext_resource type="Texture2D" uid="uid://bc1ro4tf06tk6" path="res://assets/frames/UI_frame_7.png" id="2_mmjna"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="2_t7v50"]
+[ext_resource type="Texture2D" uid="uid://cm5uy3gegxyq1" path="res://assets/frames/UI_frame.png" id="3_vwa8f"]
+[ext_resource type="Script" uid="uid://dpatee0g2onag" path="res://scenes/inventory/inventory_menu.gd" id="4_gqjff"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/UI_frame_4.png" id="4_t7v50"]
+[ext_resource type="Texture2D" uid="uid://da5ghl7f6e38v" path="res://assets/themes/background_inventory.png" id="5_20vs7"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="7_2hbfa"]
+[ext_resource type="Texture2D" uid="uid://by5lawbrejow6" path="res://assets/themes/background_frame.png" id="8_2fxuk"]
+[ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/frames/UI_frame_normal_shadow.png" id="9_ivcrv"]
+[ext_resource type="Texture2D" uid="uid://cppbtigci0ded" path="res://assets/icons/ores/stone.png" id="10_uwhsh"]
+[ext_resource type="Texture2D" uid="uid://exix7rlkkvv0" path="res://assets/icons/ores/gold.png" id="11_ep3g0"]
+[ext_resource type="Texture2D" uid="uid://dd4x2rc4vb8cf" path="res://assets/icons/ores/sapphire.png" id="12_wou7g"]
+[ext_resource type="Texture2D" uid="uid://gimv6vyxluiy" path="res://assets/icons/ores/ruby.png" id="13_rlca7"]
+[ext_resource type="Texture2D" uid="uid://c5fgccb0xc1kg" path="res://assets/icons/ores/emerald.png" id="14_monaj"]
+[ext_resource type="Texture2D" uid="uid://cjai8lgja1k7u" path="res://assets/icons/ores/diamond.png" id="15_8cep8"]
+[ext_resource type="Texture2D" uid="uid://d0b4ffpdyh6fa" path="res://assets/icons/ores/wood.png" id="16_paokr"]
+[ext_resource type="Script" uid="uid://d20d6mq3ff80w" path="res://scenes/inventory/inventory_tab.gd" id="17_gteh2"]
+[ext_resource type="Texture2D" uid="uid://dj8eqwv4g6rtd" path="res://assets/icons/ores/metal.png" id="17_t2i7q"]
+[ext_resource type="Script" uid="uid://cgdqygl4e6gvm" path="res://scenes/inventory_slot/equipment_slot.gd" id="18_ii7g3"]
+[ext_resource type="PackedScene" uid="uid://dx5yrw67x2hys" path="res://scenes/inventory_slot/inventory_slot.tscn" id="19_j7gi1"]
+[ext_resource type="Texture2D" uid="uid://cs52fqq3pr1dw" path="res://assets/themes/background_frame_2.png" id="20_vwa8f"]
+[ext_resource type="PackedScene" uid="uid://bos5mq7cc35xf" path="res://scenes/tooltips/tooltip/tooltip.tscn" id="23_t7v50"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yn6ie"]
+texture = ExtResource("1_mmjna")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhe83"]
+texture = ExtResource("2_mmjna")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tixx"]
+texture = ExtResource("4_t7v50")
+texture_margin_left = 100.0
+texture_margin_top = 100.0
+texture_margin_right = 100.0
+texture_margin_bottom = 100.0
+
+[sub_resource type="Theme" id="Theme_no80g"]
+Button/styles/disabled = SubResource("StyleBoxTexture_yn6ie")
+Button/styles/normal = SubResource("StyleBoxTexture_hhe83")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 3
+Label/fonts/font = ExtResource("2_t7v50")
+Panel/styles/panel = SubResource("StyleBoxTexture_0tixx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0tixx"]
+border_width_left = 30
+border_width_top = 30
+border_width_right = 30
+border_width_bottom = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_no80g"]
+border_width_left = 30
+border_width_top = 30
+border_width_right = 30
+border_width_bottom = 30
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rbxbx"]
+texture = ExtResource("1_mmjna")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m710k"]
+texture = ExtResource("3_vwa8f")
+texture_margin_left = 40.0
+texture_margin_top = 32.0
+texture_margin_right = 40.0
+texture_margin_bottom = 47.0
+
+[sub_resource type="Theme" id="Theme_5q4ag"]
+Button/styles/disabled = SubResource("StyleBoxTexture_rbxbx")
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("2_t7v50")
+Panel/styles/panel = SubResource("StyleBoxTexture_m710k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fxt6q"]
+texture = ExtResource("3_vwa8f")
+texture_margin_left = 40.0
+texture_margin_top = 32.0
+texture_margin_right = 40.0
+texture_margin_bottom = 47.0
+
+[sub_resource type="Theme" id="Theme_e5gw1"]
+Panel/styles/panel = SubResource("StyleBoxTexture_fxt6q")
+
+[sub_resource type="Theme" id="Theme_i5wq8"]
+
+[node name="InventoryMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_no80g")
+script = ExtResource("4_gqjff")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.63000005)
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_20vs7")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_2hbfa")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_0tixx")
+theme_override_styles/tab_disabled = SubResource("StyleBoxFlat_no80g")
+tab_alignment = 1
+current_tab = 1
+tabs_position = 1
+
+[node name="Resources" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme = SubResource("Theme_5q4ag")
+tab_alignment = 1
+metadata/_tab_index = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Resources"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 200
+
+[node name="Panel" type="Panel" parent="TabContainer/Resources/MarginContainer"]
+z_index = 1
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Background" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel"]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_2fxuk")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="InnerShadow" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel"]
+modulate = Color(1, 1, 1, 0.72400004)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_ivcrv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Resources/MarginContainer/Panel"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -80.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Stone" type="HBoxContainer" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="StoneIcon" type="Button" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Stone"]
+z_index = 1
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Stone/StoneIcon"]
+z_index = -1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_uwhsh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StoneLabel" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Stone"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Stone"
+
+[node name="StoneQuantity" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Stone"]
+modulate = Color(0.9411765, 0.5686275, 0.11372549, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "
+
+999999"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Gold" type="HBoxContainer" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="GoldIcon" type="Button" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Gold"]
+z_index = 1
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 2
+disabled = true
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Gold/GoldIcon"]
+z_index = -1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ep3g0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GoldLabel" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Gold"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Gold"
+
+[node name="GoldQuantity" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Gold"]
+modulate = Color(0.9411765, 0.5686275, 0.11372549, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "999999"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Sapphire" type="HBoxContainer" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="SapphireIcon" type="Button" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Sapphire"]
+z_index = 1
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 2
+disabled = true
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Sapphire/SapphireIcon"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_wou7g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SapphireLabel" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Sapphire"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Sapphire"
+
+[node name="SapphireQuantity" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Sapphire"]
+modulate = Color(0.9411765, 0.5686275, 0.11372549, 1)
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "999999"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Ruby" type="HBoxContainer" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="RubyIcon" type="Button" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Ruby"]
+z_index = 1
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 2
+disabled = true
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Ruby/RubyIcon"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_rlca7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RubyLabel" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Ruby"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Ruby"
+
+[node name="RubyQuantity" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Ruby"]
+modulate = Color(0.9411765, 0.5686275, 0.11372549, 1)
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "999999"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Emerald" type="HBoxContainer" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="EmeraldIcon" type="Button" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Emerald"]
+z_index = 1
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 2
+disabled = true
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Emerald/EmeraldIcon"]
+z_index = -1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_monaj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EmeraldLabel" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Emerald"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Emerald"
+
+[node name="EmeraldQuantity" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Emerald"]
+modulate = Color(0.9411765, 0.5686275, 0.11372549, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "999999"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Diamond" type="HBoxContainer" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="DiamondIcon" type="Button" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Diamond"]
+z_index = 1
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 2
+disabled = true
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Diamond/DiamondIcon"]
+z_index = -1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_8cep8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DiamondLabel" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Diamond"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Diamond"
+
+[node name="DiamondQuantity" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Diamond"]
+modulate = Color(0.9411765, 0.5686275, 0.11372549, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "999999"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Wood" type="HBoxContainer" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="WoordIcon" type="Button" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Wood"]
+z_index = 1
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 2
+disabled = true
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Wood/WoordIcon"]
+z_index = -1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_paokr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="WoodLabel" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Wood"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Wood"
+
+[node name="WoodQuantity" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Wood"]
+modulate = Color(0.9411765, 0.5686275, 0.11372549, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "999999"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Metal" type="HBoxContainer" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="MetalIcon" type="Button" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Metal"]
+z_index = 1
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Metal/MetalIcon"]
+z_index = -1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_t2i7q")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MetalLabel" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Metal"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Iron"
+
+[node name="MetalQuantity" type="Label" parent="TabContainer/Resources/MarginContainer/Panel/VBoxContainer/Metal"]
+modulate = Color(0.9411765, 0.5686275, 0.11372549, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "999999"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Inventory" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+script = ExtResource("17_gteh2")
+tooltip_path = NodePath("../../Tooltip")
+metadata/_tab_index = 1
+
+[node name="InventoryUI" type="Control" parent="TabContainer/Inventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Inventory/InventoryUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Inventory/InventoryUI/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="EquipmentPanel" type="Panel" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/EquipmentPanel"]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_vwa8f")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="InnerShadow" type="TextureRect" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/EquipmentPanel"]
+modulate = Color(1, 1, 1, 0.66300005)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+texture = ExtResource("9_ivcrv")
+expand_mode = 1
+
+[node name="EquipmentSlots" type="HBoxContainer" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/EquipmentPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="PickaxeSlot" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots" instance=ExtResource("19_j7gi1")]
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("18_ii7g3")
+slot_type = 0
+
+[node name="HelmetSlot" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots" instance=ExtResource("19_j7gi1")]
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("18_ii7g3")
+slot_type = 1
+
+[node name="LanternSlot" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots" instance=ExtResource("19_j7gi1")]
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("18_ii7g3")
+slot_type = 2
+
+[node name="JewelSlot" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots" instance=ExtResource("19_j7gi1")]
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("18_ii7g3")
+slot_type = 3
+
+[node name="InventoryPanel" type="Panel" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(0, 650)
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/InventoryPanel"]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_vwa8f")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Innershadow" type="TextureRect" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/InventoryPanel"]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_ivcrv")
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/InventoryPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="InventorySlots" type="GridContainer" parent="TabContainer/Inventory/InventoryUI/MarginContainer/VBoxContainer/InventoryPanel/MarginContainer"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 5
+
+[node name="DragPreview" type="TextureRect" parent="TabContainer/Inventory/InventoryUI"]
+z_index = 999
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 1
+offset_right = 165.0
+offset_bottom = 165.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Potions" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Artefacts" type="TabBar" parent="TabContainer"]
+visible = false
+z_index = 1
+layout_mode = 2
+theme = SubResource("Theme_e5gw1")
+metadata/_tab_index = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Artefacts"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Artefacts/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="Artefact" type="Panel" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Background" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Artefact"]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_2fxuk")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="InnerShadow" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Artefact"]
+modulate = Color(1, 1, 1, 0.61300004)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_ivcrv")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Artefact"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -82.5
+offset_right = 82.5
+offset_bottom = 82.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Equipped" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Artefact/HBoxContainer"]
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Artefact/HBoxContainer/Equipped"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Inventory" type="Panel" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+theme = SubResource("Theme_i5wq8")
+
+[node name="Background" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory"]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_2fxuk")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Innershadow" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_ivcrv")
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.0
+offset_top = -285.0
+offset_right = 465.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 5
+
+[node name="Artefact1" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact1"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact2" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact2"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact3" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact3"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact4" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact4"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact5" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact5"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact6" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact6"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact7" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact7"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact8" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact8"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact9" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact9"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact10" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact10"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact11" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact11"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact12" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact12"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact13" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact13"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact14" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact14"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Artefact15" type="Button" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Artefacts/MarginContainer/VBoxContainer/Inventory/MarginContainer/GridContainer/Artefact15"]
+z_index = -1
+custom_minimum_size = Vector2(135, 135)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -67.5
+offset_right = 67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tooltip" parent="." instance=ExtResource("23_t7v50")]
+
+[node name="ExitButton" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 70.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 40
+text = "EXIT"
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

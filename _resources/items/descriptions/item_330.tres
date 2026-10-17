@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemDescription" load_steps=4 format=3 uid="uid://bxtjlss37croy"]
+
+[ext_resource type="Texture2D" uid="uid://bm0th8bqu5w6l" path="res://assets/atlas/lantern_atlas_128.png" id="1_6oke2"]
+[ext_resource type="Script" uid="uid://dvocng0x1h0ra" path="res://_data/item_description.gd" id="1_o7p2i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqvvl"]
+atlas = ExtResource("1_6oke2")
+region = Rect2(0, 384, 128, 128)
+
+[resource]
+script = ExtResource("1_o7p2i")
+id = 330
+name_key = &"ITEM_330_NAME"
+type = 2
+rarity = 3
+description_key = &"ITEM_330_DESCRIPTION"
+icon = SubResource("AtlasTexture_iqvvl")
+metadata/_custom_type_script = "uid://dvocng0x1h0ra"

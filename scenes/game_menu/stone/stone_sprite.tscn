@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c22bv4ye0ldpg"]
+
+[ext_resource type="Texture2D" uid="uid://c1i8t1l3ilcnu" path="res://assets/icons/stone_sprites.png" id="1_lbva5"]
+[ext_resource type="Script" uid="uid://7kbn02ou1ced" path="res://scenes/game_menu/stone/stone_sprite.gd" id="1_yvwrb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvwrb"]
+atlas = ExtResource("1_lbva5")
+region = Rect2(0, 0, 174, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bk4n"]
+atlas = ExtResource("1_lbva5")
+region = Rect2(174, 0, 174, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfyys"]
+atlas = ExtResource("1_lbva5")
+region = Rect2(348, 0, 174, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kbrt"]
+atlas = ExtResource("1_lbva5")
+region = Rect2(522, 0, 174, 174)
+
+[node name="StoneSprite" type="Node2D"]
+scale = Vector2(1.682, 1.699)
+script = ExtResource("1_yvwrb")
+
+[node name="Sprite100" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_yvwrb")
+
+[node name="Sprite75" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_1bk4n")
+
+[node name="Sprite50" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_vfyys")
+
+[node name="Sprite25" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_8kbrt")

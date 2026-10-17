@@ -1,0 +1,1294 @@
+[gd_scene load_steps=74 format=3 uid="uid://b2h5rq06dqq0x"]
+
+[ext_resource type="Script" uid="uid://b8x2yddxral5a" path="res://scenes/game/game.gd" id="1_5jirj"]
+[ext_resource type="Texture2D" uid="uid://cju3rke1ejbfs" path="res://assets/backgrounds/background_game.png" id="2_vaxfo"]
+[ext_resource type="Texture2D" uid="uid://cm5uy3gegxyq1" path="res://assets/themes/UI_frame.png" id="3_5v6r0"]
+[ext_resource type="Texture2D" uid="uid://by5lawbrejow6" path="res://assets/backgrounds/background_frame.png" id="3_ftsea"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="4_otnwt"]
+[ext_resource type="Texture2D" uid="uid://cidbsefmykdlh" path="res://assets/ores/stone.png" id="5_3xj4h"]
+[ext_resource type="Texture2D" uid="uid://dfsia7r8di4yy" path="res://assets/ores/gold.png" id="6_5v6r0"]
+[ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/themes/UI_frame_normal_shadow.png" id="6_uyinl"]
+[ext_resource type="Texture2D" uid="uid://dap7h0y6p1ud7" path="res://assets/ores/sapphire.png" id="7_uyinl"]
+[ext_resource type="Texture2D" uid="uid://b3vvnrxp8jbf8" path="res://assets/ores/ruby.png" id="8_10c2w"]
+[ext_resource type="Texture2D" uid="uid://ddp3pbm38mnaq" path="res://assets/ores/emerald.png" id="9_pg2xm"]
+[ext_resource type="Texture2D" uid="uid://cm2h3n75ir7fv" path="res://assets/ores/diamond.png" id="10_gc57s"]
+[ext_resource type="Texture2D" uid="uid://c7h7ly62bmqo8" path="res://assets/backgrounds/background_xp_multiplier.png" id="11_8b66f"]
+[ext_resource type="Texture2D" uid="uid://datlbmafxpmeo" path="res://assets/items/pickaxe.png" id="12_3jaai"]
+[ext_resource type="Texture2D" uid="uid://bj1474pvsw74k" path="res://assets/themes/UI_frame_multiplier.png" id="13_5v6r0"]
+[ext_resource type="Texture2D" uid="uid://bu56wl5sdhptm" path="res://assets/backgrounds/fill_muliplier.png" id="15_uyinl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_otnwt"]
+texture = ExtResource("3_5v6r0")
+texture_margin_left = 45.0
+texture_margin_top = 45.0
+texture_margin_right = 45.0
+texture_margin_bottom = 45.0
+draw_center = false
+
+[sub_resource type="Theme" id="Theme_3xj4h"]
+default_font = ExtResource("4_otnwt")
+default_font_size = 26
+Panel/styles/panel = SubResource("StyleBoxTexture_otnwt")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_10c2w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10c2w"]
+texture = ExtResource("6_uyinl")
+texture_margin_left = 13.0
+texture_margin_top = 13.0
+texture_margin_right = 13.0
+texture_margin_bottom = 13.0
+
+[sub_resource type="Theme" id="Theme_pg2xm"]
+Panel/styles/panel = SubResource("StyleBoxTexture_10c2w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vaxfo"]
+texture = ExtResource("3_5v6r0")
+texture_margin_left = 40.0
+texture_margin_top = 32.0
+texture_margin_right = 40.0
+texture_margin_bottom = 47.0
+
+[sub_resource type="Theme" id="Theme_ftsea"]
+default_font = ExtResource("4_otnwt")
+default_font_size = 26
+Panel/styles/panel = SubResource("StyleBoxTexture_vaxfo")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3xj4h"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_5v6r0"]
+offsets = PackedFloat32Array(0.20338982, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uyinl"]
+gradient = SubResource("Gradient_5v6r0")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_otnwt"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_10c2w"]
+offsets = PackedFloat32Array(0.19322033, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pg2xm"]
+gradient = SubResource("Gradient_10c2w")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5v6r0"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_uyinl"]
+offsets = PackedFloat32Array(0.21355931, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_10c2w"]
+gradient = SubResource("Gradient_uyinl")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pg2xm"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_gc57s"]
+offsets = PackedFloat32Array(0.21355931, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8b66f"]
+gradient = SubResource("Gradient_gc57s")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3jaai"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_1iff4"]
+offsets = PackedFloat32Array(0.21694915, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4vuph"]
+gradient = SubResource("Gradient_1iff4")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wdnak"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_h48ew"]
+offsets = PackedFloat32Array(0.22033899, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fty5b"]
+gradient = SubResource("Gradient_h48ew")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l2dhg"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_firvq"]
+offsets = PackedFloat32Array(0.21694915, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8krtj"]
+gradient = SubResource("Gradient_firvq")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fydea"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_af6p5"]
+offsets = PackedFloat32Array(0.21694915, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mumkj"]
+gradient = SubResource("Gradient_af6p5")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2vph8"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_0gkf7"]
+offsets = PackedFloat32Array(0.25762713, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6ehwc"]
+gradient = SubResource("Gradient_0gkf7")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tyhjx"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_5q2xh"]
+offsets = PackedFloat32Array(0.21694915, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sikks"]
+gradient = SubResource("Gradient_5q2xh")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5v6r0"]
+texture = ExtResource("6_uyinl")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="Theme" id="Theme_uyinl"]
+Panel/styles/panel = SubResource("StyleBoxTexture_5v6r0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ftsea"]
+texture = ExtResource("13_5v6r0")
+texture_margin_left = 31.0
+texture_margin_top = 26.0
+texture_margin_right = 31.0
+texture_margin_bottom = 26.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5v6r0"]
+bg_color = Color(0.3113789, 0.3113789, 0.3113789, 0.818)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trtic"]
+texture = ExtResource("11_8b66f")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gc57s"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_8b66f"]
+offsets = PackedFloat32Array(0, 0.68813556)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3jaai"]
+gradient = SubResource("Gradient_8b66f")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uyinl"]
+texture = ExtResource("13_5v6r0")
+texture_margin_left = 31.0
+texture_margin_top = 26.0
+texture_margin_right = 31.0
+texture_margin_bottom = 26.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10c2w"]
+bg_color = Color(0.30980393, 0.30980393, 0.30980393, 0.81960785)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pg2xm"]
+
+[sub_resource type="Gradient" id="Gradient_5newe"]
+colors = PackedColorArray(0.27664715, 0.00093104126, 0.51130635, 1, 0.16690116, 0.5840384, 0.6896427, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_37s47"]
+gradient = SubResource("Gradient_5newe")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trtic"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_vaxfo"]
+default_font = ExtResource("4_otnwt")
+default_font_size = 50
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 2
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 3
+Label/constants/shadow_outline_size = 3
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xj4h"]
+load_path = "res://.godot/imported/UI_frame.png-251b1a75227f9d0ca8d5af380b39d0ce.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3xj4h"]
+texture = SubResource("CompressedTexture2D_3xj4h")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="Theme" id="Theme_5v6r0"]
+Panel/styles/panel = SubResource("StyleBoxTexture_3xj4h")
+
+[sub_resource type="Gradient" id="Gradient_rysoc"]
+colors = PackedColorArray(0.29803923, 0.47843137, 1, 1, 0.3222163, 0.0012634322, 0.5867779, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ssvqc"]
+gradient = SubResource("Gradient_rysoc")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Game" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5jirj")
+
+[node name="Background" type="Control" parent="Game"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/Background"]
+z_index = -1
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vaxfo")
+stretch_mode = 6
+
+[node name="BGAnchorLayer" type="Control" parent="Game/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InputPanel" type="Panel" parent="Game/Background/BGAnchorLayer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 30.0
+offset_top = 650.0
+offset_right = -30.0
+offset_bottom = 850.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_3xj4h")
+
+[node name="Background" type="TextureRect" parent="Game/Background/BGAnchorLayer/InputPanel"]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+texture_filter = 1
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ftsea")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="TextureRect" type="Panel" parent="Game/Background/BGAnchorLayer/InputPanel"]
+z_index = -1
+material = SubResource("CanvasItemMaterial_10c2w")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_pg2xm")
+
+[node name="SequenceSection" type="HBoxContainer" parent="Game/Background/BGAnchorLayer/InputPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 26.0
+offset_right = -25.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -15
+alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Background/BGAnchorLayer"]
+position = Vector2(540, 1200)
+scale = Vector2(1.6816093, 1.6988506)
+texture = ExtResource("5_3xj4h")
+
+[node name="Timer" type="Timer" parent="Game"]
+one_shot = true
+autostart = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Game"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_ftsea")
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="HeaderSection" type="HBoxContainer" parent="Game/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+
+[node name="ResourcesPanel" type="Panel" parent="Game/MarginContainer/VBoxContainer/HeaderSection"]
+custom_minimum_size = Vector2(850, 170)
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel"]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_ftsea")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="InnerShadow" type="Panel" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel"]
+z_index = -1
+material = SubResource("CanvasItemMaterial_10c2w")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_pg2xm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = -25.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="Stone" type="Control" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StoneFrame" type="VBoxContainer" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Stone"]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 0
+offset_right = 132.0
+offset_bottom = 125.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="StoneIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Stone/StoneFrame"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+texture = ExtResource("5_3xj4h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StoneLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Stone/StoneFrame"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47671735, 0.48893064, 0.6611171, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 26
+text = "9999"
+horizontal_alignment = 1
+
+[node name="Gold" type="Control" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GlowIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Gold"]
+modulate = Color(0.96862745, 0.43529412, 0, 0.34901962)
+material = SubResource("CanvasItemMaterial_3xj4h")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -25.0
+offset_right = 13.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_uyinl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GlowLabel" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Gold"]
+modulate = Color(0.96862745, 0.43529412, 0, 0.34901962)
+material = SubResource("CanvasItemMaterial_otnwt")
+layout_mode = 0
+offset_left = -15.0
+offset_top = 75.0
+offset_right = 145.0
+offset_bottom = 145.0
+texture = SubResource("GradientTexture2D_pg2xm")
+
+[node name="GoldFrame" type="VBoxContainer" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Gold"]
+layout_mode = 0
+offset_right = 132.0
+offset_bottom = 125.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="GoldIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Gold/GoldFrame"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+texture = ExtResource("6_5v6r0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GoldLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Gold/GoldFrame"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.99215686, 0.8627451, 0.74509805, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1.4795681, 0.36759347, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 26
+text = "9999"
+horizontal_alignment = 1
+
+[node name="Sapphire" type="Control" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GlowIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Sapphire"]
+modulate = Color(0, 0, 1, 0.36400002)
+material = SubResource("CanvasItemMaterial_5v6r0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_10c2w")
+
+[node name="GlowLabel" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Sapphire"]
+modulate = Color(0, 0, 1, 0.282)
+material = SubResource("CanvasItemMaterial_pg2xm")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 75.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_8b66f")
+
+[node name="SapphireFrame" type="VBoxContainer" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Sapphire"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 0
+offset_right = 132.0
+offset_bottom = 125.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="SapphireIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Sapphire/SapphireFrame"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+texture = ExtResource("7_uyinl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SapphireLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Sapphire/SapphireFrame"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 1, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 26
+text = "9999"
+horizontal_alignment = 1
+
+[node name="Ruby" type="Control" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GlowIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Ruby"]
+modulate = Color(0.9058309, 0, 0, 0.39200002)
+material = SubResource("CanvasItemMaterial_3jaai")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -30.0
+offset_right = 14.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_4vuph")
+
+[node name="GlowLabel" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Ruby"]
+modulate = Color(0.90683234, 0, 0, 0.35300002)
+material = SubResource("CanvasItemMaterial_wdnak")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 75.0
+offset_right = 1.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_fty5b")
+
+[node name="RubyFrame" type="VBoxContainer" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Ruby"]
+layout_mode = 0
+offset_right = 132.0
+offset_bottom = 125.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="RubyIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Ruby/RubyFrame"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+texture = ExtResource("8_10c2w")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RubyLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Ruby/RubyFrame"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 26
+text = "9999"
+horizontal_alignment = 1
+
+[node name="Emerald" type="Control" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GlowIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Emerald"]
+modulate = Color(0, 0.83116233, 0, 0.3)
+material = SubResource("CanvasItemMaterial_l2dhg")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -30.0
+offset_right = 25.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_8krtj")
+
+[node name="GlowLabel" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Emerald"]
+modulate = Color(0, 0.83116233, 0, 0.3)
+material = SubResource("CanvasItemMaterial_fydea")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 75.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_mumkj")
+
+[node name="EmeraldFrame" type="VBoxContainer" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Emerald"]
+layout_mode = 0
+offset_right = 132.0
+offset_bottom = 125.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="EmeraldIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Emerald/EmeraldFrame"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+texture = ExtResource("9_pg2xm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EmeraldLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Emerald/EmeraldFrame"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78431374, 0.95686275, 0.9490196, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 26
+text = "9999"
+horizontal_alignment = 1
+
+[node name="Diamond" type="Control" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GlowIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Diamond"]
+modulate = Color(0, 0.7159233, 0.7159233, 0.3)
+material = SubResource("CanvasItemMaterial_2vph8")
+layout_mode = 0
+offset_left = -5.0
+offset_top = -30.0
+offset_right = 135.0
+offset_bottom = 120.0
+texture = SubResource("GradientTexture2D_6ehwc")
+
+[node name="GlowLabel" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Diamond"]
+modulate = Color(0, 0.7176471, 0.7176471, 0.3019608)
+material = SubResource("CanvasItemMaterial_tyhjx")
+layout_mode = 0
+offset_top = 75.0
+offset_right = 132.0
+offset_bottom = 145.0
+texture = SubResource("GradientTexture2D_sikks")
+
+[node name="DiamondFrame" type="VBoxContainer" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Diamond"]
+layout_mode = 0
+offset_right = 131.0
+offset_bottom = 135.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="DiamondIcon" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Diamond/DiamondFrame"]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+texture = ExtResource("10_gc57s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DiamondLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/HeaderSection/ResourcesPanel/HBoxContainer/Diamond/DiamondFrame"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7019608, 0.9490196, 0.9411765, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 26
+text = "9999"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="Game/MarginContainer/VBoxContainer/HeaderSection"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimerPanel" type="Panel" parent="Game/MarginContainer/VBoxContainer/HeaderSection"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeaderSection/TimerPanel"]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_ftsea")
+stretch_mode = 1
+
+[node name="InnerShadow" type="Panel" parent="Game/MarginContainer/VBoxContainer/HeaderSection/TimerPanel"]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_uyinl")
+
+[node name="TimerLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/HeaderSection/TimerPanel"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 40
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="Game/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="MultiplierSection" type="HBoxContainer" parent="Game/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="XPPanel" type="Panel" parent="Game/MarginContainer/VBoxContainer/MultiplierSection"]
+z_index = 3
+custom_minimum_size = Vector2(850, 90)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ftsea")
+
+[node name="XPBar" type="ProgressBar" parent="Game/MarginContainer/VBoxContainer/MultiplierSection/XPPanel"]
+z_index = -1
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 815.0
+offset_bottom = 85.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_5v6r0")
+theme_override_styles/fill = SubResource("StyleBoxTexture_trtic")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="MultiplierPanel" type="Panel" parent="Game/MarginContainer/VBoxContainer/MultiplierSection/XPPanel"]
+z_index = 1
+layout_mode = 0
+offset_left = 810.0
+offset_top = -30.0
+offset_right = 1020.0
+offset_bottom = 120.0
+
+[node name="Background" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/MultiplierSection/XPPanel/MultiplierPanel"]
+modulate = Color(1.4683453, 1.4683453, 1.4683453, 0.94100004)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_uyinl")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Glow" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/MultiplierSection/XPPanel/MultiplierPanel"]
+modulate = Color(1, 0, 0, 0.177)
+material = SubResource("CanvasItemMaterial_gc57s")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_3jaai")
+
+[node name="MultiplierSignLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/MultiplierSection/XPPanel/MultiplierPanel"]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 80.0
+offset_bottom = 147.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.9882353, 0.9254902, 0.08627451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.76020277, 3.706068e-06, 4.813075e-07, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 50
+text = "x"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MultiplierLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/MultiplierSection/XPPanel/MultiplierPanel"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = -5.0
+offset_right = 167.0
+offset_bottom = 145.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.9882353, 0.9254902, 0.08627451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.76020277, 3.706068e-06, 4.813075e-07, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 70
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="Game/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="HeatSection" type="HBoxContainer" parent="Game/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="EnergyPanel" type="Panel" parent="Game/MarginContainer/VBoxContainer/HeatSection"]
+z_index = 1
+custom_minimum_size = Vector2(850, 90)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uyinl")
+
+[node name="EnergyBar" type="ProgressBar" parent="Game/MarginContainer/VBoxContainer/HeatSection/EnergyPanel"]
+z_index = -1
+layout_mode = 0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 815.0
+offset_bottom = 85.0
+theme_override_styles/background = SubResource("StyleBoxFlat_10c2w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pg2xm")
+value = 50.0
+show_percentage = false
+
+[node name="HeatPanel" type="Panel" parent="Game/MarginContainer/VBoxContainer/HeatSection/EnergyPanel"]
+z_index = 1
+layout_mode = 0
+offset_left = 810.0
+offset_top = -30.0
+offset_right = 1020.0
+offset_bottom = 120.0
+
+[node name="Background" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeatSection/EnergyPanel/HeatPanel"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_uyinl")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Glow" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/HeatSection/EnergyPanel/HeatPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeatSignLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/HeatSection/EnergyPanel/HeatPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 32.0
+
+[node name="HeatLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/HeatSection/EnergyPanel/HeatPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 32.0
+
+[node name="EffectSection" type="HBoxContainer" parent="Game/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="CritLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/EffectSection"]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CRIT !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BombLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/EffectSection"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "BOMB !"
+horizontal_alignment = 1
+
+[node name="JackpotLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/EffectSection"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "JACKPOT !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxLabel" type="Label" parent="Game/MarginContainer/VBoxContainer/EffectSection"]
+visible = false
+layout_mode = 2
+
+[node name="Spacer3" type="Control" parent="Game/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Equipments" type="HBoxContainer" parent="Game/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="PickaxePanel" type="Panel" parent="Game/MarginContainer/VBoxContainer/Equipments"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/Equipments/PickaxePanel"]
+modulate = Color(1, 1, 1, 0.7764706)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_37s47")
+
+[node name="Pickaxe" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/Equipments/PickaxePanel"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_3jaai")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="ArtefactPanel" type="Panel" parent="Game/MarginContainer/VBoxContainer/Equipments"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Game/MarginContainer/VBoxContainer/Equipments/ArtefactPanel"]
+modulate = Color(1, 1, 1, 0.7764706)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_37s47")
+
+[node name="SequenceSection" type="HBoxContainer" parent="Game/MarginContainer/VBoxContainer/Equipments/ArtefactPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PubPanel" type="Panel" parent="Game/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trtic")
+
+[node name="EndScreen" type="Control" parent="Game"]
+visible = false
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_vaxfo")
+
+[node name="ColorRect" type="ColorRect" parent="Game/EndScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.46666667)
+
+[node name="MarginContainer" type="MarginContainer" parent="Game/EndScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="RunStats" type="Panel" parent="Game/EndScreen/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_5v6r0")
+
+[node name="TextureRect" type="TextureRect" parent="Game/EndScreen/MarginContainer/RunStats"]
+modulate = Color(1, 1, 1, 0.7647059)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ssvqc")
+
+[node name="MarginContainer" type="MarginContainer" parent="Game/EndScreen/MarginContainer/RunStats"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="RunStats" type="Label" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+text = "Success : 99 - Failed : 99
+Multiplier : 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stone" type="HBoxContainer" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Stone"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+texture = ExtResource("5_3xj4h")
+stretch_mode = 5
+
+[node name="StoneStat" type="Label" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Stone"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 60
+text = "9999 x 10 = 99990"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gold" type="HBoxContainer" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Gold"]
+layout_mode = 2
+texture = ExtResource("6_5v6r0")
+
+[node name="GoldStat" type="Label" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Gold"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 60
+text = "9999 x 10 = 99990"
+
+[node name="Sapphire" type="HBoxContainer" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Sapphire"]
+layout_mode = 2
+texture = ExtResource("7_uyinl")
+
+[node name="SapphireStat" type="Label" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Sapphire"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 60
+text = "9999 x 10 = 99990"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ruby" type="HBoxContainer" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Ruby"]
+layout_mode = 2
+texture = ExtResource("8_10c2w")
+
+[node name="RubyStat" type="Label" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Ruby"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 60
+text = "9999 x 10 = 99990"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Emerald" type="HBoxContainer" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Emerald"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = ExtResource("9_pg2xm")
+
+[node name="EmeraldStat" type="Label" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Emerald"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 60
+text = "9999 x 10 = 99990"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Diamond" type="HBoxContainer" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Diamond"]
+layout_mode = 2
+texture = ExtResource("10_gc57s")
+
+[node name="DiamondStat" type="Label" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/Diamond"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_otnwt")
+theme_override_font_sizes/font_size = 60
+text = "9999 x 10 = 99990"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 40
+text = "EXIT"
+
+[connection signal="timeout" from="Game/Timer" to="Game" method="_on_timer_timeout"]
+[connection signal="pressed" from="Game/EndScreen/MarginContainer/RunStats/MarginContainer/VBoxContainer/ExitButton" to="Game" method="_on_exit_button_pressed"]

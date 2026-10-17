@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Task" format=3 uid="uid://csid8jvvbhhcm"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_3q5uy"]
+[ext_resource type="Script" uid="uid://bj0fbj6y5qgc6" path="res://_data/task.gd" id="2_6a2gj"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_p6ywo"]
+
+[sub_resource type="Resource" id="Resource_dvxb0"]
+script = ExtResource("1_3q5uy")
+ore = 1
+quantity = 20
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2whcb"]
+atlas = ExtResource("2_p6ywo")
+region = Rect2(640, 256, 128, 128)
+
+[resource]
+script = ExtResource("2_6a2gj")
+type = 7
+id = 22
+description = "TASK_023_DESCRIPTION"
+base_required_amount = 10
+base_rewards = Array[ExtResource("1_3q5uy")]([SubResource("Resource_dvxb0")])
+max_level = 20
+icon = SubResource("AtlasTexture_2whcb")
+metadata/_custom_type_script = "uid://bj0fbj6y5qgc6"

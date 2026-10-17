@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c6tvc13lpauw3"]
+
+[ext_resource type="Resource" uid="uid://bca1gxmjaby4j" path="res://_resources/items/descriptions/item_006.tres" id="1_i1xtb"]
+[ext_resource type="Texture2D" uid="uid://bvr6sqxhicnib" path="res://assets/atlas/artefacts_atlas.png" id="2_u2k6l"]
+[ext_resource type="Script" uid="uid://6rjj0t56qr88" path="res://_data/item.gd" id="3_u2k6l"]
+[ext_resource type="Script" uid="uid://dlbtrjuhbb1gy" path="res://_data/stat_value.gd" id="4_dy1h2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmruv"]
+atlas = ExtResource("2_u2k6l")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="Resource" id="Resource_i1xtb"]
+script = ExtResource("4_dy1h2")
+stat = 301
+value = 0.2
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_bt0a2"]
+script = ExtResource("4_dy1h2")
+stat = 101
+value = 10.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_3t84h"]
+script = ExtResource("4_dy1h2")
+stat = 201
+value = 0.5
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[sub_resource type="Resource" id="Resource_5noop"]
+script = ExtResource("4_dy1h2")
+stat = 660
+value = 0.3
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[resource]
+script = ExtResource("3_u2k6l")
+hash = "djE7NDs0OzY7MzAxLDAuMywxOzEwMSwxMC4wLDA7NjYwLDAuNSwxOzY2MSwyLjAsMXxmMGM0NzRhMThmOTI5ZTM5MGI4ZjU2ODY3ZmE0NjI5NjExMGMwZGIxZjExZGIxNGMxM2EwMjM1YjBkNGQ4MDEx"
+description = ExtResource("1_i1xtb")
+icon = SubResource("AtlasTexture_jmruv")
+type = 4
+rarity = 4
+stats = Array[ExtResource("4_dy1h2")]([SubResource("Resource_i1xtb"), SubResource("Resource_bt0a2"), SubResource("Resource_3t84h"), SubResource("Resource_5noop")])

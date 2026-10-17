@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StatDefinition" load_steps=2 format=3 uid="uid://dle7g8c7mte0h"]
+
+[ext_resource type="Script" uid="uid://cjij84vdl2etu" path="res://_data/stat_definition.gd" id="1_erwma"]
+
+[resource]
+script = ExtResource("1_erwma")
+id = 620
+name = "STAT_BOMB_CHANCE_NAME"
+description = "STAT_BOMB_CHANCE_DESCRIPTION"
+rarity = 2
+tags = Array[int]([17, 10])
+mode = 1
+bonus_min = 0.01
+bonus_max = 0.05
+ore_affinity = Array[int]([4])
+metadata/_custom_type_script = "uid://cjij84vdl2etu"

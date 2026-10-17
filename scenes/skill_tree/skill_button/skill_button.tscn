@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://22g6ounvsouw"]
+
+[ext_resource type="Texture2D" uid="uid://c3ngxrqnacjia" path="res://assets/backgrounds/background_skill.png" id="2_3r0xy"]
+[ext_resource type="Script" uid="uid://bxcbwjnjpkh6q" path="res://scenes/skill_tree/skill_button/skill_button.gd" id="2_rbj7s"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="4_roei1"]
+[ext_resource type="Texture2D" uid="uid://mxgnb27y3sk3" path="res://assets/atlas/skill_secondary_atlas_64.png" id="5_5qail"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp1hy"]
+atlas = ExtResource("4_roei1")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx4xc"]
+atlas = ExtResource("5_5qail")
+region = Rect2(64, 0, 64, 64)
+
+[node name="SkillButton" type="Button" unique_id=1825853142]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 1
+script = ExtResource("2_rbj7s")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1254882591]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3r0xy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PrimaryIcon" type="TextureRect" parent="." unique_id=852811129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_fp1hy")
+stretch_mode = 5
+
+[node name="SecondaryIcon" type="TextureRect" parent="." unique_id=1864371507]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = SubResource("AtlasTexture_vx4xc")
+stretch_mode = 5

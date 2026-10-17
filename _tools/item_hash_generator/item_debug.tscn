@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://ceger8826xgta"]
+
+[ext_resource type="Script" uid="uid://ce283g73lxnff" path="res://_tools/item_hash_generator/item_debug.gd" id="1_j4rs2"]
+[ext_resource type="Script" uid="uid://dlbtrjuhbb1gy" path="res://_data/stat_value.gd" id="2_3xel2"]
+[ext_resource type="Resource" uid="uid://bpylmuqpmrhl7" path="res://_resources/items/descriptions/item_133.tres" id="3_ihyld"]
+
+[sub_resource type="Resource" id="Resource_0ydiy"]
+script = ExtResource("2_3xel2")
+stat = 700
+value = 8.0
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[node name="ItemDebug" type="Node"]
+script = ExtResource("1_j4rs2")
+item_rarity = 3
+item_stats = Array[ExtResource("2_3xel2")]([SubResource("Resource_0ydiy")])
+item_description = ExtResource("3_ihyld")

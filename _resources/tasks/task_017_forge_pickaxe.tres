@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Task" format=3 uid="uid://b5fyu3s1tvkhp"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_ojucq"]
+[ext_resource type="Texture2D" uid="uid://xfgtpmiqx4hy" path="res://assets/atlas/forge_item_atlas.png" id="2_67mb3"]
+[ext_resource type="Script" uid="uid://bj0fbj6y5qgc6" path="res://_data/task.gd" id="2_dvxb0"]
+
+[sub_resource type="Resource" id="Resource_ojucq"]
+script = ExtResource("1_ojucq")
+ore = 6
+quantity = 50
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_dvxb0"]
+script = ExtResource("1_ojucq")
+ore = 7
+quantity = 50
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3h1q"]
+atlas = ExtResource("2_67mb3")
+region = Rect2(0, 0, 128, 128)
+
+[resource]
+script = ExtResource("2_dvxb0")
+type = 1
+id = 16
+description = "TASK_017_DESCRIPTION"
+base_required_amount = 3
+base_rewards = Array[ExtResource("1_ojucq")]([SubResource("Resource_ojucq"), SubResource("Resource_dvxb0")])
+max_level = 15
+icon = SubResource("AtlasTexture_e3h1q")
+metadata/_custom_type_script = "uid://bj0fbj6y5qgc6"

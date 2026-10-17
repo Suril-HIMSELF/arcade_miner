@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemDescription" format=3 uid="uid://b2gcmfucjybhx"]
+
+[ext_resource type="Texture2D" uid="uid://bvr6sqxhicnib" path="res://assets/atlas/artefacts_atlas.png" id="1_1o3bu"]
+[ext_resource type="Script" uid="uid://dvocng0x1h0ra" path="res://_data/item_description.gd" id="1_l3lfe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyc4c"]
+atlas = ExtResource("1_1o3bu")
+region = Rect2(512, 0, 128, 128)
+
+[resource]
+script = ExtResource("1_l3lfe")
+id = 4
+name_key = &"ITEM_004_NAME"
+type = 4
+rarity = 4
+description_key = &"ITEM_004_DESCRIPTION"
+icon = SubResource("AtlasTexture_hyc4c")
+metadata/_custom_type_script = "uid://dvocng0x1h0ra"

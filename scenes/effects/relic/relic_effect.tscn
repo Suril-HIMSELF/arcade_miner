@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvddi805stnm8"]
+
+[ext_resource type="Script" uid="uid://dmkjvhwcrwn7j" path="res://scenes/effects/relic/relic_effect.gd" id="1_xkco1"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_7h43g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_neblp"]
+atlas = ExtResource("2_7h43g")
+region = Rect2(128, 384, 128, 128)
+
+[node name="RelicEffect" type="Node2D"]
+position = Vector2(0, -100)
+script = ExtResource("1_xkco1")
+
+[node name="RelicSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.85, 0.85)
+texture = SubResource("AtlasTexture_neblp")

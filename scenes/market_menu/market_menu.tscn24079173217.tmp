@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=3 uid="uid://b46my2w0fyepv"]
+
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="2_4y35j"]
+[ext_resource type="Script" uid="uid://dg0xlm6kykvpj" path="res://scenes/market_menu/market_menu.gd" id="3_a65ne"]
+[ext_resource type="PackedScene" uid="uid://cfcmvokmsymig" path="res://scenes/market_menu/market_slot/market_slot.tscn" id="4_2lugx"]
+[ext_resource type="Texture2D" uid="uid://bfpsvqx30hh5x" path="res://assets/backgrounds/background_market.png" id="4_rei6i"]
+[ext_resource type="PackedScene" uid="uid://q7vkbfsi8k0f" path="res://scenes/tooltips/market/tooltip_market.tscn" id="12_4rklr"]
+
+[sub_resource type="Theme" id="Theme_au0up"]
+default_font = ExtResource("2_4y35j")
+default_font_size = 20
+Label/colors/font_color = Color(0.9529412, 0.9411765, 0.9098039, 1)
+Label/colors/font_outline_color = Color(0.101960786, 0.07058824, 0.047058824, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.53333336)
+Label/constants/outline_size = 6
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4rklr"]
+
+[sub_resource type="Theme" id="Theme_e48af"]
+Panel/styles/panel = SubResource("StyleBoxEmpty_4rklr")
+
+[node name="MarketMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_au0up")
+script = ExtResource("3_a65ne")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.63000005)
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_rei6i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -511.5
+offset_top = -705.0
+offset_right = 511.5
+offset_bottom = 705.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="OreContainer" type="VBoxContainer" parent="VBoxContainer"]
+z_index = 1
+layout_mode = 2
+mouse_filter = 2
+theme = SubResource("Theme_e48af")
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/OreContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 23
+alignment = 1
+
+[node name="WoodSlot" parent="VBoxContainer/OreContainer/HBoxContainer" instance=ExtResource("4_2lugx")]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_vertical = 6
+ore = 6
+
+[node name="MetalSlot" parent="VBoxContainer/OreContainer/HBoxContainer" instance=ExtResource("4_2lugx")]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_vertical = 6
+ore = 7
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/OreContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 23
+alignment = 1
+
+[node name="SapphireSlot" parent="VBoxContainer/OreContainer/HBoxContainer2" instance=ExtResource("4_2lugx")]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_vertical = 6
+ore = 2
+
+[node name="RubySlot" parent="VBoxContainer/OreContainer/HBoxContainer2" instance=ExtResource("4_2lugx")]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 4
+ore = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/OreContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 23
+alignment = 1
+
+[node name="EmeraldSlot" parent="VBoxContainer/OreContainer/HBoxContainer3" instance=ExtResource("4_2lugx")]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_vertical = 6
+ore = 4
+
+[node name="DiamondSlot" parent="VBoxContainer/OreContainer/HBoxContainer3" instance=ExtResource("4_2lugx")]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 6
+ore = 5
+
+[node name="TooltipMarket" parent="." instance=ExtResource("12_4rklr")]
+visible = false

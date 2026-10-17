@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dvuwlwne66gmr"]
+
+[ext_resource type="Script" uid="uid://cdwy3s0a5dv0w" path="res://scenes/tutorial/tutorial_layer.gd" id="1_2eo2o"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="1_aasar"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="2_jp1fh"]
+[ext_resource type="Texture2D" uid="uid://bpdnkshu62dn0" path="res://assets/backgrounds/background_tooltip.png" id="3_8fblc"]
+[ext_resource type="Texture2D" uid="uid://bt3tppk1rtdhb" path="res://assets/icons/arrow.png" id="5_8fblc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0clt"]
+texture = ExtResource("2_jp1fh")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jp1fh"]
+texture = ExtResource("3_8fblc")
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+
+[node name="TutorialLayer" type="CanvasLayer" unique_id=620785898]
+script = ExtResource("1_2eo2o")
+
+[node name="TutorialRoot" type="Control" parent="." unique_id=2027327701]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TutorialBubbleRoot" type="Control" parent="TutorialRoot" unique_id=1905339147]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TutorialBubble" type="PanelContainer" parent="TutorialRoot/TutorialBubbleRoot" unique_id=895360084]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 123.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m0clt")
+
+[node name="Background" type="Panel" parent="TutorialRoot/TutorialBubbleRoot/TutorialBubble" unique_id=1573414185]
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jp1fh")
+
+[node name="MarginContainer" type="MarginContainer" parent="TutorialRoot/TutorialBubbleRoot/TutorialBubble" unique_id=809423229]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Label" type="Label" parent="TutorialRoot/TutorialBubbleRoot/TutorialBubble/MarginContainer" unique_id=1952320299]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_aasar")
+theme_override_font_sizes/font_size = 50
+text = "Voici un exemple de texte pour le tutoriel. "
+autowrap_mode = 3
+
+[node name="Arrow" type="TextureRect" parent="TutorialRoot/TutorialBubbleRoot" unique_id=1573485233]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = -1
+offset_right = 14.0
+offset_bottom = 23.0
+texture = ExtResource("5_8fblc")
+expand_mode = 1
+stretch_mode = 5

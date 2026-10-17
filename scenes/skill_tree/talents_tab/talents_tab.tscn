@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://cjv3xdjudlvu4"]
+
+[ext_resource type="Texture2D" path="res://assets/frames/frame_forge_light.png" id="1_0xjt7"]
+[ext_resource type="Texture2D" uid="uid://b46wayhwevqv6" path="res://assets/frames/frame_small.png" id="1_tdwxg"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="2_m4045"]
+[ext_resource type="Script" uid="uid://c0qj4u3njv8vb" path="res://scenes/skill_tree/talents_tab/talents_tab.gd" id="4_wk713"]
+[ext_resource type="AudioStream" uid="uid://cotfc88sun1oq" path="res://assets/sounds/sfx_pickaxe.mp3" id="6_cjefu"]
+[ext_resource type="PackedScene" uid="uid://22g6ounvsouw" path="res://scenes/skill_tree/skill_button/skill_button.tscn" id="7_y7k42"]
+[ext_resource type="PackedScene" uid="uid://155fd7wtcaf4" path="res://scenes/tooltips/skill/tooltip_skill.tscn" id="9_0xjt7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0xjt7"]
+texture = ExtResource("1_tdwxg")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdwxg"]
+texture = ExtResource("1_tdwxg")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhe83"]
+texture = ExtResource("1_tdwxg")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qr0ks"]
+texture = ExtResource("1_0xjt7")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_no80g"]
+default_font = ExtResource("2_m4045")
+default_font_size = 30
+Button/styles/focus = SubResource("StyleBoxTexture_0xjt7")
+Button/styles/hover = SubResource("StyleBoxTexture_tdwxg")
+Button/styles/normal = SubResource("StyleBoxTexture_hhe83")
+Button/styles/pressed = SubResource("StyleBoxTexture_qr0ks")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 3
+Label/fonts/font = ExtResource("2_m4045")
+
+[node name="TalentsTab" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_no80g")
+script = ExtResource("4_wk713")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 250
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 200
+
+[node name="SkillsContainer" type="GridContainer" parent="MarginContainer"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 5
+
+[node name="StoneQuantity" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 10000
+
+[node name="GoldQuantity" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 10100
+
+[node name="SapphireQuantity" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 10200
+
+[node name="RubyQuantity" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 10300
+
+[node name="EmeraldQuantity" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 10400
+
+[node name="DiamondQuantity" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 10500
+
+[node name="StoneXp" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 20000
+
+[node name="GoldXp" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 20100
+
+[node name="SapphireXp" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 20200
+
+[node name="RubyXp" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 20300
+
+[node name="EmeraldXp" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 20400
+
+[node name="DiamondXp" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 20500
+
+[node name="HeatXp" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 130300
+
+[node name="HeatCrit" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 130400
+
+[node name="HeatQuantity" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 130500
+
+[node name="CritChance" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 60000
+
+[node name="CritPower" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 60100
+
+[node name="Luck" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 52000
+
+[node name="InventorySlots" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 58000
+
+[node name="UnlockArtefact" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 58996
+
+[node name="EchoChance" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 65000
+
+[node name="EchoPower" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 65100
+
+[node name="GoldRushChance" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 66000
+
+[node name="GoldRushPower" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 66100
+
+[node name="RelicChance" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 64000
+
+[node name="RelicPower" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 64100
+
+[node name="TimerDuration" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 50000
+
+[node name="TimerPenalty" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 50100
+
+[node name="MultiplierPenalty" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 51000
+
+[node name="DamageFlat" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 70000
+
+[node name="DamagePercent" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 70100
+
+[node name="BombChance" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 62000
+
+[node name="BombPower" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 62100
+
+[node name="Restock" parent="MarginContainer/SkillsContainer" instance=ExtResource("7_y7k42")]
+layout_mode = 2
+skill_id = 59000
+
+[node name="SFXSkill" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_cjefu")
+
+[node name="Tooltip" parent="." instance=ExtResource("9_0xjt7")]

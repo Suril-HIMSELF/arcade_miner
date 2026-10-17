@@ -1,0 +1,262 @@
+[gd_scene format=3 uid="uid://br3ja7a8eqk04"]
+
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="1_ger31"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="2_xtdmw"]
+[ext_resource type="Texture2D" uid="uid://cs52fqq3pr1dw" path="res://assets/themes/background_frame_2.png" id="3_sy8f5"]
+[ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/frames/frame_shadow.png" id="4_tbpb8"]
+[ext_resource type="Texture2D" uid="uid://stn507v6avwg" path="res://assets/atlas/ore_atlas_128.png" id="5_c6wr0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1iff4"]
+texture = ExtResource("1_ger31")
+texture_margin_left = 50.0
+texture_margin_top = 50.0
+texture_margin_right = 50.0
+texture_margin_bottom = 50.0
+
+[sub_resource type="Theme" id="Theme_vaxfo"]
+default_font = ExtResource("2_xtdmw")
+default_font_size = 50
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 2
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 3
+Label/constants/shadow_outline_size = 3
+Panel/styles/panel = SubResource("StyleBoxTexture_1iff4")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fydea"]
+atlas = ExtResource("5_c6wr0")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_af6p5"]
+atlas = ExtResource("5_c6wr0")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mumkj"]
+atlas = ExtResource("5_c6wr0")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vph8"]
+atlas = ExtResource("5_c6wr0")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gkf7"]
+atlas = ExtResource("5_c6wr0")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ehwc"]
+atlas = ExtResource("5_c6wr0")
+region = Rect2(640, 0, 128, 128)
+
+[node name="EndScreen" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_vaxfo")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.46666667)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="RunStats" type="Panel" parent="Control/MarginContainer"]
+z_index = 2
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Background" type="TextureRect" parent="Control/MarginContainer/RunStats"]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_sy8f5")
+
+[node name="InnerGlow" type="TextureRect" parent="Control/MarginContainer/RunStats"]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_tbpb8")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/RunStats"]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/RunStats/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="RunStats" type="RichTextLabel" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+bbcode_enabled = true
+text = "Success : 99 - Failed : 99
+Multiplier : [color=#b434eb]10[/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Artefacts" type="HBoxContainer" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+alignment = 1
+
+[node name="Stone" type="HBoxContainer" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Stone"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = SubResource("AtlasTexture_fydea")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StoneStat" type="RichTextLabel" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Stone"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "9999 x [color=#b434eb]10[/color] = 99990"
+vertical_alignment = 1
+
+[node name="Gold" type="HBoxContainer" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Gold"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = SubResource("AtlasTexture_af6p5")
+expand_mode = 1
+
+[node name="GoldStat" type="RichTextLabel" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Gold"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "9999 x [color=#b434eb]10[/color] = 99990"
+vertical_alignment = 1
+
+[node name="Sapphire" type="HBoxContainer" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Sapphire"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = SubResource("AtlasTexture_mumkj")
+expand_mode = 1
+
+[node name="SapphireStat" type="RichTextLabel" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Sapphire"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "9999 x [color=#b434eb]10[/color] = 99990"
+vertical_alignment = 1
+
+[node name="Ruby" type="HBoxContainer" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Ruby"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = SubResource("AtlasTexture_2vph8")
+expand_mode = 1
+
+[node name="RubyStat" type="RichTextLabel" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Ruby"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "9999 x [color=#b434eb]10[/color] = 99990"
+vertical_alignment = 1
+
+[node name="Emerald" type="HBoxContainer" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Emerald"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = SubResource("AtlasTexture_0gkf7")
+expand_mode = 1
+
+[node name="EmeraldStat" type="RichTextLabel" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Emerald"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "9999 x [color=#b434eb]10[/color] = 99990"
+vertical_alignment = 1
+
+[node name="Diamond" type="HBoxContainer" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Diamond"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture = SubResource("AtlasTexture_6ehwc")
+expand_mode = 1
+
+[node name="DiamondStat" type="RichTextLabel" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer/Diamond"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "9999 x [color=#b434eb]10[/color] = 99990"
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="Control/MarginContainer/RunStats/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 40
+text = "EXIT"

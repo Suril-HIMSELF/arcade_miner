@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c0tof87hwuh14"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="EndRewardUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="EndRewardUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleLabel" type="Label" parent="EndRewardUI/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="RewardLabel" type="RichTextLabel" parent="EndRewardUI/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

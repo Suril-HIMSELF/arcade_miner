@@ -1,0 +1,374 @@
+[gd_scene format=3 uid="uid://q7vkbfsi8k0f"]
+
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="1_lg8so"]
+[ext_resource type="Script" uid="uid://chbwc3s5q20he" path="res://scenes/tooltips/market/tooltip_market.gd" id="1_rrebs"]
+[ext_resource type="Texture2D" uid="uid://bsh0x5f4xjbyy" path="res://assets/buttons/button_green.png" id="2_xnsts"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="3_jrkl1"]
+[ext_resource type="Texture2D" uid="uid://bpdnkshu62dn0" path="res://assets/backgrounds/background_tooltip.png" id="4_olk4o"]
+[ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/frames/frame_shadow.png" id="5_7de7p"]
+[ext_resource type="Texture2D" uid="uid://bmx6f65s5watr" path="res://assets/frames/separator_h.png" id="5_kdf80"]
+[ext_resource type="Texture2D" uid="uid://7whusx0kgrw2" path="res://assets/frames/frame_normal.png" id="6_6xem5"]
+[ext_resource type="Texture2D" uid="uid://stn507v6avwg" path="res://assets/atlas/ore_atlas_128.png" id="6_7de7p"]
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/frame_light.png" id="8_lg8so"]
+[ext_resource type="Texture2D" uid="uid://do2pc28i11u6j" path="res://assets/buttons/button_green_pressed.png" id="10_4yvt8"]
+[ext_resource type="Texture2D" uid="uid://gjcri7dvlebd" path="res://assets/buttons/button_red.png" id="10_kdf80"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="12_7de7p"]
+[ext_resource type="Texture2D" uid="uid://5mofe2dwy8ow" path="res://assets/buttons/button_red_pressed.png" id="13_4yvt8"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="13_6xem5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4yvt8"]
+texture = ExtResource("1_lg8so")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="Theme" id="Theme_rrebs"]
+default_font = ExtResource("3_jrkl1")
+default_font_size = 27
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 4
+Panel/styles/panel = SubResource("StyleBoxTexture_4yvt8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wfhxq"]
+texture = ExtResource("1_lg8so")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="Theme" id="Theme_6eskr"]
+Panel/styles/panel = SubResource("StyleBoxTexture_wfhxq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7de7p"]
+texture = ExtResource("1_lg8so")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1rna4"]
+texture = ExtResource("4_olk4o")
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_amf1s"]
+texture = ExtResource("5_7de7p")
+expand_margin_left = 50.0
+expand_margin_top = 50.0
+expand_margin_right = 50.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6eskr"]
+texture = ExtResource("6_6xem5")
+texture_margin_left = 25.0
+texture_margin_top = 25.0
+texture_margin_right = 25.0
+texture_margin_bottom = 25.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxhub"]
+atlas = ExtResource("12_7de7p")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vi675"]
+texture = ExtResource("8_lg8so")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6xem5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6eskr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4e1ev"]
+texture = ExtResource("2_xnsts")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kdf80"]
+texture = ExtResource("10_4yvt8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xem5"]
+texture = ExtResource("2_xnsts")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nmtje"]
+texture = ExtResource("10_kdf80")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eskr"]
+atlas = ExtResource("6_7de7p")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6er3"]
+texture = ExtResource("10_kdf80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5iywi"]
+texture = ExtResource("13_4yvt8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ahojq"]
+texture = ExtResource("10_kdf80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f8baa"]
+texture = ExtResource("10_kdf80")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xem5"]
+atlas = ExtResource("6_7de7p")
+region = Rect2(128, 0, 128, 128)
+
+[node name="TooltipMarket" type="CanvasLayer" unique_id=598546388]
+
+[node name="Control" type="Control" parent="." unique_id=1762600664]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_rrebs")
+script = ExtResource("1_rrebs")
+
+[node name="BlackVeil" type="ColorRect" parent="Control" unique_id=816543279]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.69803923)
+
+[node name="Panel" type="PanelContainer" parent="Control" unique_id=1032560902]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -325.0
+offset_right = 350.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme = SubResource("Theme_6eskr")
+theme_override_styles/panel = SubResource("StyleBoxTexture_7de7p")
+
+[node name="Background" type="Panel" parent="Control/Panel" unique_id=1036613959]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1rna4")
+
+[node name="InnerShadow" type="Panel" parent="Control/Panel" unique_id=1709483380]
+z_index = -1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_amf1s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel" unique_id=2077686711]
+layout_mode = 2
+mouse_force_pass_scroll_events = false
+theme_override_constants/separation = 20
+
+[node name="Header" type="HBoxContainer" parent="Control/Panel/VBoxContainer" unique_id=1714813330]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/Panel/VBoxContainer/Header" unique_id=1772361904]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/disabled = SubResource("StyleBoxTexture_6eskr")
+disabled = true
+
+[node name="Icon" type="TextureRect" parent="Control/Panel/VBoxContainer/Header/Button" unique_id=1653378334]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_rxhub")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/Header" unique_id=697732925]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Title" type="Label" parent="Control/Panel/VBoxContainer/Header/TitleContainer" unique_id=1050150292]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0.7607843, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_6xem5")
+theme_override_font_sizes/font_size = 38
+text = "Stone Quantity"
+vertical_alignment = 1
+
+[node name="Quantity" type="RichTextLabel" parent="Control/Panel/VBoxContainer/Header/TitleContainer" unique_id=1878896647]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_jrkl1")
+theme_override_fonts/bold_font = ExtResource("13_6xem5")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Stock : [color=\"#91c65eff\"]35[/color]"
+vertical_alignment = 1
+
+[node name="Separator1" type="TextureRect" parent="Control/Panel/VBoxContainer" unique_id=1818088548]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+texture = ExtResource("5_kdf80")
+expand_mode = 1
+
+[node name="ContentContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer" unique_id=715714739]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Title" type="Label" parent="Control/Panel/VBoxContainer/ContentContainer" unique_id=1272091153]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "TOOLTIP_MARKET_LABEL_QUANTITY"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="LineEdit" type="LineEdit" parent="Control/Panel/VBoxContainer/ContentContainer" unique_id=1125667439]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_vi675")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_6xem5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6eskr")
+text = "9999"
+alignment = 1
+virtual_keyboard_type = 2
+
+[node name="Footer" type="HBoxContainer" parent="Control/Panel/VBoxContainer" unique_id=1896105637]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="BuyButton" type="Button" parent="Control/Panel/VBoxContainer/Footer" unique_id=1377184543]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_4e1ev")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kdf80")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6xem5")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_nmtje")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/Footer/BuyButton" unique_id=445748193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.5
+offset_right = 104.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer/Footer/BuyButton/VBoxContainer" unique_id=115069738]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "TOOLTIP_MARKET_LABEL_PURCHASE"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel/VBoxContainer/Footer/BuyButton/VBoxContainer" unique_id=2063018597]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="GoldIcon" type="TextureRect" parent="Control/Panel/VBoxContainer/Footer/BuyButton/VBoxContainer/HBoxContainer" unique_id=1750880523]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_6eskr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BuyPriceFinal" type="Label" parent="Control/Panel/VBoxContainer/Footer/BuyButton/VBoxContainer/HBoxContainer" unique_id=1200324614]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SellButton" type="Button" parent="Control/Panel/VBoxContainer/Footer" unique_id=294960595]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_n6er3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5iywi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ahojq")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_f8baa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/VBoxContainer/Footer/SellButton" unique_id=268827611]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.5
+offset_right = 100.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -10
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer/Footer/SellButton/VBoxContainer" unique_id=2011849082]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "TOOLTIP_MARKET_LABEL_RESALE"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel/VBoxContainer/Footer/SellButton/VBoxContainer" unique_id=162486843]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="GoldIcon" type="TextureRect" parent="Control/Panel/VBoxContainer/Footer/SellButton/VBoxContainer/HBoxContainer" unique_id=1227147826]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_6xem5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SellPriceFinal" type="Label" parent="Control/Panel/VBoxContainer/Footer/SellButton/VBoxContainer/HBoxContainer" unique_id=684768631]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="text_changed" from="Control/Panel/VBoxContainer/ContentContainer/LineEdit" to="Control" method="_on_line_edit_text_changed"]

@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=10 format=3 uid="uid://dgipareip3fkt"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_8tlrt"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_xqriu"]
+[ext_resource type="Script" uid="uid://bw106588ppk51" path="res://_data/skill.gd" id="3_ahm8w"]
+[ext_resource type="Resource" uid="uid://c5ie7hx27m72j" path="res://_resources/stats/crit_power.tres" id="4_oh41l"]
+[ext_resource type="Texture2D" uid="uid://mxgnb27y3sk3" path="res://assets/atlas/skill_secondary_atlas_64.png" id="4_xqriu"]
+
+[sub_resource type="Resource" id="Resource_rih6b"]
+script = ExtResource("1_8tlrt")
+quantity = 100
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_xqriu"]
+script = ExtResource("1_8tlrt")
+ore = 3
+quantity = 10
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42sp2"]
+atlas = ExtResource("2_xqriu")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahm8w"]
+atlas = ExtResource("4_xqriu")
+region = Rect2(256, 0, 64, 64)
+
+[resource]
+script = ExtResource("3_ahm8w")
+id = 60100
+name = "STAT_CRIT_POWER_NAME"
+description = "STAT_CRIT_POWER_DESCRIPTION"
+primary_icon = SubResource("AtlasTexture_42sp2")
+secondary_icon = SubResource("AtlasTexture_ahm8w")
+stat = ExtResource("4_oh41l")
+bonus = 0.1
+max_level = 5
+cost = Array[ExtResource("1_8tlrt")]([SubResource("Resource_rih6b"), SubResource("Resource_xqriu")])

@@ -1,0 +1,299 @@
+[gd_scene format=3 uid="uid://xdi7d6lulfyd"]
+
+[ext_resource type="Texture2D" uid="uid://bc1ro4tf06tk6" path="res://assets/frames/frame_inventory.png" id="2_mmjna"]
+[ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="2_t7v50"]
+[ext_resource type="Texture2D" uid="uid://6n1uhqsgmepc" path="res://assets/frames/frame_wood.png" id="4_t7v50"]
+[ext_resource type="Texture2D" uid="uid://dhqnidvcp7f0y" path="res://assets/backgrounds/background_inventory.png" id="5_c61o2"]
+[ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/frames/frame_shadow.png" id="9_ivcrv"]
+[ext_resource type="Texture2D" uid="uid://bhrhn0r03wlcl" path="res://assets/icons/pickaxe_empty.png" id="10_qluvr"]
+[ext_resource type="Texture2D" uid="uid://ddhnnj8gkwghm" path="res://assets/icons/helmet_empty.png" id="10_yaa82"]
+[ext_resource type="Texture2D" uid="uid://dicqnqftce8y8" path="res://assets/icons/lantern_empty.png" id="11_c61o2"]
+[ext_resource type="Texture2D" uid="uid://ny1f40ugnse1" path="res://assets/icons/jewel_empty.png" id="12_qluvr"]
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="14_jkh06"]
+[ext_resource type="Texture2D" uid="uid://cnqgofe4o68wc" path="res://assets/buttons/button_brown.png" id="15_7f173"]
+[ext_resource type="Texture2D" uid="uid://f0uwn220negq" path="res://assets/buttons/button_brown_pressed.png" id="16_7f173"]
+[ext_resource type="Script" uid="uid://dpatee0g2onag" path="res://scenes/inventory_menu/inventory_menu.gd" id="17_gteh2"]
+[ext_resource type="Script" uid="uid://cgdqygl4e6gvm" path="res://scenes/inventory_menu/inventory_slot/equipment_slot.gd" id="18_ii7g3"]
+[ext_resource type="PackedScene" uid="uid://dx5yrw67x2hys" path="res://scenes/inventory_menu/inventory_slot/inventory_slot.tscn" id="19_j7gi1"]
+[ext_resource type="Texture2D" uid="uid://cs52fqq3pr1dw" path="res://assets/themes/background_frame_2.png" id="20_vwa8f"]
+[ext_resource type="PackedScene" uid="uid://dvoqfdvw3f0p5" path="res://scenes/tooltips/inventory/tooltip_inventory.tscn" id="23_t7v50"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yn6ie"]
+texture = ExtResource("2_mmjna")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhe83"]
+texture = ExtResource("2_mmjna")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tixx"]
+texture = ExtResource("4_t7v50")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+
+[sub_resource type="Theme" id="Theme_no80g"]
+default_font = ExtResource("2_t7v50")
+default_font_size = 30
+Button/styles/disabled = SubResource("StyleBoxTexture_yn6ie")
+Button/styles/normal = SubResource("StyleBoxTexture_hhe83")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 3
+Label/fonts/font = ExtResource("2_t7v50")
+Panel/styles/panel = SubResource("StyleBoxTexture_0tixx")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7f173"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kqfia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fn4mn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsjk6"]
+texture = ExtResource("16_7f173")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0gp6t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fn4mn"]
+texture = ExtResource("15_7f173")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7f173"]
+texture = ExtResource("16_7f173")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_doys7"]
+texture = ExtResource("16_7f173")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s22d8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8x1o"]
+texture = ExtResource("16_7f173")
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_7f173"]
+
+[node name="InventoryMenu" type="Control" unique_id=1356322722]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_no80g")
+script = ExtResource("17_gteh2")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1586003915]
+modulate = Color(1, 1, 1, 0.63000005)
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_c61o2")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1967971098]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=52530131]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="EquipmentPanel" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=873205096]
+z_index = 1
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="MarginContainer/VBoxContainer/EquipmentPanel" unique_id=1611486556]
+modulate = Color(1.3131658, 1.3131658, 1.3131658, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_vwa8f")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="InnerShadow" type="TextureRect" parent="MarginContainer/VBoxContainer/EquipmentPanel" unique_id=1918047251]
+modulate = Color(1, 1, 1, 0.66300005)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+texture = ExtResource("9_ivcrv")
+expand_mode = 1
+
+[node name="EquipmentSlots" type="HBoxContainer" parent="MarginContainer/VBoxContainer/EquipmentPanel" unique_id=1926576158]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="PickaxeSlot" parent="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots" unique_id=786721887 instance=ExtResource("19_j7gi1")]
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("18_ii7g3")
+slot_type = 0
+
+[node name="SlotIcon" parent="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots/PickaxeSlot" index="0"]
+texture = ExtResource("10_qluvr")
+
+[node name="HelmetSlot" parent="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots" unique_id=815382250 instance=ExtResource("19_j7gi1")]
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("18_ii7g3")
+slot_type = 1
+
+[node name="SlotIcon" parent="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots/HelmetSlot" index="0"]
+texture = ExtResource("10_yaa82")
+
+[node name="LanternSlot" parent="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots" unique_id=35683236 instance=ExtResource("19_j7gi1")]
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("18_ii7g3")
+slot_type = 2
+
+[node name="SlotIcon" parent="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots/LanternSlot" index="0"]
+texture = ExtResource("11_c61o2")
+
+[node name="JewelSlot" parent="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots" unique_id=1582017519 instance=ExtResource("19_j7gi1")]
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("18_ii7g3")
+slot_type = 3
+
+[node name="SlotIcon" parent="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots/JewelSlot" index="0"]
+texture = ExtResource("12_qluvr")
+
+[node name="InventoryPanel" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=533794793]
+z_index = 1
+custom_minimum_size = Vector2(0, 800)
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="MarginContainer/VBoxContainer/InventoryPanel" unique_id=1716583910]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_vwa8f")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Innershadow" type="TextureRect" parent="MarginContainer/VBoxContainer/InventoryPanel" unique_id=425839837]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_ivcrv")
+
+[node name="InventorySlots" type="GridContainer" parent="MarginContainer/VBoxContainer/InventoryPanel" unique_id=1599789748]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=320335677]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="InventoryMenuButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=643318282]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("14_jkh06")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7f173")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kqfia")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fn4mn")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_xsjk6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0gp6t")
+disabled = true
+text = "UI_INVENTORY_BUTTON_INVENTORY"
+
+[node name="ArtefactMenuButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1946224729]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("14_jkh06")
+theme_override_styles/normal = SubResource("StyleBoxTexture_fn4mn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7f173")
+theme_override_styles/hover = SubResource("StyleBoxTexture_doys7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_s22d8")
+theme_override_styles/focus = SubResource("StyleBoxTexture_o8x1o")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_7f173")
+text = "UI_INVENTORY_BUTTON_ARTEFACTS"
+
+[node name="DragPreview" type="TextureRect" parent="." unique_id=1580428989]
+z_index = 999
+custom_minimum_size = Vector2(165, 165)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 1498.0
+offset_right = 1030.0
+offset_bottom = 1663.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tooltip" parent="." unique_id=830711186 instance=ExtResource("23_t7v50")]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ArtefactMenuButton" to="." method="_on_artefact_menu_button_pressed"]
+
+[editable path="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots/PickaxeSlot"]
+[editable path="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots/HelmetSlot"]
+[editable path="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots/LanternSlot"]
+[editable path="MarginContainer/VBoxContainer/EquipmentPanel/EquipmentSlots/JewelSlot"]

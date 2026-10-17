@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cx12loloifxne"]
+
+[ext_resource type="Script" uid="uid://dgwpwrnfu31su" path="res://scenes/loading/loading.gd" id="1_vqqgw"]
+[ext_resource type="Texture2D" uid="uid://wfvd1p6tt7x" path="res://assets/Chaotic-Loot_vertical.png" id="2_vqqgw"]
+
+[node name="Loading" type="Control" unique_id=312667908]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vqqgw")
+
+[node name="Background" type="ColorRect" parent="." unique_id=904624814]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="TextureRect" parent="." unique_id=1105931808]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vqqgw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Fade" type="ColorRect" parent="." unique_id=671074628]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Warmup" type="TextureRect" parent="." unique_id=2118694026]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1

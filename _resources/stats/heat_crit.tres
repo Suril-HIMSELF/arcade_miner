@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StatDefinition" load_steps=2 format=3 uid="uid://dqfwx3t6vtnmy"]
+
+[ext_resource type="Script" uid="uid://cjij84vdl2etu" path="res://_data/stat_definition.gd" id="1_nx0te"]
+
+[resource]
+script = ExtResource("1_nx0te")
+id = 1304
+name = "STAT_HEAT_CRIT_NAME"
+description = "STAT_HEAT_CRIT_DESCRIPTION"
+rarity = 2
+tags = Array[int]([15, 10])
+mode = 1
+bonus_min = 0.01
+bonus_max = 0.05
+ore_affinity = Array[int]([4])
+metadata/_custom_type_script = "uid://cjij84vdl2etu"

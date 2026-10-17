@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dge0t6nhi1ako"]
+
+[ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="1_lgwrg"]
+[ext_resource type="Script" uid="uid://bo6k741nipflc" path="res://scenes/effects/floating_text.gd" id="2_llnos"]
+
+[node name="FloatingText" type="Label"]
+offset_right = 150.0
+offset_bottom = 32.0
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("1_lgwrg")
+theme_override_font_sizes/font_size = 40
+text = "+9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_llnos")

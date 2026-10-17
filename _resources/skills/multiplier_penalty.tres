@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Skill" load_steps=10 format=3 uid="uid://4ovn7apvv22o"]
+
+[ext_resource type="Script" uid="uid://c4h4d7w54qsvr" path="res://_data/ore_quantity.gd" id="1_xgows"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="2_6jg2c"]
+[ext_resource type="Script" uid="uid://bw106588ppk51" path="res://_data/skill.gd" id="3_kocsi"]
+[ext_resource type="Texture2D" uid="uid://mxgnb27y3sk3" path="res://assets/atlas/skill_secondary_atlas_64.png" id="4_xgows"]
+[ext_resource type="Resource" uid="uid://b3ighjf15v1pm" path="res://_resources/stats/multiplier_penalty.tres" id="5_eu1wu"]
+
+[sub_resource type="Resource" id="Resource_rih6b"]
+script = ExtResource("1_xgows")
+quantity = 300
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="Resource" id="Resource_xgows"]
+script = ExtResource("1_xgows")
+ore = 5
+quantity = 25
+metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qwsu"]
+atlas = ExtResource("2_6jg2c")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_344j5"]
+atlas = ExtResource("4_xgows")
+region = Rect2(128, 0, 64, 64)
+
+[resource]
+script = ExtResource("3_kocsi")
+id = 51000
+name = "STAT_MULTIPLIER_PENALTY_NAME"
+description = "STAT_MULTIPLIER_PENALTY_DESCRIPTION"
+primary_icon = SubResource("AtlasTexture_5qwsu")
+secondary_icon = SubResource("AtlasTexture_344j5")
+stat = ExtResource("5_eu1wu")
+bonus = -0.05
+max_level = 4
+cost = Array[ExtResource("1_xgows")]([SubResource("Resource_rih6b"), SubResource("Resource_xgows")])

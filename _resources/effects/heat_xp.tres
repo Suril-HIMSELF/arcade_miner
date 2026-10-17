@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=6 format=3 uid="uid://ctd5if02oat3a"]
+
+[ext_resource type="Script" uid="uid://dlbtrjuhbb1gy" path="res://_data/stat_value.gd" id="1_3y71d"]
+[ext_resource type="Texture2D" uid="uid://mxgnb27y3sk3" path="res://assets/atlas/skill_secondary_atlas_64.png" id="1_crf4t"]
+[ext_resource type="Script" uid="uid://br3txkp3xbpk5" path="res://_data/effect.gd" id="1_n64fp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxicn"]
+atlas = ExtResource("1_crf4t")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="Resource" id="Resource_crf4t"]
+script = ExtResource("1_3y71d")
+stat = 1303
+value = 0.5
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[resource]
+script = ExtResource("1_n64fp")
+name = "heat_xp"
+icon = SubResource("AtlasTexture_mxicn")
+stat_value = SubResource("Resource_crf4t")
+duration = -1.0
+metadata/_custom_type_script = "uid://br3txkp3xbpk5"

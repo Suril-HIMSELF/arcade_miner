@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=6 format=3 uid="uid://ja2vpjjnqsu0"]
+
+[ext_resource type="Script" uid="uid://dlbtrjuhbb1gy" path="res://_data/stat_value.gd" id="1_8jqap"]
+[ext_resource type="Texture2D" uid="uid://b2cdkbrbw2oau" path="res://assets/atlas/skill_atlas_128.png" id="1_21ahw"]
+[ext_resource type="Script" uid="uid://br3txkp3xbpk5" path="res://_data/effect.gd" id="1_fy23d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ewu0"]
+atlas = ExtResource("1_21ahw")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="Resource" id="Resource_8jqap"]
+script = ExtResource("1_8jqap")
+stat = 1304
+value = 0.1
+mode = 1
+metadata/_custom_type_script = "uid://dlbtrjuhbb1gy"
+
+[resource]
+script = ExtResource("1_fy23d")
+name = "heat_crit"
+icon = SubResource("AtlasTexture_4ewu0")
+stat_value = SubResource("Resource_8jqap")
+duration = -1.0
+metadata/_custom_type_script = "uid://br3txkp3xbpk5"
