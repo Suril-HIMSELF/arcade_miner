@@ -17,27 +17,46 @@ var task: Task
 
 func _ready() -> void:
 	claim_button.pressed.connect(_on_claim_pressed)
+	level.set_meta("skip_auto_localize", true)
+
+	if not LanguageManager.language_changed.is_connected(_on_language_changed):
+		LanguageManager.language_changed.connect(_on_language_changed)
+
+
+func _on_language_changed() -> void:
+	if task == null:
+		return
+
+	refresh_translations()
+
+
+func refresh_translations() -> void:
+	var state: Dictionary = GameManager.task_states[task.id]
+	var state_level: int = state["level"]
+
+	level.text = tr("UI_TASK_FRAME_LABEL_LEVEL") + " : [color='#91c65eff']" + str(state_level) + "[/color]"
+	description.text = tr(task.description)
 
 
 func setup(task_data: Task) -> void:
 	task = task_data
 
-	var state: Dictionary = GameManager.task_states[task.id]
+	description.set_meta("loc_key", task.description)
 
+	var state: Dictionary = GameManager.task_states[task.id]
 	var state_level: int = state["level"]
 	var current_amount: int = state["current_amount"]
 	var required_amount: int = task.get_required_amount(state_level)
+
+	if task.icon != null:
+		icon.texture = task.icon
 	
-	icon.texture = task.icon
-	level.text = tr("UI_TASK_FRAME_LABEL_LEVEL") + " : [color='#91c65eff']"  + str(state_level) + "[/color]"
-	description.text = task.get_description(state_level) 
 	requirement.text = " %d / %d" % [current_amount, required_amount]
 
 	for child in rewards_container.get_children():
 		child.queue_free()
 
 	var rewards := task.get_rewards(state_level)
-
 	for reward_data in rewards:
 		var reward: Reward = reward_scene.instantiate()
 		rewards_container.add_child(reward)
@@ -49,6 +68,8 @@ func setup(task_data: Task) -> void:
 		if state["finished"]
 		else Control.FOCUS_NONE
 	)
+
+	refresh_translations()
 
 
 func _on_claim_pressed() -> void:

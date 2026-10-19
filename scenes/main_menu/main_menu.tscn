@@ -66,11 +66,11 @@ texture_margin_bottom = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i7nm7"]
 atlas = ExtResource("6_lqpn7")
-region = Rect2(0, 512, 128, 128)
+region = Rect2(128, 512, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_81nce"]
 atlas = ExtResource("6_lqpn7")
-region = Rect2(128, 512, 128, 128)
+region = Rect2(0, 512, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tfctf"]
 atlas = ExtResource("16_a1gy5")
@@ -253,7 +253,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 150.0
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_3ovsr")
@@ -841,7 +841,6 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="Tutorial" parent="." unique_id=270004559 instance=ExtResource("24_0xlsr")]
-visible = false
 
 [connection signal="pressed" from="Menu/GameMenu/VBoxContainer/GameButton" to="." method="_on_game_button_pressed"]
 [connection signal="pressed" from="HeaderPanel/HBoxContainer/Statistics" to="." method="_on_statistics_pressed"]

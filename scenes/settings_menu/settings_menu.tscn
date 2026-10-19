@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://q0nblgqg03hf"]
 
 [ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/frame_light.png" id="1_rhfa7"]
+[ext_resource type="Texture2D" uid="uid://ds6722r41un1f" path="res://assets/buttons/check_button_on.png" id="1_rnpuf"]
 [ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="2_emu0i"]
+[ext_resource type="Texture2D" uid="uid://b3j6rwklgih6u" path="res://assets/buttons/check_button_off.png" id="2_x4xx2"]
 [ext_resource type="Script" uid="uid://n3pihdfac03y" path="res://scenes/settings_menu/settings_menu.gd" id="3_tbgns"]
 [ext_resource type="Texture2D" uid="uid://btvruml5dkvy2" path="res://assets/backgrounds/background_statistics.png" id="4_vjx8r"]
 [ext_resource type="Texture2D" uid="uid://gjcri7dvlebd" path="res://assets/buttons/button_red.png" id="5_5sljs"]
@@ -10,11 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://bpdnkshu62dn0" path="res://assets/backgrounds/background_tooltip.png" id="7_nsung"]
 [ext_resource type="FontFile" uid="uid://bblmoh4sxx04g" path="res://assets/fonts/Exo2-Bold.otf" id="8_m0u4m"]
 [ext_resource type="Texture2D" uid="uid://bmx6f65s5watr" path="res://assets/frames/separator_h.png" id="9_lx4aw"]
-[ext_resource type="Texture2D" uid="uid://bsh0x5f4xjbyy" path="res://assets/buttons/button_green.png" id="10_m2yo8"]
 [ext_resource type="Texture2D" uid="uid://dg4iyiyc8jxkn" path="res://assets/icons/language.png" id="10_s87xj"]
 [ext_resource type="Texture2D" uid="uid://cnqgofe4o68wc" path="res://assets/buttons/button_brown.png" id="13_m2yo8"]
 [ext_resource type="Texture2D" uid="uid://148nc4km2beo" path="res://assets/icons/settings_miscellaneous.png" id="14_u7vy4"]
 [ext_resource type="Texture2D" uid="uid://f0uwn220negq" path="res://assets/buttons/button_brown_pressed.png" id="16_few2h"]
+[ext_resource type="Texture2D" uid="uid://5mofe2dwy8ow" path="res://assets/buttons/button_red_pressed.png" id="16_rnpuf"]
 [ext_resource type="PackedScene" uid="uid://bf8cfbnsmyrq2" path="res://scenes/tooltips/settings/tooltip_settings.tscn" id="16_yeyb7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3xpff"]
@@ -27,6 +29,8 @@ texture_margin_bottom = 16.0
 [sub_resource type="Theme" id="Theme_l6cit"]
 default_font = ExtResource("2_emu0i")
 default_font_size = 21
+CheckButton/icons/checked = ExtResource("1_rnpuf")
+CheckButton/icons/unchecked = ExtResource("2_x4xx2")
 Panel/styles/panel = SubResource("StyleBoxTexture_3xpff")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s87xj"]
@@ -42,30 +46,6 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rnpuf"]
-texture = ExtResource("10_m2yo8")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2yo8"]
-texture = ExtResource("10_m2yo8")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_53gbb"]
-texture = ExtResource("5_5sljs")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x4xx2"]
-texture = ExtResource("5_5sljs")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oyfy1"]
-texture = ExtResource("10_m2yo8")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7t8vs"]
-texture = ExtResource("10_m2yo8")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mje64"]
-texture = ExtResource("5_5sljs")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f3fdp"]
-texture = ExtResource("5_5sljs")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_few2h"]
 texture = ExtResource("1_rhfa7")
@@ -106,6 +86,9 @@ texture = ExtResource("5_5sljs")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rcdfy"]
 texture = ExtResource("5_5sljs")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vo1kq"]
+texture = ExtResource("16_rnpuf")
 
 [node name="SettingsMenu" type="Control" unique_id=1755288010]
 layout_mode = 3
@@ -232,27 +215,10 @@ text = "UI_SETTINGS_LABEL_MUSIC"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/Music" unique_id=338286152]
+[node name="MusicCheck" type="CheckButton" parent="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/Music" unique_id=1753192723]
 layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="MusicOn" type="Button" parent="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/Music/HBoxContainer" unique_id=258376341]
-custom_minimum_size = Vector2(150, 80)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("8_m0u4m")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_rnpuf")
-theme_override_styles/hover = SubResource("StyleBoxTexture_m2yo8")
-text = "UI_SETTINGS_BUTTON_ON"
-
-[node name="MusicOff" type="Button" parent="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/Music/HBoxContainer" unique_id=1425119300]
-custom_minimum_size = Vector2(150, 80)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("8_m0u4m")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_53gbb")
-theme_override_styles/hover = SubResource("StyleBoxTexture_x4xx2")
-text = "UI_SETTINGS_BUTTON_OFF"
+theme_override_constants/icon_max_width = 100
+button_pressed = true
 
 [node name="SFX" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container" unique_id=1173358241]
 layout_mode = 2
@@ -266,27 +232,10 @@ text = "UI_SETTINGS_LABEL_SFX"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/SFX" unique_id=69006737]
+[node name="SfxCheck" type="CheckButton" parent="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/SFX" unique_id=433258210]
 layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="SfxOn" type="Button" parent="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/SFX/HBoxContainer" unique_id=2074101045]
-custom_minimum_size = Vector2(150, 80)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("8_m0u4m")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_oyfy1")
-theme_override_styles/hover = SubResource("StyleBoxTexture_7t8vs")
-text = "UI_SETTINGS_BUTTON_ON"
-
-[node name="SfxOff" type="Button" parent="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/SFX/HBoxContainer" unique_id=1339280015]
-custom_minimum_size = Vector2(150, 80)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("8_m0u4m")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_mje64")
-theme_override_styles/hover = SubResource("StyleBoxTexture_f3fdp")
-text = "UI_SETTINGS_BUTTON_OFF"
+theme_override_constants/icon_max_width = 100
+button_pressed = true
 
 [node name="LanguagePanel" type="Panel" parent="ScrollContainer/VBoxContainer" unique_id=1489233715]
 z_index = 1
@@ -387,6 +336,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_c2a1x")
 theme_override_icons/arrow = SubResource("AtlasTexture_rwhis")
 alignment = 1
 selected = 0
+allow_reselect = true
 item_count = 5
 popup/item_0/text = "English"
 popup/item_0/id = 0
@@ -514,13 +464,12 @@ theme_override_fonts/font = ExtResource("8_m0u4m")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxTexture_bsihy")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rcdfy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vo1kq")
 text = "UI_SETTINGS_BUTTON_SAVE"
 
 [node name="Tooltip" parent="." unique_id=373503403 instance=ExtResource("16_yeyb7")]
 
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/Music/HBoxContainer/MusicOn" to="." method="_on_music_on_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/Music/HBoxContainer/MusicOff" to="." method="_on_music_off_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/SFX/HBoxContainer/SfxOn" to="." method="_on_sfx_on_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/SFX/HBoxContainer/SfxOff" to="." method="_on_sfx_off_pressed"]
+[connection signal="toggled" from="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/Music/MusicCheck" to="." method="_on_music_check_toggled"]
+[connection signal="toggled" from="ScrollContainer/VBoxContainer/MusicPanel/VBoxContainer/Container/SFX/SfxCheck" to="." method="_on_sfx_check_toggled"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/MiscellaneousPanel/VBoxContainer/Container/Credits/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/MiscellaneousPanel/VBoxContainer/Container/Delete/DeleteButton" to="." method="_on_delete_button_pressed"]

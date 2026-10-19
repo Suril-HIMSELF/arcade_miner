@@ -5,8 +5,17 @@ extends Control
 
 
 func _ready() -> void:
-	language_options.item_selected.connect(_on_language_options_item_selected)
+	var current_locale := TranslationServer.get_locale()
 	
+	match current_locale:
+		"en" : language_options.select(0)
+		"fr" : language_options.select(1)
+		"es" : language_options.select(2)
+		"de" : language_options.select(3)
+		"it" : language_options.select(4)
+	
+	language_options.item_selected.connect(_on_language_options_item_selected)
+	 
 	tooltip.visible = false
 	
 	var popup := language_options.get_popup()
@@ -51,7 +60,6 @@ func _on_language_options_item_selected(index: int) -> void:
 		4: GameManager.language = "it"
 		_: GameManager.language = "en"
 	
-	TranslationServer.set_locale(GameManager.language)
 	LanguageManager.set_language(GameManager.language)
 	
 	language_options.select(index)
@@ -65,25 +73,24 @@ func _on_delete_button_pressed() -> void:
 	GameManager.reset_game()
 
 
-func _on_music_on_pressed() -> void:
-	GameManager.music_volume = 100
-	set_bus_volume("Music", 100)
-
-
-func _on_music_off_pressed() -> void:
-	GameManager.music_volume = 0
-	set_bus_volume("Music", 0)
-
-
-func _on_sfx_on_pressed() -> void:
-	GameManager.sfx_volume = 100
-	set_bus_volume("sfx", 100)
-
-
-func _on_sfx_off_pressed() -> void:
-	GameManager.sfx_volume = 0
-	set_bus_volume("sfx", 0)
-
-
 func _on_credits_button_pressed() -> void:
 	tooltip.show_content()
+
+
+func _on_music_check_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		GameManager.music_volume = 100
+		set_bus_volume("Music", 100)
+	else:
+		GameManager.music_volume = 0
+		set_bus_volume("Music", 0)
+
+
+func _on_sfx_check_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		GameManager.sfx_volume = 100
+		set_bus_volume("sfx", 100)
+	else:
+		GameManager.sfx_volume = 0
+		set_bus_volume("sfx", 0)
+"res://assets/buttons/check_button_off.png"

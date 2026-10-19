@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdr30ptged3ar"]
-
-[ext_resource type="Script" uid="uid://chcqakacnxrdg" path="res://_tools/cost_generator/calculator.gd" id="1_5gwfg"]
-
-[node name="Calculator" type="Node"]
-script = ExtResource("1_5gwfg")

@@ -18,25 +18,22 @@ func set_language(language: String) -> void:
 	language_changed.emit()
 
 
-func localize_tree(node: Node):
+func localize_tree(node: Node) -> void:
 	for child in node.get_children():
-		if child is Label or child is Button or child is RichTextLabel:
+		if child.get_meta("skip_auto_localize", false):
+			localize_tree(child)
+			continue
 
+		if child is Label or child is Button or child is RichTextLabel:
 			if not child.has_meta("loc_key"):
 				child.set_meta("loc_key", child.text)
 
 			var key = child.get_meta("loc_key")
-			
-			#Debug problème de clé non résolue
-			#print("'" + str(key) + "'")
-			
-			var translated = TranslationServer.translate(key)
+			child.text = TranslationServer.translate(key)
 
-			child.text = translated
-		
 		elif child is TabBar:
 			localize_tabbar(child)
-		
+
 		localize_tree(child)
 
 

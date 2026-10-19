@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://csrfvrxohd6em"]
 
-[ext_resource type="Texture2D" uid="uid://b8nl1o0soldo0" path="res://assets/frames/frame_light_on.png" id="2_4vhjo"]
+[ext_resource type="Texture2D" uid="uid://b8nl1o0soldo0" path="res://assets/frames/Frame_light_on.png" id="2_4vhjo"]
 [ext_resource type="Script" uid="uid://1ehti86nbm1n" path="res://scenes/forge_menu/forge_menu.gd" id="2_5x3f0"]
 [ext_resource type="Texture2D" uid="uid://bf0fntksupku1" path="res://assets/backgrounds/background_forge.png" id="3_8h0f4"]
 [ext_resource type="FontFile" uid="uid://clyxjewuty8n3" path="res://assets/fonts/Exo2-Regular.otf" id="3_uxy6k"]
-[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/frame_light.png" id="5_l5sqo"]
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/Frame_light.png" id="5_l5sqo"]
 [ext_resource type="Texture2D" uid="uid://xfgtpmiqx4hy" path="res://assets/atlas/forge_item_atlas.png" id="7_l5sqo"]
 [ext_resource type="Texture2D" uid="uid://bjd5bc16puly0" path="res://assets/frames/frame_shadow.png" id="8_2vhcx"]
 [ext_resource type="Texture2D" uid="uid://stn507v6avwg" path="res://assets/atlas/ore_atlas_128.png" id="9_5x3f0"]
@@ -107,6 +107,10 @@ texture_margin_bottom = 60.0
 atlas = ExtResource("9_5x3f0")
 region = Rect2(256, 0, 128, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h0f4"]
+atlas = ExtResource("9_5x3f0")
+region = Rect2(384, 0, 128, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_6hhld"]
 atlas = ExtResource("9_5x3f0")
 region = Rect2(512, 0, 128, 128)
@@ -133,10 +137,6 @@ region = Rect2(896, 0, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_6tr1x"]
 atlas = ExtResource("9_5x3f0")
 region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8h0f4"]
-atlas = ExtResource("9_5x3f0")
-region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v8q8u"]
 texture = ExtResource("14_5lwbr")
@@ -418,6 +418,15 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_vertical = 4
 
+[node name="RubyIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer/RubyButton" unique_id=281773353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_8h0f4")
+
 [node name="EmeraldButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/OrePanel/VBoxContainer/ContentContainer" unique_id=741048418]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
@@ -573,19 +582,6 @@ custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 vertical_alignment = 1
-
-[node name="RubyIcon" type="TextureRect" parent="ScrollContainer/MarginContainer/VBoxContainer/CostPanel" unique_id=281773353]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 275.0
-offset_top = -227.5
-offset_right = 275.0
-offset_bottom = -227.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_8h0f4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer" unique_id=1791860137]
 layout_mode = 2

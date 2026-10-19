@@ -99,7 +99,6 @@ func _ready() -> void:
 			{"target": skills_button, "text": "TUTO_MAIN_MENU_BUTTON_SKILL"},
 			{"target": forge_button, "text": "TUTO_MAIN_MENU_BUTTON_FORGE"},
 			{"target": ore_panel_toggle, "text": "TUTO_MAIN_MENU_PANEL_ORE"},
-			{"target": settings_button, "text": "TUTO_MAIN_MENU_BUTTON_SETTINGS"},
 			{"target": play_button, "text": "TUTO_MAIN_MENU_BUTTON_PLAY"}
 		])
 		

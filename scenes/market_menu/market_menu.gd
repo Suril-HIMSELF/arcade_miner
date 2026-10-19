@@ -19,6 +19,7 @@ var market_modifier: float
 
 func _ready() -> void:
 	var __ = tooltip_market.tooltip_closed.connect(_on_tooltip_closed)
+	__ = LanguageManager.language_changed.connect(_on_language_changed)
 	
 	tooltip_market.visible = false
 	
@@ -31,6 +32,14 @@ func _ready() -> void:
 		__ = slot.pressed.connect(_on_ore_slot_pressed.bind(slot))
 		
 		refresh_ore_slot(slot)
+
+
+func _on_language_changed() -> void:
+	LanguageManager.localize_tree(self)
+
+	for slot in ore_container.get_children():
+		if slot is MarketSlot:
+			slot.refresh_translations()
 
 
 func refresh_ore_slot(slot: MarketSlot) -> void:

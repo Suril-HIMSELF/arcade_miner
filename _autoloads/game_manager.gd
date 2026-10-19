@@ -583,14 +583,14 @@ func reset_game() -> void:
 	]
 	
 	ore_inventory = {
-		Enums.ORE.STONE: 100000,
-		Enums.ORE.GOLD: 100000,
-		Enums.ORE.SAPPHIRE: 100000,
-		Enums.ORE.RUBY: 100000,
-		Enums.ORE.EMERALD: 100000,
-		Enums.ORE.DIAMOND: 100000,
-		Enums.ORE.WOOD: 100000,
-		Enums.ORE.METAL: 100000,
+		Enums.ORE.STONE: 0,
+		Enums.ORE.GOLD: 0,
+		Enums.ORE.SAPPHIRE: 0,
+		Enums.ORE.RUBY: 0,
+		Enums.ORE.EMERALD: 0,
+		Enums.ORE.DIAMOND: 0,
+		Enums.ORE.WOOD: 0,
+		Enums.ORE.METAL: 0,
 	}
 	
 	stats = default
@@ -598,6 +598,8 @@ func reset_game() -> void:
 	ore_level = 1
 	ore_hp = compute_ore_max_hp(ore_level)
 	run_completed = 0
+	tuto_completed_main = false
+	tuto_completed_game = false
 	
 	update_ore.emit()
 	level_up.emit()

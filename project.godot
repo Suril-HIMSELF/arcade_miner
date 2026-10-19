@@ -18,7 +18,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="arcade_miner"
+config/name="Arcade Miner"
 config/description="Do you like shiny colored rocks ? Then you can mine until your pockets are full... And keep mining even more !"
 run/main_scene="uid://cx12loloifxne"
 config/features=PackedStringArray("4.6", "Mobile")

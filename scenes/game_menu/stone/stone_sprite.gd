@@ -5,7 +5,7 @@ extends Node2D
 @onready var sprite_50: Sprite2D = $Sprite50
 @onready var sprite_25: Sprite2D = $Sprite25
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	sprite_100.visible = true
 	sprite_75.visible = false

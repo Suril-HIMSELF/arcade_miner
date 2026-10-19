@@ -44,10 +44,10 @@ func show_item(_item: Item, _inventory_index: int = -1, _equipment_type: int = -
 	is_equipped = _equipment_type != -1
 	
 	if is_equipped:
-		equip_button.text = tr("UNEQUIP")
+		equip_button.text = tr("TOOLTIP_INVENTORY_BUTTON_UNEQUIP")
 		equip_button.disabled = not _can_unequip
 	else:
-		equip_button.text = tr("EQUIP")
+		equip_button.text = tr("TOOLTIP_INVENTORY_BUTTON_EQUIP")
 		equip_button.disabled = false
 	
 	title.text = tr(_item.description.name_key).to_upper()

@@ -34,7 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://bsh0x5f4xjbyy" path="res://assets/buttons/button_green.png" id="33_vrf2t"]
 [ext_resource type="AudioStream" uid="uid://bqsi3p865nqq3" path="res://assets/sounds/sfx_pickaxe_critical.mp3" id="33_wmw63"]
 [ext_resource type="AudioStream" uid="uid://cjibuwwk4a0i1" path="res://assets/sounds/sfx_pickaxe_fail.mp3" id="34_osqfy"]
-[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/frame_light.png" id="34_xqrsv"]
+[ext_resource type="Texture2D" uid="uid://pijcd2j5jkbb" path="res://assets/frames/Frame_light.png" id="34_xqrsv"]
 [ext_resource type="Texture2D" uid="uid://cidbsefmykdlh" path="res://assets/ores/stone.png" id="35_ebq8f"]
 [ext_resource type="AudioStream" uid="uid://bqbevo63bf5yj" path="res://assets/sounds/sfx_echo.mp3" id="35_x1bfp"]
 [ext_resource type="AudioStream" uid="uid://cfjucd3j2e4rg" path="res://assets/sounds/sfx_relic.mp3" id="36_i81nb"]
