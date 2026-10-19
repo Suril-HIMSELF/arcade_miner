@@ -152,8 +152,6 @@ const RARITY_COLOR: Dictionary = {
 ### MARKET ###
 const PRICE_FACTOR: int = 12
 const QUANTITY_FACTOR = 1.2
-const RELOAD_COST = 500
-
 
 const MARKET_MAX: Dictionary = { # Quantité max possible d'une ressource au marché hors effet wow
 	Enums.ORE.STONE: 0,

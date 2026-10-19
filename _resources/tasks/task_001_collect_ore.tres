@@ -6,12 +6,13 @@
 
 [sub_resource type="Resource" id="Resource_x6a7l"]
 script = ExtResource("1_x6a7l")
+ore = 6
 quantity = 10
 metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
 
 [sub_resource type="Resource" id="Resource_4tx04"]
 script = ExtResource("1_x6a7l")
-ore = 1
+ore = 7
 quantity = 10
 metadata/_custom_type_script = "uid://c4h4d7w54qsvr"
 

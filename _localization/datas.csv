@@ -121,6 +121,7 @@ STAT_UP_WEIGHT_NAME;Swipe up weight;Probabilité de swipe haut;Probabilidad de d
 STAT_UP_WEIGHT_DESCRIPTION;Increase swipe haut input probability.;Augmente la probabilité d'apparition d'un swipe haut.;Aumenta la probabilidad de realizar un deslizamiento hacia arriba.;Erhöht die Wahrscheinlichkeit für eine Wischgeste nach oben.;Aumenta la probabilità di effettuare uno scorrimento verso l'alto.
 STAT_UNLOCK_ARTEFACT_NAME;Unlock artefacts;Déblocage artefacts;Desbloquear artefactos;Artefakte freischalten;Sblocca artefatti
 STAT_UNLOCK_ARTEFACT_DESCRIPTION;Artefacts can be found while mining !;Des artefacts peuvent apparaitre pendant le minage !;¡Los artefactos pueden aparecer durante la extracción!;Artefakte können beim Abbauen gefunden werden!;Gli artefatti possono essere trovati durante l'estrazione!
+TASK_000_DESCRIPTION;Play games;Jouer des parties;Jugar partidas;Runs spielen;Giocare partite
 TASK_001_DESCRIPTION;Gather ore;Récolter du minerai;Recolectar mineral;Erz sammeln;Raccogliere minerale
 TASK_002_DESCRIPTION;Gather stone;Récolter de la pierre;Recolectar piedra;Stein sammeln;Raccogliere pietra
 TASK_003_DESCRIPTION;Gather gold;Récolter de l'or;Recolectar oro;Gold sammeln;Raccogliere oro
@@ -143,7 +144,6 @@ TASK_019_DESCRIPTION;Forge lanterns;Forger des lanternes;Forjar linternas;Latern
 TASK_020_DESCRIPTION;Forge jewels;Forger des bijoux;Forjar joyas;Juwelen schmieden;Forgiare gioielli
 TASK_021_DESCRIPTION;Deal damages;Faire des dégâts;Infligir daño;Schaden verursachen;Infliggere danni
 TASK_022_DESCRIPTION;Destroy the big roc;Détruire la grosse roche;Destruir la gran roca;Den großen Felsen zerstören;Distruggere la grande roccia
-TASK_023_DESCRIPTION;Play games;Jouer des parties;Jugar partidas;Runs spielen;Giocare partite
 TUTO_MAIN_MENU_WELCOME;Welcome to Arcade Miner, a game where you can collect ore, craft stuff and learn skills !;Bienvenue dans Arcade Miner, un jeu où vous pouvez collecter du minerai, fabriquer des équipements et apprendre des compétences !;¡Bienvenido a Arcade Miner, un juego en el que puedes recolectar mineral, fabricar objetos y aprender habilidades!;Willkommen bei Arcade Miner, einem Spiel, in dem du Erz sammeln, Ausrüstung herstellen und Fähigkeiten erlernen kannst!;Benvenuto in Arcade Miner, un gioco in cui puoi raccogliere minerale, creare equipaggiamento e imparare abilità!
 TUTO_MAIN_MENU_BUTTON_STATISTICS;This is the Statistics menu where you can see each stat with its associated value.;Voici le menu Statistiques où vous pourrez voir chaque stat avec sa valeur associée.;Este es el menú de Estadísticas, donde puedes ver cada estadística con su valor correspondiente.;Dies ist das Statistikmenü, in dem du jede Statistik mit ihrem zugehörigen Wert sehen kannst.;Questo è il menu Statistiche, dove puoi vedere ogni statistica con il relativo valore.
 TUTO_MAIN_MENU_BUTTON_QUESTS;Here you can track all your quests progression.;Ici vous pouvez suivre la progression de vos quêtes.;Aquí puedes consultar el progreso de todas tus misiones.;Hier kannst du den Fortschritt all deiner Quests verfolgen.;Qui puoi seguire i progressi di tutte le tue missioni.
